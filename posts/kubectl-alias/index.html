@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Kubectl alias &middot; KLN Site </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lforlinux.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://lforlinux.github.io/'>
+        KLN@lforlinux ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://lforlinux.github.io/'>/home/KLN</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/kln.pdf">~/cv.pdf</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">/posts <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="https://lforlinux.github.io/posts">~/</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/kubectl-alias/">Kubectl alias</a></h1>
+                <span class="post-date">2020-12-17 </span>
+                <div class="post-content">
+                    <h2 id="_play-with-kubernets-at-ease_"><em>Play with kubernets at ease!</em></h2>
+<h3 id="alias-whatwhy-">Alias? What,Why 🤔</h3>
+<hr>
+<ul>
+<li>An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command.</li>
+<li>It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency. A simple example is setting default options on commands to avoid having to type them each time a command is run</li>
+<li>✨ Be lazy - use less keys on your keyboard ✨ 😜</li>
+</ul>
+<hr>
+<p>Start your day with a list of things you know you tend to waste time on
+As <em>Alicia Rades</em> writes on the <a href="https://www.lifehack.org/author/alicia-j-rades">lifehack</a></p>
+<blockquote>
+<p>When you notice you’re wasting time,
+add that time-waster to the automation.
+This will serve as a reminder of things
+you shouldn’t allow yourself to do google
+around commands as an example here.</p>
+</blockquote>
+<h3 id="lets-get-started">Let&rsquo;s get started!</h3>
+<p>Open your favorite Terminal and run these command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">alias k<span style="color:#f92672">=</span>kubectl
+alias kl<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl logs --tail 100 -f&#39;</span>
+alias ke<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl get events -o wide&#39;</span>
+alias knks<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl -n kube-system&#39;</span>
+alias knkp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl -n kube-public&#39;</span>
+alias kdp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl describe pod&#39;</span>
+alias ked<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl edit deployment&#39;</span>
+alias kr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl get pods -o wide| grep -vE &#34;1/1|2/2|3/3|4/4|Completed&#34;&#39;</span>
+alias kr1<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl get pods | grep &#34;0/&#34; | grep -Eiv &#34;Completed&#34;&#39;</span>
+alias ksc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl get pods -o wide | grep -Eiv &#34;1/1|0/1&#34;&#39;</span>
+alias klr<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;kubectl get deployments -o yaml | grep &#34;path: /api&#34;&#39;</span>
+alias kx<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;function _kx(){ kubectl exec -it $1 sh; };_kx&#39;</span>
+alias kt<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl -n kube-system describe secret <span style="color:#66d9ef">$(</span>kubectl -n kube-system get secret | grep admin-user | awk <span style="color:#e6db74">&#39;{print $1}&#39;</span><span style="color:#66d9ef">))</span>
+</code></pre></div><hr>
+<p>How to use these alias in realtime? 🥳</p>
+<p>Below command will follow last 100 line of pods logs with ease 💪🏽.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kl podname 
+</code></pre></div><hr>
+<p>Kubectl official <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Cheatsheet</a>.</p>
+
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2021 K LEKSHMI NARAYAN -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+        </div>
+    </body>

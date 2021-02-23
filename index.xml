@@ -6,23 +6,14 @@
     <description>Recent content on KLN Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Feb 2021 10:28:34 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Dec 2020 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Second Post</title>
-      <link>https://lforlinux.github.io/posts/my-second-post/</link>
-      <pubDate>Wed, 17 Feb 2021 10:28:34 +0530</pubDate>
+      <title>Kubectl alias</title>
+      <link>https://lforlinux.github.io/posts/kubectl-alias/</link>
+      <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
       
-      <guid>https://lforlinux.github.io/posts/my-second-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://lforlinux.github.io/posts/my-first-post/</link>
-      <pubDate>Wed, 17 Feb 2021 08:53:27 +0530</pubDate>
-      
-      <guid>https://lforlinux.github.io/posts/my-first-post/</guid>
-      <description></description>
+      <guid>https://lforlinux.github.io/posts/kubectl-alias/</guid>
+      <description>Play with kubernets at ease! Alias? What,Why 🤔   An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command. It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency.</description>
     </item>
     
   </channel>

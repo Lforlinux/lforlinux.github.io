@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Jenkins as a Container &middot; KLN </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lforlinux.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://lforlinux.github.io/'>
+        kln@lforlinux ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://lforlinux.github.io/'>/home/kln</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/posts">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/kln.pdf">~/cv.pdf</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/jenkins-as-docker/">Jenkins as a Container</a></h1>
+                <span class="post-date">2020-12-17 </span>
+                <div class="post-content">
+                    <h2 id="_run-jenkins-as-a-container-with-the-stateful-volume_"><em>Run jenkins as a container with the stateful volume!</em></h2>
+<h3 id="why-docker-as-a-container-">Why docker as a container 🤔</h3>
+<ul>
+<li>It&rsquo;s helps simplify the installation process.</li>
+<li>Decrease dependency errors.</li>
+<li>The Turnaround time for an Jenkins server installation is just few minutes.</li>
+<li>Cross platform compatible.</li>
+</ul>
+<h3 id="why-do-we-need-a-stateful-volume">Why do we need a stateful volume!🤨</h3>
+<ul>
+<li>Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly. As in we will setting up the users, credentials inside Jenkins so it is important to save this as a stateful volume.</li>
+</ul>
+<h3 id="lets-get-started-">Let&rsquo;s get started! 🎬</h3>
+<p>Create the volume for Jenkins on Docker host.</p>
+<pre><code>
+# docker volume create jenkins-data 
+</code></pre><p>To check and confirm if the volume is created for us</p>
+<pre><code> # docker volume ls
+ DRIVER              VOLUME NAME
+ local               jenkins-data
+
+</code></pre><p>Execute the following command to run the jenkins as a container.</p>
+<pre><code>    docker run --name klnjenkins \
+    --rm --detach \
+    --publish 8080:8080 \
+    --publish 50000:50000 \
+    --volume jenkins-data:/var/jenkins_home \
+    jenkins/jenkins:lts
+</code></pre><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ndash;name</td>
+<td>name of the container</td>
+</tr>
+<tr>
+<td>&ndash;rm</td>
+<td>Automatically removes the Docker container (the instance of the Docker image) when it is shut down.</td>
+</tr>
+<tr>
+<td>&ndash;publish</td>
+<td>Exposes the Docker daemon port on the host machine</td>
+</tr>
+<tr>
+<td>&ndash;volume</td>
+<td>Maps the /var/jenkins_home directory inside the container to the Docker volume named jenkins-data.</td>
+</tr>
+<tr>
+<td>&ndash;detach</td>
+<td>Runs the Docker container in the background</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> We have exposed our 8080 port to assess our Jenkins server modify if you want to use different port.</p>
+<hr>
+<ul>
+<li>Open your browser and with docker host machine ip or <em><strong>localhost:8080</strong></em> if it&rsquo;s a localhost. You will be seeing an unlock jenkins screen like below.</li>
+</ul>
+<p><img src="https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg" alt="N|Solid"></p>
+<ul>
+<li>To get our intialadmin password, you can grab it from the docker container logs.</li>
+</ul>
+<pre><code>docker logs klnjenkins
+</code></pre><p><img src="https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-02-copying-initial-admin-password.png" alt="N|Solid"></p>
+<ul>
+<li>Now copy the password and paste it on the browser and continue the installation with the <em>suggested plugins</em> as below, if you are beginner level user of jenkins</li>
+</ul>
+<p><img src="https://assets.digitalocean.com/articles/jenkins-install-ubuntu-1604/jenkins-customize.png" alt="N|Solid"></p>
+<ul>
+<li>
+<p>Create the user along with password if you want a separate user for jenkins server else skip and use as admin. Remember, admin user will not have password by default but you can set it later from inside via manage jenkins.</p>
+</li>
+<li>
+<p>We are all set now!🥁 jenkins is ready to use via docker container 🥂.</p>
+</li>
+</ul>
+<p><img src="https://boozallen.github.io/sdp-docs/learning-labs/1/local-development/_images/jenkins-home-page.png" alt="N|Solid"></p>
+<p>How to confirm if our state of the works of persisted? 🙋🏽‍♂️</p>
+<ul>
+<li>Create any hello world job with some name.</li>
+<li>Kill the docker container of jenkins.</li>
+</ul>
+<p>Now run the container with the command as above</p>
+<pre><code>    docker run --name klnjenkins \
+    --rm --detach \
+    --publish 8080:8080 \
+    --publish 50000:50000 \
+    --volume jenkins-data:/var/jenkins_home \
+    jenkins/jenkins:lts
+</code></pre><ul>
+<li>Now we can assess the jenkins via the same ip:port with the previously created credentials and we can see our pipeline jobs persisted! 🤩🎉🎉</li>
+</ul>
+
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2021 K LEKSHMI NARAYAN -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+        </div>
+    </body>

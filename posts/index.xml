@@ -6,14 +6,24 @@
     <description>Recent content in Posts on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Dec 2020 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Dec 2020 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins as a Container</title>
       <link>https://lforlinux.github.io/posts/jenkins-as-docker/</link>
-      <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
+      <pubDate>Mon, 28 Dec 2020 01:23:24 +0530</pubDate>
       
       <guid>https://lforlinux.github.io/posts/jenkins-as-docker/</guid>
       <description>Run jenkins as a container with the stateful volume! Why docker as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
+    </item>
+    
+    <item>
+      <title>Jinja2 template</title>
+      <link>https://lforlinux.github.io/posts/jinja2/</link>
+      <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/jinja2/</guid>
+      <description>Play with kubernets at ease! Alias? What,Why 🤔 this is place holder for jinja2 refenerece
+https://kodekloud.com/courses/656697/lectures/12166609 </description>
     </item>
     
     <item>

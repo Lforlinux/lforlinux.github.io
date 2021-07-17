@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Boto3 Resource, Client and Session &middot; KLN </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lforlinux.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://lforlinux.github.io/'>
+        kln@lforlinux ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://lforlinux.github.io/'>/home/kln</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/posts">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/kln.pdf">~/cv.pdf</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/boto3/">Boto3 Resource, Client and Session</a></h1>
+                <span class="post-date">2021-07-15 </span>
+                <div class="post-content">
+                    <h2 id="core-concepts-of-boto3">Core concepts of Boto3</h2>
+<hr>
+<ul>
+<li>There are few concepts of boto3 (aws sdk) like Session, Resource, Client, Meta, Collections, Paginators</li>
+<li>In this post we will discuss about the kehy difference between  Resource, Client and Session</li>
+</ul>
+<hr>
+<h2 id="session">Session</h2>
+<hr>
+<p>A session manages state about a particular configuration. By default, a session is created for you when needed. However, it&rsquo;s possible and recommended that in some scenarios you maintain your own session. Sessions typically store the following:</p>
+<ul>
+<li>Credentials</li>
+<li>AWS Region</li>
+<li>Other configurations related to your profile</li>
+</ul>
+<h3 id="default-session">Default session</h3>
+<p>Boto3 acts as a proxy to the default session. This is created automatically when you create a low-level client or resource client</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
+
+<span style="color:#75715e"># Using the default session</span>
+s3 <span style="color:#f92672">=</span> boto3.resource<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;s3&#39;</span><span style="color:#f92672">)</span>
+
+<span style="color:#66d9ef">for</span> each_buck in s3.buckets.all<span style="color:#f92672">()</span>:
+    print<span style="color:#f92672">(</span>each_buck.name<span style="color:#f92672">)</span>
+
+</code></pre></div><h3 id="custom-session">Custom session</h3>
+<p>You can also manage your own session and create low-level clients or resource clients from it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
+import boto3.session
+
+<span style="color:#75715e"># Create your own session</span>
+my_session <span style="color:#f92672">=</span> boto3.session.Session<span style="color:#f92672">(</span>profile_name<span style="color:#f92672">=</span>None<span style="color:#f92672">)</span> <span style="color:#75715e">#profile_name is none as in we are going with default user in the .aws/credentials. </span>
+
+
+<span style="color:#75715e"># Now we can create low-level clients or resource clients from our custom session</span>
+s3 <span style="color:#f92672">=</span> my_session.resource<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;s3&#39;</span><span style="color:#f92672">)</span>
+
+<span style="color:#66d9ef">for</span> each_buck in s3.buckets.all<span style="color:#f92672">()</span>:
+    print<span style="color:#f92672">(</span>each_buck.name<span style="color:#f92672">)</span>
+
+</code></pre></div><h3 id="session-configurations">Session configurations</h3>
+<p>You can configure each session with specific credentials, AWS Region information, or profiles. The most common configurations you might use are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">boto3.session.Session<span style="color:#f92672">(</span>aws_access_key_id<span style="color:#f92672">=</span>None, aws_secret_access_key<span style="color:#f92672">=</span>None, aws_session_token<span style="color:#f92672">=</span>None, region_name<span style="color:#f92672">=</span>None, botocore_session<span style="color:#f92672">=</span>None, profile_name<span style="color:#f92672">=</span>None<span style="color:#f92672">)</span>
+</code></pre></div><ul>
+<li>aws_access_key_id (string) &ndash; AWS access key ID</li>
+<li>aws_secret_access_key (string) &ndash; AWS secret access key</li>
+<li>aws_session_token (string) &ndash; AWS temporary session token</li>
+<li>region_name (string) &ndash; Default region when creating new connections</li>
+<li>botocore_session (botocore.session.Session) &ndash; Use this Botocore session instead of creating a new default one.</li>
+<li>profile_name (string) &ndash; The name of a profile to use. If not given, then the default profile is used.</li>
+</ul>
+<h2 id="resource">Resource</h2>
+<p>Resources represent an object-oriented interface to Amazon Web Services (AWS). They provide a higher-level abstraction than the raw, low-level calls made by service clients. To use resources, you invoke the resource() method of a Session and pass in a service name</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
+import boto3.session
+
+my_session <span style="color:#f92672">=</span> boto3.session.Session<span style="color:#f92672">(</span>profile_name<span style="color:#f92672">=</span>None<span style="color:#f92672">)</span> 
+<span style="color:#75715e"># Now we can create low-level clients or resource clients from our custom session</span>
+s3 <span style="color:#f92672">=</span> my_session.resource<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;s3&#39;</span><span style="color:#f92672">)</span> <span style="color:#75715e"># you can use any resource within aws </span>
+
+<span style="color:#66d9ef">for</span> each_buck in s3.buckets.all<span style="color:#f92672">()</span>:
+    print<span style="color:#f92672">(</span>each_buck.name<span style="color:#f92672">)</span>
+</code></pre></div><h2 id="clients">Clients</h2>
+<p>Clients provide a low-level interface to AWS whose methods map close to 1:1 with service APIs. All service operations are supported by clients. Clients are generated from a JSON service definition file.</p>
+<p>Diffeence between client and resource</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
+
+print <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;This is using resource&#34;</span><span style="color:#f92672">)</span>
+
+my_session <span style="color:#f92672">=</span> boto3.session.Session<span style="color:#f92672">(</span>profile_name<span style="color:#f92672">=</span>None<span style="color:#f92672">)</span>
+iam_resource <span style="color:#f92672">=</span> my_session.resource<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;iam&#39;</span><span style="color:#f92672">)</span>
+
+
+<span style="color:#66d9ef">for</span> each_user in iam_resource.users.all<span style="color:#f92672">()</span>: <span style="color:#75715e">#resource provides higher-level abstraction than the raw, low-level calls made by service clients</span>
+    print<span style="color:#f92672">(</span>each_user.name<span style="color:#f92672">)</span>
+
+print <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-----------------------&#34;</span><span style="color:#f92672">)</span>
+
+print <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;This is using client&#34;</span><span style="color:#f92672">)</span>
+
+
+my_session <span style="color:#f92672">=</span> boto3.session.Session<span style="color:#f92672">(</span>profile_name<span style="color:#f92672">=</span>None<span style="color:#f92672">)</span>
+iam_client<span style="color:#f92672">=</span> my_session.client<span style="color:#f92672">(</span>service_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;iam&#39;</span>,region_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;us-east-a&#39;</span><span style="color:#f92672">)</span>
+
+<span style="color:#66d9ef">for</span> each in iam_client.list_users<span style="color:#f92672">()[</span><span style="color:#e6db74">&#39;Users&#39;</span><span style="color:#f92672">]</span>:  <span style="color:#75715e">#in client method we have to search for Users as Dict and with the output we have to playaround</span>
+    print <span style="color:#f92672">(</span>each<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;UserName&#39;</span><span style="color:#f92672">])</span>
+
+
+</code></pre></div>
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2021 K LEKSHMI NARAYAN -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+        </div>
+    </body>

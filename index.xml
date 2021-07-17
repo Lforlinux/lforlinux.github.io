@@ -6,7 +6,16 @@
     <description>Recent content on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Dec 2020 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jul 2021 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boto3 Resource, Client and Session</title>
+      <link>https://lforlinux.github.io/posts/boto3/</link>
+      <pubDate>Thu, 15 Jul 2021 01:23:24 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/boto3/</guid>
+      <description>Core concepts of Boto3   There are few concepts of boto3 (aws sdk) like Session, Resource, Client, Meta, Collections, Paginators In this post we will discuss about the kehy difference between Resource, Client and Session   Session  A session manages state about a particular configuration. By default, a session is created for you when needed. However, it&amp;rsquo;s possible and recommended that in some scenarios you maintain your own session.</description>
+    </item>
+    
     <item>
       <title>Jenkins as a Container</title>
       <link>https://lforlinux.github.io/posts/jenkins-as-docker/</link>
@@ -16,6 +25,15 @@
       <description>Run jenkins as a container with the stateful volume! Why docker as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
     </item>
     
+    <item>
+      <title>Jinja2 template</title>
+      <link>https://lforlinux.github.io/posts/jinja2/</link>
+      <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/jinja2/</guid>
+      <description>Play with kubernets at ease! Alias? What,Why 🤔 this is place holder for jinja2 refenerece
+https://kodekloud.com/courses/656697/lectures/12166609 </description>
+    </item>
     
     <item>
       <title>Kubectl alias</title>

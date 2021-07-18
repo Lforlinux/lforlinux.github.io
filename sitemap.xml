@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://lforlinux.github.io/posts/docker-cli-container-howitworks/</loc>
+    <lastmod>2020-12-18T08:53:27+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lforlinux.github.io/posts/kubectl-alias/</loc>
     <lastmod>2020-12-17T08:53:27+05:30</lastmod>
   </url>

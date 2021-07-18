@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-	<head>
-		<title> Tags &middot; KLN </title>
+    <head>
+        <title> Docker-container-howitworks &middot; KLN </title>
 
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="generator" content="Hugo 0.80.0" />
 
@@ -35,10 +35,10 @@
 
 
 
-	</head>
+    </head>
 
-	<body>
-		<header>
+    <body>
+        <header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -82,26 +82,40 @@
 </nav>
 </header>
 
-		<div class="flex-wrapper">
-			<div class="container wrapper">
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<h1 id=>Tags</h1>
-					</div>
-				</div>
-				<ul id="post-list">
-						
-				</ul>
-				
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/docker-cli-container-howitworks/">Docker-container-howitworks</a></h1>
+                <span class="post-date">2020-12-18 </span>
+                <div class="post-content">
+                    <h2 id="-docker-container-creation---how-it-works">🐳 Docker container creation - How it works!</h2>
+<hr>
+<ul>
+<li>In this post we will see what is happening when we run a command # docker container run -it -d nginx</li>
+<li>We will also discuss some components involved during the container creation process</li>
+</ul>
+<hr>
+<h2 id="docker-cli-docker-">Docker CLI (docker) 💻</h2>
+<hr>
+<p>Docker CLI (docker)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">/usr/bin/docker
+</code></pre></div><p>Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith. But now docker-cli is only responsible for user-friendly communication with docker.</p>
+<p>So the command’s like <code>docker build</code> &hellip; <code>docker run</code> &hellip; are handled by Docker CLI and result in the invocation of dockerd API.</p>
+<hr>
+<h1 id="docker-container-creation-process-flow">Docker container creation process flow</h1>
+<p>When we run a command to create docker container <code>docker run -it -d nginx</code> The process kicked in will be explained on the below diagram</p>
+<p><img src="howitworks-docker.png" alt="Docker"></p>
 
-
-
-			</div>
-			<footer class="footer text-center">
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
 <p>Copyright &copy; 2021 K LEKSHMI NARAYAN -
 </p>
 </footer>
 
-		</div>
-	</body>
-</html>
+        </div>
+    </body>

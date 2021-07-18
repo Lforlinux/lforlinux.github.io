@@ -25,7 +25,16 @@
       <description>Run jenkins as a container with the stateful volume! Why docker as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
     </item>
     
-   
+    <item>
+      <title>Docker-container-howitworks</title>
+      <link>https://lforlinux.github.io/posts/docker-cli-container-howitworks/</link>
+      <pubDate>Fri, 18 Dec 2020 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/docker-cli-container-howitworks/</guid>
+      <description>🐳 Docker container creation - How it works!   In this post we will see what is happening when we run a command # docker container run -it -d nginx We will also discuss some components involved during the container creation process   Docker CLI (docker) 💻  Docker CLI (docker)
+/usr/bin/docker Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith.</description>
+    </item>
+    
     <item>
       <title>Kubectl alias</title>
       <link>https://lforlinux.github.io/posts/kubectl-alias/</link>

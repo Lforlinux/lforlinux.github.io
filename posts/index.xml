@@ -6,7 +6,16 @@
     <description>Recent content in Posts on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jul 2021 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jul 2021 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash scripting - set command </title>
+      <link>https://lforlinux.github.io/posts/bash-set-e/</link>
+      <pubDate>Thu, 22 Jul 2021 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/bash-set-e/</guid>
+      <description>🖥 Bash scripting - set command and its usage   In this post we will see what is set in bash scripting We will also discuss when to use set -e.   Set command Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.</description>
+    </item>
+    
     <item>
       <title>Boto3 Resource, Client and Session</title>
       <link>https://lforlinux.github.io/posts/boto3/</link>

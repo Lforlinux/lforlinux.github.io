@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title> Docker-container-howitworks &middot; KLN </title>
+        <title> Bash scripting - set command  &middot; KLN </title>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -84,26 +84,66 @@
 
         <div class="flex-wrapper">
             <div class="container wrapper">
-                <h1><a href="https://lforlinux.github.io/posts/docker-cli-container-howitworks/">Docker-container-howitworks</a></h1>
-                <span class="post-date">2020-12-18 </span>
+                <h1><a href="https://lforlinux.github.io/posts/bash-set-e/">Bash scripting - set command </a></h1>
+                <span class="post-date">2021-07-22 </span>
                 <div class="post-content">
-                    <h2 id="-docker-container-creation---how-it-works">🐳 Docker container creation - How it works!</h2>
+                    <h2 id="-bash-scripting---set-command-and-its-usage">🖥 Bash scripting - set command and its usage</h2>
 <hr>
 <ul>
-<li>In this post we will see what is happening when we run a command # docker container run -it -d nginx</li>
-<li>We will also discuss some components involved during the container creation process</li>
+<li>In this post we will see what is set in bash scripting</li>
+<li>We will also discuss when to use set -e.</li>
 </ul>
 <hr>
-<h2 id="docker-cli-docker-">Docker CLI (docker) 💻</h2>
-<hr>
-<p>Docker CLI (docker)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">/usr/bin/docker
-</code></pre></div><p>Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith. But now docker-cli is only responsible for user-friendly communication with docker.</p>
-<p>So the command’s like <code>docker build</code> &hellip; <code>docker run</code> &hellip; are handled by Docker CLI and result in the invocation of dockerd API.</p>
-<hr>
-<h1 id="docker-container-creation-process-flow">Docker container creation process flow</h1>
-<p>When we run a command to create docker container <code>docker run -it -d nginx</code> The process kicked in will be explained on the below diagram</p>
-<p><img src="https://raw.githubusercontent.com/Lforlinux/lforlinux.github.io/master/posts/howitworks-docker.png" alt="N|Solid"></p>
+<h2 id="set-command">Set command</h2>
+<p>Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.</p>
+<h2 id="set--e">Set -e</h2>
+<p>sets a shell option to immediately exit if any command being run exits with a non-zero exit code.
+The script will return with the exit code of the failing command.</p>
+<p>From the bash man page</p>
+<p>set -e:</p>
+<blockquote>
+<p>Exit immediately if a pipeline (which may consist of a single simple command), a list, or a compound command (see SHELL GRAMMAR &gt; above), exits with a non-zero status.</p>
+</blockquote>
+<h2 id="set--e-usage">Set -e usage</h2>
+<p>General bash script without set -e ( This script written to fail intentionaly)</p>
+<pre><code>#!/bin/bash
+
+echo &quot;a&quot;
+sleep 2
+echo &quot;b&quot;
+sleep 2
+echod &quot;c&quot;
+sleep 2
+echo &quot;d&quot;
+</code></pre><p>Script execution</p>
+<pre><code> kln@MacBook-Pro  ~  bash check.sh
+a
+b
+check.sh: line 9: echod: command not found
+d
+</code></pre><p>The above code exit code is 0. But the actual script failed in between.</p>
+<pre><code> kln@MacBook-Pro  ~  echo $?
+0
+</code></pre><p>So now we will make use of set -e and see it in action</p>
+<pre><code>#!/bin/bash
+  
+set -e
+
+echo &quot;a&quot;
+sleep 2
+echo &quot;b&quot;
+sleep 2
+echod &quot;c&quot;
+sleep 2
+echo &quot;d&quot;
+       
+</code></pre><pre><code>  kln@MacBook-Pro  ~  bash check.sh
+a
+b
+check.sh: line 9: echod: command not found
+ ✘ kln@MacBook-Pro  ~  echo $?      
+127
+</code></pre><p>So it&rsquo;s evident that with set -e sets a shell option to immediately exit if any command being run exits with a non-zero exit code.</p>
 
                 </div>
                 

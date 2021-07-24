@@ -6,7 +6,18 @@
     <description>Recent content on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jul 2021 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jul 2021 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy vs Reverse Proxy</title>
+      <link>https://lforlinux.github.io/posts/proxy-vs-reverseproxy/</link>
+      <pubDate>Sat, 24 Jul 2021 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/proxy-vs-reverseproxy/</guid>
+      <description>In this post we will see what is proxy and reverse proxy. We will also discuss the differnce between them.   What is proxy? Proxy is an act where someelse doing something for you on your behalf.
+Simple explantion of a proxy act in the below image.
+What is Proxy server? It is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the Internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.</description>
+    </item>
+    
     <item>
       <title>Bash scripting - set command </title>
       <link>https://lforlinux.github.io/posts/bash-set-e/</link>

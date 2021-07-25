@@ -6,7 +6,16 @@
     <description>Recent content in Posts on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jul 2021 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 08:53:27 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins Pipeline</title>
+      <link>https://lforlinux.github.io/posts/declartive-vs-scripted-pipeline/</link>
+      <pubDate>Sun, 25 Jul 2021 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/declartive-vs-scripted-pipeline/</guid>
+      <description>What is Jenkins Pipeline 🤔   Jenkins Pipeline allows us to write the Jenkins build steps in code Pipelines are robust. So if your server undergoes an unpredicted restart, the pipeline will be automatically resumed. Jenkins Pipelines support big projects. You can run many jobs, and even use pipelines in a loop    Jenkins Pipeline format Jenkins Pipeline can be defined by a text file called JenkinsFile. You can implement pipeline as code using JenkinsFile, and this can be defined by using a DSL (Domain Specific Language).</description>
+    </item>
+    
     <item>
       <title>Proxy vs Reverse Proxy</title>
       <link>https://lforlinux.github.io/posts/proxy-vs-reverseproxy/</link>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Jenkins Pipeline &middot; KLN </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lforlinux.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://lforlinux.github.io/'>
+        kln@lforlinux ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://lforlinux.github.io/'>/home/kln</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/posts">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/kln.pdf">~/cv.pdf</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/declartive-vs-scripted-pipeline/">Jenkins Pipeline</a></h1>
+                <span class="post-date">2021-07-25 </span>
+                <div class="post-content">
+                    <h3 id="what-is-jenkins-pipeline-">What is Jenkins Pipeline 🤔</h3>
+<hr>
+<ul>
+<li>Jenkins Pipeline allows us to write the Jenkins build steps in code</li>
+<li>Pipelines are robust. So if your server undergoes an unpredicted restart, the pipeline will be automatically resumed.</li>
+<li>Jenkins Pipelines support big projects. You can run many jobs, and even use pipelines in a loop</li>
+</ul>
+<hr>
+<h3 id="jenkins-pipeline-format">Jenkins Pipeline format</h3>
+<p>Jenkins Pipeline can be defined by a text file called JenkinsFile. You can implement pipeline as code using JenkinsFile, and this can be defined by using a DSL (Domain Specific Language).</p>
+<h3 id="pipeline-syntax">Pipeline Syntax</h3>
+<p>There are two types of syntax can be used when you write the Jenkinsfile.</p>
+<ul>
+<li>Declarative</li>
+<li>Scripted</li>
+</ul>
+<h3 id="difference-beween--declarative-and-scripted-pipeline">Difference beween  Declarative and Scripted Pipeline</h3>
+<ul>
+<li>Declarative pipeline is a relatively new feature that supports the pipeline as code concept. It makes the pipeline code easier to read and write.</li>
+<li>Scripted pipeline uses groovy - Groovy is the scripting language for the java platform.</li>
+<li>No matter of what Pipeline it is Under the hood even the Declarative pipeline will inteprated by groovy in Jenkins.</li>
+</ul>
+<h3 id="declarative-pipeline-example-code">Declarative pipeline Example code</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pipeline <span style="color:#f92672">{</span>
+    agent <span style="color:#f92672">{</span> label <span style="color:#e6db74">&#39;master&#39;</span><span style="color:#f92672">}</span>
+
+    parameters<span style="color:#f92672">{</span>
+        string<span style="color:#f92672">(</span>name:<span style="color:#e6db74">&#39;AWS_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#e6db74">&#39;&#39;</span>, description: <span style="color:#e6db74">&#39;AWS_ACCESS_KEY&#39;</span><span style="color:#f92672">)</span>
+        string<span style="color:#f92672">(</span>name:<span style="color:#e6db74">&#39;AWS_SECRET_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#e6db74">&#39;&#39;</span>, description: <span style="color:#e6db74">&#39;AWS_SECRET_ACCESS_KEY&#39;</span><span style="color:#f92672">)</span>
+        string<span style="color:#f92672">(</span>name:<span style="color:#e6db74">&#39;token&#39;</span>, defaultValue: <span style="color:#e6db74">&#39;&#39;</span>, description: <span style="color:#e6db74">&#39;token&#39;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">}</span>
+    stages <span style="color:#f92672">{</span>
+        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Terraform init&#39;</span><span style="color:#f92672">){</span>
+            steps<span style="color:#f92672">{</span>
+                  sh<span style="color:#f92672">(</span>
+                      <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">                      sh &#39;</span>scripts/terraform-init.sh<span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">                      &#39;&#39;&#39;</span>  
+                  <span style="color:#f92672">)</span>
+            <span style="color:#f92672">}</span>
+
+        <span style="color:#f92672">}</span>
+        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Terraform apply&#39;</span><span style="color:#f92672">){</span>
+            steps<span style="color:#f92672">{</span>
+                  sh<span style="color:#f92672">(</span>
+                      <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">                      sh &#39;</span>scripts/terraform-apply.sh<span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">                      &#39;&#39;&#39;</span>  
+                  <span style="color:#f92672">)</span><span style="color:#ae81ff">5</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="scripted-pipeline-example-code">Scripted pipeline Example code</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Jenkinsfile <span style="color:#f92672">(</span>Scripted Pipeline<span style="color:#f92672">)</span>
+node <span style="color:#f92672">{</span>  
+    stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Build&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        // 
+    <span style="color:#f92672">}</span>
+    stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Test&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        // 
+    <span style="color:#f92672">}</span>
+    stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Deploy&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        // 
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><h2 id="key-differences">Key Differences.</h2>
+<ul>
+<li>Pipeline: This is the user-defined block, which contains all the processes such as build, test, deploy, etc. it is a group of all the stages in a JenkinsFile. All the stages and steps are defined in this block. <strong>It is used in declarative pipeline syntax.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pipeline<span style="color:#f92672">{</span>  
+<span style="color:#f92672">}</span>  
+</code></pre></div><ul>
+<li>Node: The node is a machine on which Jenkins runs is called a node. <strong>A node block is used in scripted pipeline syntax.</strong></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node<span style="color:#f92672">{</span>  
+<span style="color:#f92672">}</span>  
+</code></pre></div>
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2021 K LEKSHMI NARAYAN -
+</p>
+</footer>
+
+        </div>
+    </body>

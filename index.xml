@@ -51,7 +51,7 @@ What is Proxy server? It is a server that sits in front of a group of client mac
       <pubDate>Mon, 28 Dec 2020 01:23:24 +0530</pubDate>
       
       <guid>https://lforlinux.github.io/posts/jenkins-as-docker/</guid>
-      <description>Run jenkins as a container with the stateful volume! Why docker as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
+      <description>Run jenkins as a container with the stateful volume! Why Jenkins as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
     </item>
     
     <item>
@@ -62,6 +62,15 @@ What is Proxy server? It is a server that sits in front of a group of client mac
       <guid>https://lforlinux.github.io/posts/docker-cli-container-howitworks/</guid>
       <description>🐳 Docker container creation - How it works!   In this post we will see what is happening when we run a command # docker container run -it -d nginx We will also discuss some components involved during the container creation process   Docker CLI (docker) 💻  Docker CLI (docker)
 /usr/bin/docker Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith.</description>
+    </item>
+    
+    <item>
+      <title>Kubectl alias</title>
+      <link>https://lforlinux.github.io/posts/k8s-service/</link>
+      <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/k8s-service/</guid>
+      <description>Play with kubernets at ease! Alias? What,Why 🤔   An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command. It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency.</description>
     </item>
     
     <item>

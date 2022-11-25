@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> AWS EKS Application Deploment By Terraform &middot; KLN </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lforlinux.github.io/css/nix.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+      <a class="navbar-brand" id="green-terminal" href='https://lforlinux.github.io/'>
+        kln@lforlinux ~ $
+      </a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href='https://lforlinux.github.io/'>/home/kln</a>
+        </li>
+        
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/posts">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://lforlinux.github.io/kln.pdf">~/cv.pdf</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="flex-wrapper">
+            <div class="container wrapper">
+                <h1><a href="https://lforlinux.github.io/posts/terraform-eks/">AWS EKS Application Deploment By Terraform</a></h1>
+                <span class="post-date">2022-11-25 </span>
+                <div class="post-content">
+                    <hr>
+<h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li>Using this repository, you can provision the application as well as all of your cloud infrastructure with a single command.</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li>Terraform has been used to provision infrastructure on AWS.</li>
+<li>To make provision for application On the AWS EKS, deployment has been performed through using Helm template.</li>
+<li>To fit the Kubernetes design, the NodeJS service has been changed to a microservice.</li>
+<li>Terraform has been converted into a docker container microservice to improve team cooperation by ensuring that everyone uses the same version of the software.</li>
+<li>This project makes use of Makefile to automate the provisioning of the full stack with a single command.</li>
+<li>For convenience of usage, the load and performance testing tool locust has been transformed into a docker container.</li>
+</ul>
+<h2 id="prerequisite">Prerequisite</h2>
+<ul>
+<li>AWS account access</li>
+<li>AWS iam programmatic user access with the follwing policy attached to the user</li>
+<li>AmazonEC2FullAccess,IAMFullAccess,AutoScalingFullAccess,AmazonEKSClusterPolicy,     ￼</li>
+<li>AmazonEKSWorkerNodePolicy,AmazonVPCFullAccess,AmazonEKSServicePolicy,AmazonEKS_CNI_Policy</li>
+</ul>
+<hr>
+<h2 id="how-to-provision-the-infra">How to provision the infra</h2>
+<p>Makefile has been leveraged for the simple approach towards the one-click entire stack deployment.</p>
+<ul>
+<li>GIT Clone this repo</li>
+<li>Configure your AWS credentials.</li>
+<li>Just deploy the entire stack by following single command.</li>
+</ul>
+<pre><code>make deploy
+</code></pre><ul>
+<li>Review the resources and type yes.</li>
+<li>Detailed workflow has been given on the following diagram.</li>
+</ul>
+<h2 id="workflow-diagram">Workflow diagram.</h2>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/aws-terraform-nodejs/master/workflow.png" alt="N|Solid"></p>
+<hr>
+<hr>
+<h2 id="architecture">Architecture.</h2>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/aws-terraform-nodejs/master/architecture.png" alt="image"></p>
+<h2 id="how-to-see-the-application-and-access-the-kubernetes-cluster">How to see the application and access the Kubernetes cluster.</h2>
+<ul>
+<li>If you are running the <code>make deploy</code> inside laptop/ AWS instance. The Kubernetes kubeconfig will be posted on the same directory. You can make use of this kubeconfig if you are using any K8s tools like Lens or any other k8s IDE.</li>
+<li>Another way to access the k8s cluster is via kubectl.</li>
+<li>set the context by the following command after <code>make deploy</code></li>
+<li><code>aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)</code></li>
+<li>Above command will set the context to use the kubectl.</li>
+<li>Now ALB URL will be available by <code>kubectl get svc</code> or go to the AWS ALB console and copy and use it on any browser.</li>
+</ul>
+<pre><code>[ec2-user@ip-172-31-83-136 aws-terraform-nodejs]$ kubectl get svc
+NAME                              TYPE           CLUSTER-IP     EXTERNAL-IP                                                              PORT(S)        AGE
+nodejsapplication-helm-nodejs     LoadBalancer   172.20.83.16   a0a551a21584c449a961842a873b38c6-718686509.us-east-1.elb.amazonaws.com   80:31924/TCP   18m
+</code></pre><ul>
+<li>Port 80 for the NodeJS application is open on the internet.  </li>
+</ul>
+<h2 id="how-fault-tolerance-with-high-availability-achieved">How fault tolerance with high availability achieved</h2>
+<ul>
+<li>K8s resources are deployed as deployment and mapped to Horizontal Pod Autoscaler.</li>
+<li>HPA will look after the pod&rsquo;s memory and CPU utilization and it will increase the pods' count and decrease the pod count if the load pressure comes under control.  </li>
+<li>K8s worker nodes are deployed are AWS Auto Scaling Group.  </li>
+</ul>
+<h2 id="performance-testing--load-testing">Performance Testing / Load Testing.  </h2>
+<ul>
+<li>use the following command to do performance/load testing.</li>
+</ul>
+<pre><code># export TARGET_HOST=Place-your-ALB-URL-Here
+
+# docker run -i --rm -v $PWD/reports:/opt/reports -v ~/.aws:/root/.aws -v $PWD/:/opt/script -v $PWD/credentials:/meta/credentials -p 8089:8089 -e ROLE=standalone -e TARGET_HOST=$TARGET_HOST -e LOCUST_FILE=https://raw.githubusercontent.com/zalando-incubator/docker-locust/master/example/simple.py -e SLAVE_MUL=4 -e AUTOMATIC=False registry.opensource.zalan.do/tip/docker-locust
+</code></pre><ul>
+<li>open your local browser and use localhost:8089 (The IP varies Depending on where you are running the above docker command)</li>
+<li>Give the user and load iteration above 1000 concurrent users to generate the load.</li>
+<li>Monitor the pod&rsquo;s counts and HPA as per the load the pod&rsquo;s count will be increased via HPA component.</li>
+</ul>
+<h2 id="application-lifecycle-management-with-zero-downtime">Application lifecycle Management with zero downtime.</h2>
+<ul>
+<li>Make sure to do the code change for the Nodejs app given on this same directory.</li>
+<li>Do docker build and push it to the Docker registry</li>
+<li>Once we have the latest image available create a branch from this repository</li>
+<li>append new image tag on the NodeJS helm chart values.yaml file.</li>
+<li>Create a PR</li>
+<li>Apply the change by running terraform <code>make deploy</code></li>
+<li>Deployment will be performed by Helm. The K8s deployment will take care of rolling updates on the pods to achieve zero downtime.  </li>
+</ul>
+<h2 id="enhancement">Enhancement</h2>
+<ul>
+<li>The whole orchestration can be performed via Jenkins as a scripted/Declatrative pipeline</li>
+<li>Helm chart can be packaged and placed in a separate registry which will give more leverage for our App lifecycle management.</li>
+<li>GitOps model can be implemented via the branch build and PR&rsquo;s terraform can be posted on the PR itself via GitHook from Jenkins slave to Git PR. Once approved promotion and apply parts can be done via the pipeline. </li>
+</ul>
+
+                </div>
+                
+                <div class="post-comments">
+                    
+                </div>
+                
+            </div>
+            <footer class="footer text-center">
+<p>Copyright &copy; 2022 K LEKSHMI NARAYAN -
+</p>
+</footer>
+
+        </div>
+    </body>

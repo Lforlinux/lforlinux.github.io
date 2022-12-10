@@ -6,7 +6,16 @@
     <description>Recent content on KLN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Nov 2022 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2022 01:23:24 +0530</lastBuildDate><atom:link href="https://lforlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview of ChatGPT and DevOps use cases</title>
+      <link>https://lforlinux.github.io/posts/chatgpt/</link>
+      <pubDate>Sat, 10 Dec 2022 01:23:24 +0530</pubDate>
+      
+      <guid>https://lforlinux.github.io/posts/chatgpt/</guid>
+      <description>What is ChatGPT?  GPT (Generative Pretrained Transformer) is a type of natural language processing (NLP) model developed by OpenAI. It is a large, powerful model that can generate human-like text based on the input it receives. It is optimized for generating responses to user input in a conversational context, and it can be trained on specific domains  What is the significane of it?   Sam Altman, the CEO and founder of OpenAI, recently announced the official release of the openGPT one week earlier(on November 30).</description>
+    </item>
+    
     <item>
       <title>AWS EKS Application Deploment By Terraform</title>
       <link>https://lforlinux.github.io/posts/terraform-eks/</link>

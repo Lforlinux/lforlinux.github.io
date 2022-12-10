@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lforlinux.github.io/posts/terraform-eks/</loc>
-    <lastmod>2022-11-25T01:23:24+05:30</lastmod>
+    <loc>https://lforlinux.github.io/</loc>
+    <lastmod>2022-12-10T01:23:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://lforlinux.github.io/</loc>
-    <lastmod>2022-11-25T01:23:24+05:30</lastmod>
+    <loc>https://lforlinux.github.io/posts/chatgpt/</loc>
+    <lastmod>2022-12-10T01:23:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://lforlinux.github.io/posts/</loc>
+    <lastmod>2022-12-10T01:23:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lforlinux.github.io/posts/terraform-eks/</loc>
     <lastmod>2022-11-25T01:23:24+05:30</lastmod>
   </url>
   

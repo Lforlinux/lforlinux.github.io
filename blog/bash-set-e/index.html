@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="The website of Lekshmi Kolappan, DevOps/SRE Engineer">
+  <meta name="description" property="og:description" content="Master Bash Scripting: Set Command">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -36,8 +36,7 @@
   
   <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
 
-  <link rel="alternate" type="application/rss+xml" href="https://example.com/tags/index.xml" title="Lekshmi Kolappan" />
-<script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -46,7 +45,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body class="tags">
+<body class="blog">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -74,7 +73,8 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
                 
                 
                 
@@ -141,7 +141,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
             
             
             
@@ -182,22 +182,162 @@
 
 
 
+<style>
+  p {
+    margin: 0
+  }
 
-<section class="uk-margin-large-bottom">
-        <h1 class="uk-heading-large uk-text-center">Tags</h1>
-</section>
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
 
 
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Bash scripting - set command </h1>
+    <p class="uk-text-center uk-text-lead">Master Bash Scripting: Set Command</p>
+    <p class="uk-text-center">Published on Jul 22, 2021</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    
 
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid uk-height-match="target: > div > div > .card-body">
-            
+    <hr class="full-width">
+    
 
-        </div>
+    <div class="content">
+      <h2 id="-bash-scripting---set-command-and-its-usage">🖥 Bash scripting - set command and its usage</h2>
+<hr>
+<ul>
+<li>In this post we will see what is set in bash scripting</li>
+<li>We will also discuss when to use set -e.</li>
+</ul>
+<hr>
+<h2 id="set-command">Set command</h2>
+<p>Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.</p>
+<h2 id="set--e">Set -e</h2>
+<p>sets a shell option to immediately exit if any command being run exits with a non-zero exit code.
+The script will return with the exit code of the failing command.</p>
+<p>From the bash man page</p>
+<p>set -e:</p>
+<blockquote>
+<p>Exit immediately if a pipeline (which may consist of a single simple command), a list, or a compound command (see SHELL GRAMMAR &gt; above), exits with a non-zero status.</p>
+</blockquote>
+<h2 id="set--e-usage">Set -e usage</h2>
+<p>General bash script without set -e ( This script written to fail intentionaly)</p>
+<pre><code>#!/bin/bash
+
+echo &quot;a&quot;
+sleep 2
+echo &quot;b&quot;
+sleep 2
+echod &quot;c&quot;
+sleep 2
+echo &quot;d&quot;
+</code></pre><p>Script execution</p>
+<pre><code> kln@MacBook-Pro  ~  bash check.sh
+a
+b
+check.sh: line 9: echod: command not found
+d
+</code></pre><p>The above code exit code is 0. But the actual script failed in between.</p>
+<pre><code> kln@MacBook-Pro  ~  echo $?
+0
+</code></pre><p>So now we will make use of set -e and see it in action</p>
+<pre><code>#!/bin/bash
+  
+set -e
+
+echo &quot;a&quot;
+sleep 2
+echo &quot;b&quot;
+sleep 2
+echod &quot;c&quot;
+sleep 2
+echo &quot;d&quot;
+       
+</code></pre><pre><code>  kln@MacBook-Pro  ~  bash check.sh
+a
+b
+check.sh: line 9: echod: command not found
+ ✘ kln@MacBook-Pro  ~  echo $?      
+127
+</code></pre><p>So it&rsquo;s evident that with set -e sets a shell option to immediately exit if any command being run exits with a non-zero exit code.</p>
 
     </div>
+  </div>
+  </div>
 </section>
+
 
 
     </div>

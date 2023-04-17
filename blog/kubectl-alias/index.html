@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Boost Your Productivity with K8s Aliases">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://kayelen.com/resume/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://example.com"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://kayelen.com/resume/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Kubectl alias</h1>
+    <p class="uk-text-center uk-text-lead">Boost Your Productivity with K8s Aliases</p>
+    <p class="uk-text-center">Published on Dec 17, 2020</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h2 id="_play-with-kubernets-at-ease_"><em>Play with kubernets at ease!</em></h2>
+<h3 id="alias-whatwhy-">Alias? What,Why 🤔</h3>
+<hr>
+<ul>
+<li>An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command.</li>
+<li>It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency. A simple example is setting default options on commands to avoid having to type them each time a command is run</li>
+<li>✨ Be lazy - use less keys on your keyboard ✨ 😜</li>
+</ul>
+<hr>
+<p>Start your day with a list of things you know you tend to waste time on
+As <em>Alicia Rades</em> writes on the <a href="https://www.lifehack.org/author/alicia-j-rades">lifehack</a></p>
+<blockquote>
+<p>When you notice you’re wasting time,
+add that time-waster to the automation.
+This will serve as a reminder of things
+you shouldn’t allow yourself to do google
+around commands as an example here.</p>
+</blockquote>
+<h3 id="lets-get-started">Let&rsquo;s get started!</h3>
+<p>Open your favorite Terminal and run these command.</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#5918bb;font-weight:bold">alias</span> k<span style="color:#2c5dcd">=</span>kubectl
+<span style="color:#5918bb;font-weight:bold">alias</span> kl<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl logs --tail 100 -f&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> ke<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl get events -o wide&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> knks<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl -n kube-system&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> knkp<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl -n kube-public&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> kdp<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl describe pod&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> ked<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl edit deployment&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> kr<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl get pods -o wide| grep -vE &#34;1/1|2/2|3/3|4/4|Completed&#34;&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> kr1<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl get pods | grep &#34;0/&#34; | grep -Eiv &#34;Completed&#34;&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> ksc<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl get pods -o wide | grep -Eiv &#34;1/1|0/1&#34;&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> klr<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;kubectl get deployments -o yaml | grep &#34;path: /api&#34;&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> kx<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;function _kx(){ kubectl exec -it $1 sh; };_kx&#39;</span>
+<span style="color:#5918bb;font-weight:bold">alias</span> kt<span style="color:#2c5dcd">=</span><span style="color:#2c5dcd;font-weight:bold">$(</span>kubectl -n kube-system describe secret <span style="color:#2c5dcd;font-weight:bold">$(</span>kubectl -n kube-system get secret | grep admin-user | awk <span style="color:#0c6">&#39;{print $1}&#39;</span><span style="color:#2c5dcd;font-weight:bold">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>How to use these alias in realtime? 🥳</p>
+<p>Below command will follow last 100 line of pods logs with ease 💪🏽.</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kl podname 
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>Kubectl official <a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Cheatsheet</a>.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2023
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

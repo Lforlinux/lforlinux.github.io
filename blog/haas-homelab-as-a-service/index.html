@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Building your own cloud, one container at a time">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">HaaS: Homelab as a Service</h1>
+    <p class="uk-text-center uk-text-lead">Building your own cloud, one container at a time</p>
+    <p class="uk-text-center">Published on Jun 09, 2024</p>
+    <p class="uk-text-center">Reading time: 2 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>In today&rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&rdquo; Having worked with open-source software from the very beginning of my career, I&rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️</p>
+<p>For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️. Like many hobbyists, I started with the world&rsquo;s tiniest computer — the Raspberry Pi 🥧. I paired it with open-source NAS operating systems like TrueNAS and OpenMediaVault, experimenting for a few years. But while these setups were fun and educational, they fell short when it came to performance and reliability. ⚡️❌</p>
+<p>Eventually, I realized that what I truly needed was a dedicated, energy-efficient, and stable machine with built-in RAID support. After weighing the pros and cons of building a custom PC (spoiler: high power consumption was a deal-breaker 🔌⚡️), I turned to pre-built NAS systems.</p>
+<p>That&rsquo;s when I found the sweet spot: Synology 🏆. With its own battle-tested OS, native support for RAID, and the ability to run Docker containers out-of-the-box, it ticked all the boxes. I finally landed on the Synology DS923+, a powerful 4-bay NAS that&rsquo;s capable of not only storing my data, but running my self-hosted stack — from media servers to music libraries, all without depending on third-party cloud services. ☁️🚫</p>
+<p>🧱 <strong>Building the Stack: What I&rsquo;m Running on My Synology NAS</strong></p>
+<p>Once my Synology DS923+ was up and running, the next challenge was clear: How do I bring all the self-hosted pieces together? Thankfully, Synology&rsquo;s built-in support for Docker (via the Container Manager package) gave me a solid launchpad.</p>
+<p>I quickly realized I needed more control and visibility over my containers — and that&rsquo;s where Portainer came in.</p>
+<p>🧩 <strong>Stack Overview</strong></p>
+<p>Here&rsquo;s a look at what powers my self-hosted ecosystem:</p>
+<p>✅ <strong>Portainer: My Container HQ</strong></p>
+<p>The very first thing I deployed was Portainer, a lightweight container management UI that makes spinning up and managing Docker stacks incredibly simple.</p>
+<p>Rather than writing and tweaking endless <code>docker-compose.yml</code> files via SSH, Portainer gives me a clean web UI to manage containers, volumes, networks, and even registries — all from the browser.</p>
+<p>🖥️ <strong>SSH Access ( Who else doesn&rsquo;t like CLI 😎)</strong></p>
+<p>Of course, I couldn&rsquo;t resist enabling SSH access to my NAS. While Portainer handles most container lifecycle tasks, I often find myself jumping into the terminal for:</p>
+<ul>
+<li>Troubleshooting logs</li>
+<li>Volume mounts and permissions</li>
+<li>One-off container commands</li>
+<li>Syncing with external storage (e.g. <code>rsync</code>, <code>rclone</code>)</li>
+</ul>
+<p>🔐 <strong>Tailscale: Zero-Config VPN</strong></p>
+<p>To securely access my self-hosted stack from anywhere in the world, I set up a Tailscale VPN node on my NAS.</p>
+<p>My current stacks are running inside Portainer.</p>
+<p><img src="/Users/apple/Documents/GIT/hugo-new-site/images/portainer.png" alt="Portainer Dashboard"></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

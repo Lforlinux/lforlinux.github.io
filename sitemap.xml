@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://l4linux.com/blog/haas-homelab-as-a-service/</loc>
+    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://l4linux.com/blog/chatgpt/</loc>
     <lastmod>2022-12-10T01:23:24+05:30</lastmod>
   </url>
@@ -65,11 +70,6 @@
   <url>
     <loc>https://l4linux.com/portfolio/jenkins-as-a-container/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://l4linux.com/blog/first-blog/</loc>
-    <lastmod>2019-12-31T12:14:34+06:00</lastmod>
   </url>
   
   <url>

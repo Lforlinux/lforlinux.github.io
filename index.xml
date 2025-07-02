@@ -8,6 +8,16 @@
     <language>en-gb</language>
     <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://l4linux.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>HaaS: Homelab as a Service</title>
+      <link>https://l4linux.com/blog/haas-homelab-as-a-service/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://l4linux.com/blog/haas-homelab-as-a-service/</guid>
+      <description>In today&amp;rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &amp;ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&amp;rdquo; Having worked with open-source software from the very beginning of my career, I&amp;rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️
+For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️.</description>
+    </item>
+    
+    <item>
       <title>Overview of ChatGPT and DevOps use cases</title>
       <link>https://l4linux.com/blog/chatgpt/</link>
       <pubDate>Sat, 10 Dec 2022 01:23:24 +0530</pubDate>
@@ -98,17 +108,6 @@ What is Proxy server? It is a server that sits in front of a group of client mac
       
       <guid>https://l4linux.com/portfolio/jenkins-as-a-container/</guid>
       <description>Run jenkins as a container with the stateful volume! Why Jenkins as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
-    </item>
-    
-    <item>
-      <title>Making a new Website</title>
-      <link>https://l4linux.com/blog/first-blog/</link>
-      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
-      
-      <guid>https://l4linux.com/blog/first-blog/</guid>
-      <description>For a long time this website has had a couple of links to contact me, but those days are over.
-Now I have a brand new Hugo website with a custom written theme complete with
- A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog  Why Hugo? The first question is why a site builder?</description>
     </item>
     
   </channel>

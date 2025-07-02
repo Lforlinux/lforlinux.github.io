@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="Jenkins as a container">
+  <meta name="description" property="og:description" content="My first blog, introducing my new website">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
   <meta name="generator" content="Hugo 0.80.0" />
@@ -45,7 +45,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body class="portfolio">
+<body class="blog">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -73,18 +73,18 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 <li class="uk-active"><a style="font-size: 18px; text-transform:none"
-                        href="/portfolio">Portfolio</a></li>
+                        href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
                 
                 
                 
@@ -141,7 +141,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
             
             
             
@@ -151,7 +151,7 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
             
             
             
@@ -265,161 +265,31 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">Jenkins as a container</h1>
-    <p class="uk-text-center uk-text-lead">Jenkins as a container</p>
-    <p class="uk-text-center">Published on Jun 19, 2020</p>
-    <p class="uk-text-center">Reading time: 2 minutes.</p>
-    
-
-    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
-      
-
-    
-
-
-    
-      <div>
-        
-        <a class="uk-button uk-button-default" href="https://github.com/Lforlinux/jenkins-pipeline"> <span uk-icon="icon: github"></span>
-          Github</a>
-        
-      </div>
-      
-    </div>
-
+    <h1 class="uk-text-center uk-heading-medium">Making a new Website</h1>
+    <p class="uk-text-center uk-text-lead">My first blog, introducing my new website</p>
+    <p class="uk-text-center">Published on Dec 31, 2019</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
     
 
     <hr class="full-width">
-    
-    
-    <h2 class="uk-text-center uk-heading-small">Built with</h2>
-
-    <section >
-      <div class="uk-container">
-
-        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
-             uk-grid>
-          
-          <div class="imagemargin">
-            <a href="https://www.jenkins.io/">
-            <img class="contain skills" src="https://www.zend.com/sites/default/files/image/2019-09/logo-jenkins.jpg" alt="Jenkins" loading="lazy" style="cursor: pointer">
-            </a>
-          </div>
-          
-          <div class="imagemargin">
-            <a href="https://www.docker.com/">
-            <img class="contain skills" src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker" loading="lazy" style="cursor: pointer">
-            </a>
-          </div>
-          
-        </div>
-
-      </div>
-
-    </section>
-
-    <hr class="full-width">
-    
     
 
     <div class="content">
-      <h2 id="_run-jenkins-as-a-container-with-the-stateful-volume_"><em>Run jenkins as a container with the stateful volume!</em></h2>
-<h3 id="why-jenkins-as-a-container-">Why Jenkins as a container 🤔</h3>
+      <p>For a long time this website has had a couple of links to contact me, but those days are over.</p>
+<p>Now I have a brand new Hugo website with a custom written theme complete with</p>
 <ul>
-<li>It&rsquo;s helps simplify the installation process.</li>
-<li>Decrease dependency errors.</li>
-<li>The Turnaround time for an Jenkins server installation is just few minutes.</li>
-<li>Cross platform compatible.</li>
+<li>A homepage with more social links, and description of my skills</li>
+<li>An about page with description of who I am</li>
+<li>A portfolio page to showcase all my projects</li>
+<li>A blog</li>
 </ul>
-<h3 id="why-do-we-need-a-stateful-volume">Why do we need a stateful volume!🤨</h3>
-<ul>
-<li>Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly. As in we will setting up the users, credentials inside Jenkins so it is important to save this as a stateful volume.</li>
-</ul>
-<h3 id="lets-get-started-">Let&rsquo;s get started! 🎬</h3>
-<p>Create the volume for Jenkins on Docker host.</p>
-<pre><code>
-# docker volume create jenkins-data 
-</code></pre><p>To check and confirm if the volume is created for us</p>
-<pre><code> # docker volume ls
- DRIVER              VOLUME NAME
- local               jenkins-data
-
-</code></pre><p>Execute the following command to run the jenkins as a container.</p>
-<pre><code>    docker run --name klnjenkins \
-    --rm --detach \
-    --publish 8080:8080 \
-    --publish 50000:50000 \
-    --volume jenkins-data:/var/jenkins_home \
-    jenkins/jenkins:lts
-</code></pre><table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&ndash;name</td>
-<td>name of the container</td>
-</tr>
-<tr>
-<td>&ndash;rm</td>
-<td>Automatically removes the Docker container (the instance of the Docker image) when it is shut down.</td>
-</tr>
-<tr>
-<td>&ndash;publish</td>
-<td>Exposes the Docker daemon port on the host machine</td>
-</tr>
-<tr>
-<td>&ndash;volume</td>
-<td>Maps the /var/jenkins_home directory inside the container to the Docker volume named jenkins-data.</td>
-</tr>
-<tr>
-<td>&ndash;detach</td>
-<td>Runs the Docker container in the background</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note:</strong> We have exposed our 8080 port to assess our Jenkins server modify if you want to use different port.</p>
-<hr>
-<ul>
-<li>Open your browser and with docker host machine ip or <em><strong>localhost:8080</strong></em> if it&rsquo;s a localhost. You will be seeing an unlock jenkins screen like below.</li>
-</ul>
-<p><img src="https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg" alt="N|Solid"></p>
-<ul>
-<li>To get our intialadmin password, you can grab it from the docker container logs.</li>
-</ul>
-<pre><code>docker logs klnjenkins
-</code></pre><p><img src="https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-02-copying-initial-admin-password.png" alt="N|Solid"></p>
-<ul>
-<li>Now copy the password and paste it on the browser and continue the installation with the <em>suggested plugins</em> as below, if you are beginner level user of jenkins</li>
-</ul>
-<p><img src="https://assets.digitalocean.com/articles/jenkins-install-ubuntu-1604/jenkins-customize.png" alt="N|Solid"></p>
-<ul>
-<li>
-<p>Create the user along with password if you want a separate user for jenkins server else skip and use as admin. Remember, admin user will not have password by default but you can set it later from inside via manage jenkins.</p>
-</li>
-<li>
-<p>We are all set now!🥁 jenkins is ready to use via docker container 🥂.</p>
-</li>
-</ul>
-<p><img src="https://boozallen.github.io/sdp-docs/learning-labs/1/local-development/_images/jenkins-home-page.png" alt="N|Solid"></p>
-<p>How to confirm if our state of the works of persisted? 🙋🏽‍♂️</p>
-<ul>
-<li>Create any hello world job with some name.</li>
-<li>Kill the docker container of jenkins.</li>
-</ul>
-<p>Now run the container with the command as above</p>
-<pre><code>    docker run --name klnjenkins \
-    --rm --detach \
-    --publish 8080:8080 \
-    --publish 50000:50000 \
-    --volume jenkins-data:/var/jenkins_home \
-    jenkins/jenkins:lts
-</code></pre><ul>
-<li>Now we can assess the jenkins via the same ip:port with the previously created credentials and we can see our pipeline jobs persisted! 🤩🎉🎉</li>
-</ul>
+<h3 id="why-hugo">Why Hugo?</h3>
+<p>The first question is why a <em>site builder</em>? I&rsquo;m competent at web development, why not just write it all myself? The markdown processing makes it much easier to just write words, not having to think about the formatting, and if I&rsquo;m going to blog often, then I&rsquo;ll need that.</p>
+<p>Next it gets to why Hugo? why not Jekyll or any of the other vast array of site builders? The answer to that is sadly rather boring, it had a theme I liked the look of, in particular <a href="https://github.com/themefisher/kross-hugo">this theme</a>, and it had an MIT license, so I could publish and tweak it as much as I wanted to.</p>
+<h3 id="why-start-blogging">Why start blogging?</h3>
+<p>A very good question. For one it would allow me to showcase my skills more than just a portfolio would, not everything fits under the umbrella of a portfolio, but I can blog about whatever I want. Secondly is to act as a reminder of how I do things, if I blog my process when I do technical things, I&rsquo;ll always be able to look back and see how I did it if I ever have to do it again.</p>
+<h3 id="so-what-can-i-expect-to-see-in-the-blog">So what can I expect to see in the blog?</h3>
+<p>The current plan is for the vast majority of posts to be technical guides on how to do things, but there might be some variety if I want to blog about events.</p>
 
     </div>
   </div>

@@ -3,97 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kayelen.com/blog/chatgpt/</loc>
+    <loc>https://l4linux.com/blog/chatgpt/</loc>
     <lastmod>2022-12-10T01:23:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/declartive-vs-scripted-pipeline/</loc>
+    <loc>https://l4linux.com/blog/declartive-vs-scripted-pipeline/</loc>
     <lastmod>2021-07-25T08:53:27+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/proxy-vs-reverseproxy/</loc>
+    <loc>https://l4linux.com/blog/proxy-vs-reverseproxy/</loc>
     <lastmod>2021-07-24T08:53:27+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/bash-set-e/</loc>
+    <loc>https://l4linux.com/blog/bash-set-e/</loc>
     <lastmod>2021-07-22T08:53:27+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/boto3/</loc>
+    <loc>https://l4linux.com/blog/boto3/</loc>
     <lastmod>2021-07-15T01:23:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/jenkins-as-docker/</loc>
+    <loc>https://l4linux.com/blog/jenkins-as-docker/</loc>
     <lastmod>2020-12-28T01:23:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/docker-cli-container-howitworks/</loc>
+    <loc>https://l4linux.com/blog/docker-cli-container-howitworks/</loc>
     <lastmod>2020-12-18T08:53:27+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/kubectl-alias/</loc>
+    <loc>https://l4linux.com/blog/kubectl-alias/</loc>
     <lastmod>2020-12-17T08:53:27+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/categories/aws/</loc>
+    <loc>https://l4linux.com/categories/aws/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/portfolio/terraform-eks/</loc>
+    <loc>https://l4linux.com/portfolio/terraform-eks/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/categories/</loc>
+    <loc>https://l4linux.com/categories/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/categories/docker/</loc>
+    <loc>https://l4linux.com/categories/docker/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/portfolio/jenkins-as-a-container/</loc>
+    <loc>https://l4linux.com/portfolio/jenkins-as-a-container/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/about/</loc>
+    <loc>https://l4linux.com/blog/first-blog/</loc>
+    <lastmod>2019-12-31T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l4linux.com/about/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/blog/</loc>
+    <loc>https://l4linux.com/blog/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/contact/</loc>
+    <loc>https://l4linux.com/contact/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/portfolio/</loc>
+    <loc>https://l4linux.com/portfolio/</loc>
     <lastmod>2019-05-12T12:14:34+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/</loc>
+    <loc>https://l4linux.com/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kayelen.com/tags/</loc>
+    <loc>https://l4linux.com/tags/</loc>
   </url>
   
 </urlset>

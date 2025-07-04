@@ -268,7 +268,7 @@
     <h1 class="uk-text-center uk-heading-medium">Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</h1>
     <p class="uk-text-center uk-text-lead">How I built a lossless, self-hosted music server on my Synology NAS.</p>
     <p class="uk-text-center">Published on Jun 09, 2024</p>
-    <p class="uk-text-center">Reading time: 4 minutes.</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
     
 
     <hr class="full-width">
@@ -281,7 +281,7 @@
 <p>Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</p>
 </blockquote>
 <h2 id="-why-i-decided-to-host-my-own-music-server">🎯 Why I Decided to Host My Own Music Server</h2>
-<p>My journey into self-hosting started with file storage and backups, but I always knew I’d eventually get to music — a deeply personal part of my daily life. After experimenting with Raspberry Pi NAS setups and finally settling on the Synology DS923+ (more on that in my previous post), it was time to bring my music dreams to life.</p>
+<p>My journey into self-hosting started with file storage and backups, but I always knew I’d eventually get to music — a deeply personal part of my daily life. After experimenting with Raspberry Pi NAS setups and finally settling on the Synology DS923+ (<a href="https://l4linux.com/blog/haas-homelab-as-a-service/">more on that in my previous post</a>), it was time to bring my music dreams to life.</p>
 <h2 id="-the-frustration-with-streaming">😤 The Frustration with Streaming</h2>
 <p>Services like Spotify and YouTube Music are convenient — but only to a point. Once you start paying attention to audio quality, especially with decent headphones, you start noticing:</p>
 <ul>
@@ -423,7 +423,7 @@
 </span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">write_ytdl_config</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;true&#39;</span><span style="color:#cbcbcb">
 </span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
 </span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/appdata:/app/appdata<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/Music/incoming:/app/audio <span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/Music/:/app/audio <span style="color:#cbcbcb">
 </span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/video:/app/video<span style="color:#cbcbcb">
 </span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/subscriptions:/app/subscriptions<span style="color:#cbcbcb">
 </span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/users:/app/users<span style="color:#cbcbcb">
@@ -450,7 +450,7 @@
 <h2 id="-architecture-overview">🗺️ Architecture Overview</h2>
 <p>Below is a diagram of how everything fits together:</p>
 <!-- raw HTML omitted -->
-<p><img src="/images/plexamp.png" alt="Plexamp Mobile App Screenshot">
+<p><img src="https://raw.githubusercontent.com/Lforlinux/lforlinux.github.io/refs/heads/master/images/portfolio/plexamp.png" alt="Plexamp Mobile App Screenshot">
 <em>Plexamp: My go-to music player for a high-fidelity, self-hosted experience.</em></p>
 <hr>
 <h2 id="-listening-setup-audiophile-on-a-budget">🎧 Listening Setup: Audiophile on a Budget</h2>
@@ -464,6 +464,29 @@
 </ul>
 <p>Pair this with a lossless FLAC stream from your own server, and you’re getting an audiophile-grade experience for a fraction of the price of a streaming subscription and AirPods.</p>
 <hr>
+<h2 id="-sourcing-flac-media-a-topic-of-its-own">🎼 Sourcing FLAC Media: A Topic of Its Own</h2>
+<p>Building a high-fidelity music library starts with collecting quality FLAC files—and that’s a journey worth its own deep dive! There are several ways to build your collection:</p>
+<ul>
+<li>
+<p><strong>Buy FLAC Albums Online:</strong><br>
+Support artists and get lossless audio directly from reputable sources:</p>
+<ul>
+<li><a href="https://www.qobuz.com/">Qobuz</a> – Buy and download FLAC albums in various resolutions.</li>
+<li><a href="https://www.7digital.com/">7digital</a> – Wide selection of FLAC tracks and albums.</li>
+<li><a href="https://hindi-lossless.blogspot.com/">Hindi Lossless</a> – A blog for Hindi FLAC music collections.</li>
+<li><a href="https://www.tamilflac.com/">TamilFLAC</a> – India’s No.1 lossless music shop &amp; downloads.</li>
+</ul>
+</li>
+<li>
+<p><strong>Community Recommendations:</strong><br>
+Music forums and audiophile communities often share tips on where to find high-quality, legal FLAC downloads.</p>
+</li>
+<li>
+<p><strong>And yes, there’s always Telegram…</strong><br>
+Some music enthusiasts use Telegram channels to share and discover FLAC collections. Just remember to respect copyright and support artists when you can!</p>
+</li>
+</ul>
+<p><em>Stay tuned for a future post where I’ll share my favorite methods and tips for building a top-notch FLAC library!</em></p>
 <h2 id="-final-thoughts">📝 Final Thoughts</h2>
 <p>There’s a strange joy in pressing play on a song and knowing it’s yours, stored on your hardware, playing through your software, and sounding the way it was recorded.</p>
 <p>Self-hosting my music is about more than just sound quality — it’s about control, privacy, and a love for technology. It’s about owning the entire stack, from disk to driver.</p>

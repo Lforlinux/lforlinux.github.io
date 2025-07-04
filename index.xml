@@ -18,6 +18,17 @@ For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄
     </item>
     
     <item>
+      <title>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</title>
+      <link>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</guid>
+      <description>🎵 Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup
+In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:
+ Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</description>
+    </item>
+    
+    <item>
       <title>Overview of ChatGPT and DevOps use cases</title>
       <link>https://l4linux.com/blog/chatgpt/</link>
       <pubDate>Sat, 10 Dec 2022 01:23:24 +0530</pubDate>

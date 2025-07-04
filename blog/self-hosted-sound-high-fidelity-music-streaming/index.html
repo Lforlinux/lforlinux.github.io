@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="How I built a lossless, self-hosted music server on my Synology NAS.">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</h1>
+    <p class="uk-text-center uk-text-lead">How I built a lossless, self-hosted music server on my Synology NAS.</p>
+    <p class="uk-text-center">Published on Jun 09, 2024</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <p>🎵 <strong>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</strong></p>
+<p>In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:</p>
+<blockquote>
+<p>Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</p>
+</blockquote>
+<h2 id="-why-i-decided-to-host-my-own-music-server">🎯 Why I Decided to Host My Own Music Server</h2>
+<p>My journey into self-hosting started with file storage and backups, but I always knew I’d eventually get to music — a deeply personal part of my daily life. After experimenting with Raspberry Pi NAS setups and finally settling on the Synology DS923+ (more on that in my previous post), it was time to bring my music dreams to life.</p>
+<h2 id="-the-frustration-with-streaming">😤 The Frustration with Streaming</h2>
+<p>Services like Spotify and YouTube Music are convenient — but only to a point. Once you start paying attention to audio quality, especially with decent headphones, you start noticing:</p>
+<ul>
+<li>Artifacts and muddiness in MP3s</li>
+<li>Lack of instrument separation</li>
+<li>Inconsistent mastering across tracks</li>
+<li>And most importantly: no real control</li>
+</ul>
+<p>Even the platforms that do offer lossless (like Apple Music or Tidal HiFi) either cost more or lock you into proprietary apps and ecosystems.</p>
+<h2 id="-understanding-audio-quality-why-flac-wins">🎧 Understanding Audio Quality: Why FLAC Wins</h2>
+<p>Let’s compare a few popular formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Bitrate</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MP3 (High)</td>
+<td>~320 kbps</td>
+<td>Lossy</td>
+<td>Decent for casual listening, but data is discarded forever</td>
+</tr>
+<tr>
+<td>CD Audio</td>
+<td>~1,411 kbps</td>
+<td>Uncompressed PCM</td>
+<td>Full resolution, classic standard</td>
+</tr>
+<tr>
+<td>FLAC</td>
+<td>700–3,500 kbps</td>
+<td>Lossless (Variable)</td>
+<td>No quality loss, just space-efficient</td>
+</tr>
+<tr>
+<td>Hi-Res Audio</td>
+<td>~9,216 kbps</td>
+<td>Lossless (24-bit)</td>
+<td>Studio-quality, audiophile favorite</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why FLAC?</strong></p>
+<ul>
+<li>Compresses audio without sacrificing a single bit of quality</li>
+<li>Open-source and widely supported</li>
+<li>Gold standard for digital archival</li>
+</ul>
+<p>Most streaming services still use lossy formats like OGG or AAC. FLAC, on the other hand, lets you experience music as it was meant to be heard — every breath, every reverb tail, every subtle cymbal decay.</p>
+<h2 id="-my-self-hosted-music-stack">🛠️ My Self-Hosted Music Stack</h2>
+<p>Everything runs on Docker, orchestrated with Portainer on my Synology DS923+. Here’s the tech stack I use:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">plex</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>plex<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>lscr.io/linuxserver/plex:latest<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">devices</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /dev/dri:/dev/dri<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">privileged</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">true</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">network_mode</span>:<span style="color:#cbcbcb"> </span>host<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- PUID=1026<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- PGID=100<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- VERSION=docker<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>unless-stopped<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/plex:/config:rw<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/Movies:/Movies:rw<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/Music:/Music:rw<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl_material</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>tzahi12345/youtubedl-material:latest<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>ytdl_material<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">depends_on</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- ytdl-mongo-db<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;8998:17442&#34;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb"> 
+</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_mongodb_connection_string</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;mongodb://ytdl-mongo-db:27017&#39;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_use_local_db</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;false&#39;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">write_ytdl_config</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;true&#39;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/appdata:/app/appdata<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/Music/incoming:/app/audio <span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/video:/app/video<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/subscriptions:/app/subscriptions<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/users:/app/users<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl-mongo-db</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>mongo:4<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>mongo-db<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">logging</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;none&#34;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/db:/data/db<span style="color:#cbcbcb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="key-components"><strong>Key Components</strong></h3>
+<ul>
+<li><strong>Plex</strong> — My media hub that serves both music and movies. With Plexamp, I get a slick music player with offline sync, gapless playback, loudness leveling, and proper metadata matching.</li>
+<li><strong>YouTubeDL-Material</strong> — To grab music directly from YouTube in high-bitrate MP3 or even convert to FLAC.</li>
+<li><strong>MongoDB</strong> — Required for managing subscriptions and media metadata for ytdl-material.</li>
+<li><strong>Portainer</strong> — Manages all containers and stacks.</li>
+<li><strong>Tailscale VPN</strong> — Secure remote access to my stack from anywhere.</li>
+</ul>
+<hr>
+<h2 id="-architecture-overview">🗺️ Architecture Overview</h2>
+<p>Below is a diagram of how everything fits together:</p>
+<!-- raw HTML omitted -->
+<p><img src="/images/plexamp.png" alt="Plexamp Mobile App Screenshot">
+<em>Plexamp: My go-to music player for a high-fidelity, self-hosted experience.</em></p>
+<hr>
+<h2 id="-listening-setup-audiophile-on-a-budget">🎧 Listening Setup: Audiophile on a Budget</h2>
+<p>People often think that to enjoy lossless audio, you need to spend thousands on gear. That’s not true. I use the KZ EDX Pro — a no-frills In-Ear Monitor (IEM) that costs under $10, and yet delivers sound quality that puts most $100 earbuds to shame.</p>
+<p><strong>Why In-Ear Monitors?</strong></p>
+<ul>
+<li>🎧 Neutral tuning — Hear what the artist intended.</li>
+<li>🔇 Passive noise isolation — Great for immersive listening.</li>
+<li>💸 Insanely affordable — No need to break the bank.</li>
+<li>🛠️ No digital trickery — Just clean analog sound.</li>
+</ul>
+<p>Pair this with a lossless FLAC stream from your own server, and you’re getting an audiophile-grade experience for a fraction of the price of a streaming subscription and AirPods.</p>
+<hr>
+<h2 id="-final-thoughts">📝 Final Thoughts</h2>
+<p>There’s a strange joy in pressing play on a song and knowing it’s yours, stored on your hardware, playing through your software, and sounding the way it was recorded.</p>
+<p>Self-hosting my music is about more than just sound quality — it’s about control, privacy, and a love for technology. It’s about owning the entire stack, from disk to driver.</p>
+<p>Whether you&rsquo;re into open-source, into audio, or just tired of handing money to companies for things you could do yourself — setting up a lossless self-hosted music server might just be the best next step in your homelab journey.</p>
+<hr>
+<p><em>Have questions or want to share your own setup? Drop a comment or reach out!</em></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

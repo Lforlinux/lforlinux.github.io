@@ -8,24 +8,24 @@
     <language>en-gb</language>
     <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://l4linux.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>HaaS: Homelab as a Service</title>
-      <link>https://l4linux.com/blog/haas-homelab-as-a-service/</link>
-      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://l4linux.com/blog/haas-homelab-as-a-service/</guid>
-      <description>In today&amp;rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &amp;ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&amp;rdquo; Having worked with open-source software from the very beginning of my career, I&amp;rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️
-For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️.</description>
-    </item>
-    
-    <item>
       <title>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</title>
       <link>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</link>
-      <pubDate>Sun, 09 Jun 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</guid>
       <description>🎵 Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup
 In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:
  Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</description>
+    </item>
+    
+    <item>
+      <title>HaaS: Homelab as a Service</title>
+      <link>https://l4linux.com/blog/haas-homelab-as-a-service/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://l4linux.com/blog/haas-homelab-as-a-service/</guid>
+      <description>In today&amp;rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &amp;ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&amp;rdquo; Having worked with open-source software from the very beginning of my career, I&amp;rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️
+For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️.</description>
     </item>
     
     <item>

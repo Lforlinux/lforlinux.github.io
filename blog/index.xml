@@ -8,6 +8,16 @@
     <language>en-gb</language>
     <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://l4linux.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Self-Hosted Finance</title>
+      <link>https://l4linux.com/blog/actual-fianance/</link>
+      <pubDate>Sat, 27 Sep 2025 08:53:27 +0530</pubDate>
+      
+      <guid>https://l4linux.com/blog/actual-fianance/</guid>
+      <description>Self-Hosted Finance: Taking Control of Your Money with Actual Budget Building your own personal finance stack, one Docker container at a time
+ 💰 My Budgeting Journey: From Diary to Self-Hosted Finance My personal finance journey started simple — with a pen and paper diary tracking every expense. As my financial life became more complex, I graduated to Google Sheets for better calculations and visualization. But when I discovered the power of dedicated budgeting software, I faced the same question that plagues every homelab enthusiast:</description>
+    </item>
+    
+    <item>
       <title>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</title>
       <link>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</link>
       <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Taking Control of Your Money with Actual Budget">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.80.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Self-Hosted Finance</h1>
+    <p class="uk-text-center uk-text-lead">Taking Control of Your Money with Actual Budget</p>
+    <p class="uk-text-center">Published on Sep 27, 2025</p>
+    <p class="uk-text-center">Reading time: 6 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h1 id="self-hosted-finance-taking-control-of-your-money-with-actual-budget">Self-Hosted Finance: Taking Control of Your Money with Actual Budget</h1>
+<p><em>Building your own personal finance stack, one Docker container at a time</em></p>
+<hr>
+<h2 id="-my-budgeting-journey-from-diary-to-self-hosted-finance">💰 My Budgeting Journey: From Diary to Self-Hosted Finance</h2>
+<p>My personal finance journey started simple — with a pen and paper diary tracking every expense. As my financial life became more complex, I graduated to Google Sheets for better calculations and visualization. But when I discovered the power of dedicated budgeting software, I faced the same question that plagues every homelab enthusiast:</p>
+<blockquote>
+<p>Why pay $14.99/month for YNAB when I could host my own personal finance server — with complete data ownership — and actually control my financial data?</p>
+</blockquote>
+<p>After researching You Need A Budget (YNAB) and seeing the subscription fees add up to hundreds of dollars annually, I decided to take control. Just like I did with my media server and homelab infrastructure, I wanted to own my financial data and break free from the subscription economy.</p>
+<h2 id="-the-problem-with-traditional-budgeting-apps">🎯 The Problem with Traditional Budgeting Apps</h2>
+<p>Most personal finance apps suffer from the same fundamental issues:</p>
+<ul>
+<li><strong>Data Lock-in</strong> — Your financial data lives on someone else&rsquo;s servers</li>
+<li><strong>Subscription Fatigue</strong> — Another monthly bill that never goes away</li>
+<li><strong>Limited Customization</strong> — You&rsquo;re stuck with their interface and features</li>
+<li><strong>Privacy Concerns</strong> — Your most sensitive data is stored in the cloud</li>
+<li><strong>Vendor Lock-in</strong> — Switching tools means losing years of financial history</li>
+</ul>
+<p>Even YNAB, despite being excellent software, falls into these traps. At <strong>$14.99/month ($179.88/year)</strong>, it&rsquo;s not just expensive — it&rsquo;s a lifetime commitment to a service you don&rsquo;t control. That&rsquo;s nearly $1,800 over 10 years!</p>
+<h2 id="-understanding-personal-finance-why-it-matters">🏦 Understanding Personal Finance: Why It Matters</h2>
+<p>Before diving into the technical setup, let&rsquo;s talk about why personal finance management is crucial:</p>
+<h3 id="the-foundation-of-financial-freedom"><strong>The Foundation of Financial Freedom</strong></h3>
+<ul>
+<li><strong>Emergency Fund</strong> — 3-6 months of expenses saved for unexpected situations</li>
+<li><strong>Debt Elimination</strong> — Systematic approach to paying off high-interest debt</li>
+<li><strong>Investment Growth</strong> — Building wealth through compound interest</li>
+<li><strong>Financial Goals</strong> — Clear targets for major purchases, retirement, or life events</li>
+</ul>
+<h3 id="the-psychology-of-money"><strong>The Psychology of Money</strong></h3>
+<p>Personal finance isn&rsquo;t just about numbers — it&rsquo;s about behavior change. The right tools can help you:</p>
+<ul>
+<li><strong>Visualize your spending</strong> patterns and identify problem areas</li>
+<li><strong>Set realistic budgets</strong> based on your actual income and expenses</li>
+<li><strong>Track progress</strong> toward financial goals with clear metrics</li>
+<li><strong>Build better habits</strong> through consistent tracking and review</li>
+</ul>
+<h2 id="-why-actual-budget-the-perfect-ynab-alternative">🚀 Why Actual Budget? The Perfect YNAB Alternative</h2>
+<p>After testing several open-source alternatives, <strong>Actual Budget</strong> emerged as the clear winner for my needs:</p>
+<h3 id="what-makes-actual-budget-special"><strong>What Makes Actual Budget Special</strong></h3>
+<ul>
+<li><strong>YNAB-Compatible</strong> — Uses the same envelope budgeting methodology</li>
+<li><strong>Self-Hosted</strong> — Complete control over your data</li>
+<li><strong>Modern Interface</strong> — Clean, responsive web app</li>
+<li><strong>Mobile Support</strong> — Works great on phones and tablets</li>
+<li><strong>Import/Export</strong> — Easy migration from other tools</li>
+<li><strong>Active Development</strong> — Regular updates and community support</li>
+</ul>
+<h3 id="the-technical-advantages"><strong>The Technical Advantages</strong></h3>
+<ul>
+<li><strong>Docker-Ready</strong> — Deploy anywhere with containerization</li>
+<li><strong>Database Agnostic</strong> — Works with SQLite, PostgreSQL, or MySQL</li>
+<li><strong>API Access</strong> — Integrate with other tools and automations</li>
+<li><strong>Backup Friendly</strong> — Simple file-based backups</li>
+<li><strong>Resource Efficient</strong> — Runs on minimal hardware</li>
+</ul>
+<h2 id="-my-self-hosted-finance-stack">🛠️ My Self-Hosted Finance Stack</h2>
+<p>Everything runs on Docker, orchestrated with Portainer on my Synology DS923+. Here&rsquo;s the complete tech stack:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">actual</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>actualbudget/actual-server:latest<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>actual-budget<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;5006:5006&#34;</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- NODE_ENV=production<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/actual-budget:/data<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">      </span>- actual-network<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">actual-network</span>:<span style="color:#cbcbcb">
+</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span>bridge<span style="color:#cbcbcb">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="key-components-explained"><strong>Key Components Explained</strong></h3>
+<p><strong>🏦 Actual Budget Server</strong></p>
+<ul>
+<li>The core application serving your budget data</li>
+<li>Handles user authentication and data persistence</li>
+<li>Provides REST API for mobile apps and integrations</li>
+</ul>
+<h2 id="-monitoring-your-financial-health">📊 Monitoring Your Financial Health</h2>
+<p>One of the most powerful aspects of self-hosting your finance tools is the ability to monitor your financial health like any other system:</p>
+<h3 id="key-metrics-to-track"><strong>Key Metrics to Track</strong></h3>
+<ul>
+<li><strong>Budget Utilization</strong> — How much of each category you&rsquo;ve spent</li>
+<li><strong>Savings Rate</strong> — Percentage of income saved each month</li>
+<li><strong>Debt Paydown Progress</strong> — Tracking debt reduction over time</li>
+<li><strong>Emergency Fund Status</strong> — Monitoring your safety net</li>
+<li><strong>Investment Contributions</strong> — Tracking wealth-building activities</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/hugo-new-site/refs/heads/main/images/actual-1.png?token=GHSAT0AAAAAADMAVZ2NFBJDI44CHD7PPWFE2GXYSSQ" alt=" Dashboard"></p>
+<h3 id="automated-alerts"><strong>Automated Alerts</strong></h3>
+<ul>
+<li><strong>Overspending Warnings</strong> — Get notified when approaching budget limits</li>
+<li><strong>Savings Milestones</strong> — Celebrate reaching financial goals</li>
+<li><strong>Unusual Spending</strong> — Detect potential fraud or budget leaks</li>
+<li><strong>Monthly Reviews</strong> — Automated reports for financial check-ins</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/hugo-new-site/refs/heads/main/images/actual-2.png?token=GHSAT0AAAAAADMAVZ2M6AYUUZMKGAIUHJS62GXYSUA" alt=" Dashboard"></p>
+<h2 id="-security-and-privacy-your-data-your-control">🔐 Security and Privacy: Your Data, Your Control</h2>
+<p>Self-hosting your finance tools provides significant advantages:</p>
+<h3 id="data-ownership"><strong>Data Ownership</strong></h3>
+<ul>
+<li><strong>Complete Control</strong> — Your financial data never leaves your infrastructure</li>
+<li><strong>No Third-Party Access</strong> — No company can access or sell your data</li>
+<li><strong>Custom Backup Strategies</strong> — Implement your own backup and recovery</li>
+<li><strong>Compliance Control</strong> — Meet your own privacy and security requirements</li>
+</ul>
+<h3 id="security-best-practices"><strong>Security Best Practices</strong></h3>
+<ul>
+<li><strong>HTTPS Everywhere</strong> — Encrypt all connections with SSL certificates</li>
+<li><strong>VPN Access</strong> — Use Tailscale or similar for secure remote access</li>
+<li><strong>Regular Updates</strong> — Keep containers and dependencies current</li>
+<li><strong>Backup Strategy</strong> — Automated, encrypted backups to multiple locations</li>
+</ul>
+<h3 id="core-features"><strong>Core Features</strong></h3>
+<ul>
+<li><strong>Transaction Entry</strong> — Automatic Bank Sync(Country Specific)</li>
+<li><strong>Budget Review</strong> — Check category balances before spending</li>
+<li><strong>Account Reconciliation</strong> — Keep bank accounts in sync</li>
+<li><strong>Goal Tracking</strong> — Monitor progress toward financial objectives</li>
+</ul>
+<h3 id="offline-capability"><strong>Offline Capability</strong></h3>
+<ul>
+<li><strong>Sync When Connected</strong> — Changes sync automatically when online</li>
+<li><strong>Local Storage</strong> — Works without internet connection</li>
+<li><strong>Conflict Resolution</strong> — Handles multiple device updates gracefully</li>
+</ul>
+<h2 id="-getting-started-your-first-budget">🚀 Getting Started: Your First Budget</h2>
+<p>Setting up your first budget in Actual Budget:</p>
+<h3 id="initial-setup"><strong>Initial Setup</strong></h3>
+<ol>
+<li><strong>Create Accounts</strong> — Add your bank accounts, credit cards, and cash</li>
+<li><strong>Set Up Categories</strong> — Create spending categories that match your life</li>
+<li><strong>Import Transactions</strong> — Upload bank statements or enter manually or Auto Sync bank accounts  (Country Specific feature)</li>
+<li><strong>Assign Dollars</strong> — Give every dollar a job in your budget</li>
+</ol>
+<h3 id="pro-tips-for-success"><strong>Pro Tips for Success</strong></h3>
+<ul>
+<li><strong>Start Simple</strong> — Don&rsquo;t overcomplicate your first budget</li>
+<li><strong>Be Realistic</strong> — Set categories based on actual spending patterns</li>
+<li><strong>Review Weekly</strong> — Regular check-ins prevent budget drift</li>
+<li><strong>Adjust as Needed</strong> — Your budget should evolve with your life</li>
+</ul>
+<h2 id="-advanced-features-beyond-basic-budgeting">📈 Advanced Features: Beyond Basic Budgeting</h2>
+<h3 id="goal-setting-and-tracking"><strong>Goal Setting and Tracking</strong></h3>
+<ul>
+<li><strong>Emergency Fund</strong> — Track progress toward 3-6 months of expenses</li>
+<li><strong>Debt Paydown</strong> — Visualize debt reduction over time</li>
+<li><strong>Major Purchases</strong> — Save for cars, homes, or vacations</li>
+<li><strong>Retirement Planning</strong> — Long-term wealth building</li>
+</ul>
+<h3 id="reporting-and-analytics"><strong>Reporting and Analytics</strong></h3>
+<ul>
+<li><strong>Spending Trends</strong> — Identify patterns in your expenses</li>
+<li><strong>Category Analysis</strong> — See where your money goes</li>
+<li><strong>Net Worth Tracking</strong> — Monitor overall financial health</li>
+<li><strong>Goal Progress</strong> — Visualize progress toward objectives</li>
+<li><strong>Dashbord Features</strong> - Dashboards can be can imported/exported as JSON</li>
+</ul>
+<h2 id="-the-financial-impact-real-numbers">💡 The Financial Impact: Real Numbers</h2>
+<p>Let&rsquo;s talk about the actual cost savings:</p>
+<h3 id="subscription-savings-ynab-vs-actual-budget"><strong>Subscription Savings: YNAB vs. Actual Budget</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>YNAB Cost</th>
+<th>Actual Budget</th>
+<th>Savings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monthly</strong></td>
+<td>$14.99</td>
+<td>$0</td>
+<td>$14.99</td>
+</tr>
+<tr>
+<td><strong>Yearly</strong></td>
+<td>$179.88</td>
+<td>$0</td>
+<td>$179.88</td>
+</tr>
+<tr>
+<td><strong>5 Years</strong></td>
+<td>$899.40</td>
+<td>$0</td>
+<td>$899.40</td>
+</tr>
+<tr>
+<td><strong>10 Years</strong></td>
+<td>$1,798.80</td>
+<td>$0</td>
+<td>$1,798.80</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Math is Simple:</strong></p>
+<ul>
+<li><strong>YNAB</strong>: $14.99/month = $179.88/year = $1,798.80 over 10 years</li>
+<li><strong>Actual Budget</strong>: $0/month = Complete ownership and control</li>
+<li><strong>Your Savings</strong>: Nearly $1,800 over a decade!</li>
+</ul>
+<h3 id="additional-benefits"><strong>Additional Benefits</strong></h3>
+<ul>
+<li><strong>Data Ownership</strong> — Priceless peace of mind</li>
+<li><strong>Customization</strong> — Unlimited flexibility</li>
+<li><strong>Privacy</strong> — Complete control over sensitive data</li>
+<li><strong>Learning</strong> — Valuable technical skills</li>
+</ul>
+<h2 id="-the-psychology-of-self-hosted-finance">🎯 The Psychology of Self-Hosted Finance</h2>
+<p>There&rsquo;s something powerful about managing your money with tools you control:</p>
+<h3 id="the-ownership-mindset"><strong>The Ownership Mindset</strong></h3>
+<ul>
+<li><strong>Financial Independence</strong> — Not just in money, but in tools</li>
+<li><strong>Technical Skills</strong> — Learning valuable homelab skills</li>
+<li><strong>Data Sovereignty</strong> — Your data, your rules</li>
+<li><strong>Community</strong> — Contributing to open-source projects</li>
+</ul>
+<h3 id="the-long-term-view"><strong>The Long-Term View</strong></h3>
+<ul>
+<li><strong>No Vendor Lock-in</strong> — Switch tools anytime without data loss</li>
+<li><strong>Custom Development</strong> — Add features you need</li>
+<li><strong>Cost Predictability</strong> — No surprise price increases</li>
+<li><strong>Legacy Support</strong> — Keep using tools as long as you want</li>
+</ul>
+<h2 id="-troubleshooting-and-maintenance">🛠️ Troubleshooting and Maintenance</h2>
+<p>Like any self-hosted service, Actual Budget requires some maintenance:</p>
+<h3 id="regular-tasks"><strong>Regular Tasks</strong></h3>
+<ul>
+<li><strong>Container Updates</strong> — Keep images current for security</li>
+<li><strong>Backup Verification</strong> — Ensure backups are working</li>
+<li><strong>Performance Monitoring</strong> — Watch resource usage</li>
+<li><strong>Security Updates</strong> — Apply patches promptly</li>
+</ul>
+<h3 id="common-issues"><strong>Common Issues</strong></h3>
+<ul>
+<li><strong>Database Corruption</strong> — Restore from recent backup</li>
+<li><strong>Performance Problems</strong> — Check resource usage and logs</li>
+<li><strong>Sync Issues</strong> — Verify network connectivity</li>
+<li><strong>Import Problems</strong> — Check file formats and data integrity</li>
+</ul>
+<p><em>Have questions about setting up your own finance stack? Want to share your budgeting journey? Drop a comment or reach out — let&rsquo;s build our financial independence together!</em></p>
+<p><strong>🔗 Related Posts:</strong></p>
+<ul>
+<li><a href="https://l4linux.com/blog/haas-homelab-as-a-service/">HaaS: Homelab as a Service</a></li>
+<li><a href="https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/">Self-Hosted Sound: High-Fidelity Music Streaming</a></li>
+</ul>
+<hr>
+<p><em>Building your own cloud, one container at a time</em> 🐧💰</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

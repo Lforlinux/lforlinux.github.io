@@ -23,7 +23,7 @@
   <meta name="description" property="og:description" content="Boto3 Resource, Client and Session">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.151.0">
 
   <!-- plugins -->
   
@@ -104,7 +104,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
                 
                 
             </ul>
@@ -120,7 +120,7 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             
-            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
 
             
             
@@ -171,7 +171,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
             
             
         </ul>
@@ -292,71 +292,67 @@
 </ul>
 <h3 id="default-session">Default session</h3>
 <p>Boto3 acts as a proxy to the default session. This is created automatically when you create a low-level client or resource client</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
-
-<span style="color:#0080ff;font-style:italic"># Using the default session</span>
-s3 <span style="color:#2c5dcd">=</span> boto3.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span>
-
-<span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
-    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>import boto3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Using the default session</span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#2c5dcd">=</span> boto3.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
+</span></span><span style="display:flex;"><span>    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="custom-session">Custom session</h3>
 <p>You can also manage your own session and create low-level clients or resource clients from it:</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
-import boto3.session
-
-<span style="color:#0080ff;font-style:italic"># Create your own session</span>
-my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span> <span style="color:#0080ff;font-style:italic">#profile_name is none as in we are going with default user in the .aws/credentials. </span>
-
-
-<span style="color:#0080ff;font-style:italic"># Now we can create low-level clients or resource clients from our custom session</span>
-s3 <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span>
-
-<span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
-    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>import boto3
+</span></span><span style="display:flex;"><span>import boto3.session
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Create your own session</span>
+</span></span><span style="display:flex;"><span>my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span> <span style="color:#0080ff;font-style:italic">#profile_name is none as in we are going with default user in the .aws/credentials. </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Now we can create low-level clients or resource clients from our custom session</span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
+</span></span><span style="display:flex;"><span>    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="session-configurations">Session configurations</h3>
 <p>You can configure each session with specific credentials, AWS Region information, or profiles. The most common configurations you might use are:</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">boto3.session.Session<span style="color:#2c5dcd">(</span>aws_access_key_id<span style="color:#2c5dcd">=</span>None, aws_secret_access_key<span style="color:#2c5dcd">=</span>None, aws_session_token<span style="color:#2c5dcd">=</span>None, region_name<span style="color:#2c5dcd">=</span>None, botocore_session<span style="color:#2c5dcd">=</span>None, profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>boto3.session.Session<span style="color:#2c5dcd">(</span>aws_access_key_id<span style="color:#2c5dcd">=</span>None, aws_secret_access_key<span style="color:#2c5dcd">=</span>None, aws_session_token<span style="color:#2c5dcd">=</span>None, region_name<span style="color:#2c5dcd">=</span>None, botocore_session<span style="color:#2c5dcd">=</span>None, profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>aws_access_key_id (string) &ndash; AWS access key ID</li>
@@ -368,84 +364,80 @@ s3 <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2
 </ul>
 <h2 id="resource">Resource</h2>
 <p>Resources represent an object-oriented interface to Amazon Web Services (AWS). They provide a higher-level abstraction than the raw, low-level calls made by service clients. To use resources, you invoke the resource() method of a Session and pass in a service name</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
-import boto3.session
-
-my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span> 
-<span style="color:#0080ff;font-style:italic"># Now we can create low-level clients or resource clients from our custom session</span>
-s3 <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#0080ff;font-style:italic"># you can use any resource within aws </span>
-
-<span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
-    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>import boto3
+</span></span><span style="display:flex;"><span>import boto3.session
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Now we can create low-level clients or resource clients from our custom session</span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;s3&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#0080ff;font-style:italic"># you can use any resource within aws </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">for</span> each_buck in s3.buckets.all<span style="color:#2c5dcd">()</span>:
+</span></span><span style="display:flex;"><span>    print<span style="color:#2c5dcd">(</span>each_buck.name<span style="color:#2c5dcd">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="clients">Clients</h2>
 <p>Clients provide a low-level interface to AWS whose methods map close to 1:1 with service APIs. All service operations are supported by clients. Clients are generated from a JSON service definition file.</p>
 <p>Diffeence between client and resource</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">import boto3
-
-print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;This is using resource&#34;</span><span style="color:#2c5dcd">)</span>
-
-my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
-iam_resource <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;iam&#39;</span><span style="color:#2c5dcd">)</span>
-
-
-<span style="color:#2c5dcd;font-weight:bold">for</span> each_user in iam_resource.users.all<span style="color:#2c5dcd">()</span>: <span style="color:#0080ff;font-style:italic">#resource provides higher-level abstraction than the raw, low-level calls made by service clients</span>
-    print<span style="color:#2c5dcd">(</span>each_user.name<span style="color:#2c5dcd">)</span>
-
-print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;-----------------------&#34;</span><span style="color:#2c5dcd">)</span>
-
-print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;This is using client&#34;</span><span style="color:#2c5dcd">)</span>
-
-
-my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
-iam_client<span style="color:#2c5dcd">=</span> my_session.client<span style="color:#2c5dcd">(</span>service_name<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;iam&#39;</span>,region_name<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;us-east-a&#39;</span><span style="color:#2c5dcd">)</span>
-
-<span style="color:#2c5dcd;font-weight:bold">for</span> each in iam_client.list_users<span style="color:#2c5dcd">()[</span><span style="color:#0c6">&#39;Users&#39;</span><span style="color:#2c5dcd">]</span>:  <span style="color:#0080ff;font-style:italic">#in client method we have to search for Users as Dict and with the output we have to playaround</span>
-    print <span style="color:#2c5dcd">(</span>each<span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;UserName&#39;</span><span style="color:#2c5dcd">])</span>
-
-
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>import boto3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;This is using resource&#34;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>iam_resource <span style="color:#2c5dcd">=</span> my_session.resource<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;iam&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">for</span> each_user in iam_resource.users.all<span style="color:#2c5dcd">()</span>: <span style="color:#0080ff;font-style:italic">#resource provides higher-level abstraction than the raw, low-level calls made by service clients</span>
+</span></span><span style="display:flex;"><span>    print<span style="color:#2c5dcd">(</span>each_user.name<span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;-----------------------&#34;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print <span style="color:#2c5dcd">(</span><span style="color:#0c6">&#34;This is using client&#34;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_session <span style="color:#2c5dcd">=</span> boto3.session.Session<span style="color:#2c5dcd">(</span>profile_name<span style="color:#2c5dcd">=</span>None<span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>iam_client<span style="color:#2c5dcd">=</span> my_session.client<span style="color:#2c5dcd">(</span>service_name<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;iam&#39;</span>,region_name<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#39;us-east-a&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">for</span> each in iam_client.list_users<span style="color:#2c5dcd">()[</span><span style="color:#0c6">&#39;Users&#39;</span><span style="color:#2c5dcd">]</span>:  <span style="color:#0080ff;font-style:italic">#in client method we have to search for Users as Dict and with the output we have to playaround</span>
+</span></span><span style="display:flex;"><span>    print <span style="color:#2c5dcd">(</span>each<span style="color:#2c5dcd">[</span><span style="color:#0c6">&#39;UserName&#39;</span><span style="color:#2c5dcd">])</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

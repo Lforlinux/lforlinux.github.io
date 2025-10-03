@@ -4,114 +4,86 @@
     <title>Blog on Lekshmi Kolappan</title>
     <link>https://l4linux.com/blog/</link>
     <description>Recent content in Blog on Lekshmi Kolappan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://l4linux.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Sep 2025 08:53:27 +0530</lastBuildDate>
+    <atom:link href="https://l4linux.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Self-Hosted Finance</title>
       <link>https://l4linux.com/blog/actual-fianance/</link>
       <pubDate>Sat, 27 Sep 2025 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/actual-fianance/</guid>
-      <description>Self-Hosted Finance: Taking Control of Your Money with Actual Budget Building your own personal finance stack, one Docker container at a time
- 💰 My Budgeting Journey: From Diary to Self-Hosted Finance My personal finance journey started simple — with a pen and paper diary tracking every expense. As my financial life became more complex, I graduated to Google Sheets for better calculations and visualization. But when I discovered the power of dedicated budgeting software, I faced the same question that plagues every homelab enthusiast:</description>
+      <description>&lt;h1 id=&#34;self-hosted-finance-taking-control-of-your-money-with-actual-budget&#34;&gt;Self-Hosted Finance: Taking Control of Your Money with Actual Budget&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Building your own personal finance stack, one Docker container at a time&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-my-budgeting-journey-from-diary-to-self-hosted-finance&#34;&gt;💰 My Budgeting Journey: From Diary to Self-Hosted Finance&lt;/h2&gt;&#xA;&lt;p&gt;My personal finance journey started simple — with a pen and paper diary tracking every expense. As my financial life became more complex, I graduated to Google Sheets for better calculations and visualization. But when I discovered the power of dedicated budgeting software, I faced the same question that plagues every homelab enthusiast:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</title>
       <link>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</link>
       <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/</guid>
-      <description>🎵 Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup
-In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:
- Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</description>
+      <description>&lt;p&gt;🎵 &lt;strong&gt;Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>HaaS: Homelab as a Service</title>
       <link>https://l4linux.com/blog/haas-homelab-as-a-service/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      
       <guid>https://l4linux.com/blog/haas-homelab-as-a-service/</guid>
-      <description>In today&amp;rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &amp;ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&amp;rdquo; Having worked with open-source software from the very beginning of my career, I&amp;rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️
-For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️.</description>
+      <description>&lt;p&gt;In today&amp;rsquo;s world of SaaS everything — where every tool comes with a monthly subscription 💸 — I often find myself asking: &amp;ldquo;Why pay for all of this when powerful, open-source alternatives exist? 🐧&amp;rdquo; Having worked with open-source software from the very beginning of my career, I&amp;rsquo;ve always believed that owning your data and infrastructure is the way forward. 🗝️&lt;/p&gt;&#xA;&lt;p&gt;For a long time, I dreamt of building my own NAS (Network Attached Storage) 🗄️. Like many hobbyists, I started with the world&amp;rsquo;s tiniest computer — the Raspberry Pi 🥧. I paired it with open-source NAS operating systems like TrueNAS and OpenMediaVault, experimenting for a few years. But while these setups were fun and educational, they fell short when it came to performance and reliability. ⚡️❌&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Overview of ChatGPT and DevOps use cases</title>
       <link>https://l4linux.com/blog/chatgpt/</link>
       <pubDate>Sat, 10 Dec 2022 01:23:24 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/chatgpt/</guid>
-      <description>What is ChatGPT?  GPT (Generative Pretrained Transformer) is a type of natural language processing (NLP) model developed by OpenAI. It is a large, powerful model that can generate human-like text based on the input it receives. It is optimized for generating responses to user input in a conversational context, and it can be trained on specific domains  What is the significane of it?   Sam Altman, the CEO and founder of OpenAI, recently announced the official release of the openGPT one week earlier(on November 30).</description>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-chatgpt&#34;&gt;What is ChatGPT?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPT (Generative Pretrained Transformer) is a type of natural language processing (NLP) model developed by OpenAI. It is a large, powerful model that can generate human-like text based on the input it receives.&lt;/li&gt;&#xA;&lt;li&gt;It is optimized for generating responses to user input in a conversational context, and it can be trained on specific domains&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-is-the-significane-of-it&#34;&gt;What is the significane of it?&lt;/h2&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sam Altman, the CEO and founder of OpenAI, recently announced the official release of the openGPT &lt;a href=&#34;(https://twitter.com/sama/status/1598038815599661056)&#34;&gt;one week earlier&lt;/a&gt;(on November 30).&lt;/li&gt;&#xA;&lt;li&gt;Currently, the service is free. It might be turned to a paid service because, according to &lt;a href=&#34;https://twitter.com/sama/status/1599671496636780546?s=24&#34;&gt;Sam&lt;/a&gt;, the average cost each chat is only a few cents.&lt;/li&gt;&#xA;&lt;li&gt;The number of users has now surpassed 1 million, and it only took 5 days from debut to accomplish &lt;a href=&#34;https://twitter.com/sama/status/1599668808285028353&#34;&gt;this.&lt;/a&gt; Instagram took 2.5 months, Facebook 10 months, and Netflix 48 months.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;is-it-useful-for-me&#34;&gt;Is it useful for me?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Oh, Yeah! No matter whatever field you are on. ChatGPT is genius tool in many ways!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The results I&amp;rsquo;m seeing from ChatGPT makes me appreciate humans even more, especially those who think critically, and continue to push the boundaries on creative expression.&#xA;ChatGPT feels like the baseline of what we are capable of and sets the bar so we can raise it.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Jenkins Pipeline</title>
       <link>https://l4linux.com/blog/declartive-vs-scripted-pipeline/</link>
       <pubDate>Sun, 25 Jul 2021 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/declartive-vs-scripted-pipeline/</guid>
-      <description>What is Jenkins Pipeline 🤔   Jenkins Pipeline allows us to write the Jenkins build steps in code Pipelines are robust. So if your server undergoes an unpredicted restart, the pipeline will be automatically resumed. Jenkins Pipelines support big projects. You can run many jobs, and even use pipelines in a loop   Jenkins Pipeline format Jenkins Pipeline can be defined by a text file called JenkinsFile. You can implement pipeline as code using JenkinsFile, and this can be defined by using a DSL (Domain Specific Language).</description>
+      <description>&lt;h3 id=&#34;what-is-jenkins-pipeline-&#34;&gt;What is Jenkins Pipeline 🤔&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jenkins Pipeline allows us to write the Jenkins build steps in code&lt;/li&gt;&#xA;&lt;li&gt;Pipelines are robust. So if your server undergoes an unpredicted restart, the pipeline will be automatically resumed.&lt;/li&gt;&#xA;&lt;li&gt;Jenkins Pipelines support big projects. You can run many jobs, and even use pipelines in a loop&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;jenkins-pipeline-format&#34;&gt;Jenkins Pipeline format&lt;/h3&gt;&#xA;&lt;p&gt;Jenkins Pipeline can be defined by a text file called JenkinsFile. You can implement pipeline as code using JenkinsFile, and this can be defined by using a DSL (Domain Specific Language).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Proxy vs Reverse Proxy</title>
       <link>https://l4linux.com/blog/proxy-vs-reverseproxy/</link>
       <pubDate>Sat, 24 Jul 2021 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/proxy-vs-reverseproxy/</guid>
-      <description>In this post we will see what is proxy and reverse proxy. We will also discuss the differnce between them.   What is proxy? Proxy is an act where someelse doing something for you on your behalf.
-Simple explantion of a proxy act in the below image.
-What is Proxy server? It is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the Internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.</description>
+      <description>&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In this post we will see what is proxy and reverse proxy.&lt;/li&gt;&#xA;&lt;li&gt;We will also discuss the differnce between them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-proxy&#34;&gt;What is proxy?&lt;/h2&gt;&#xA;&lt;p&gt;Proxy is an act where someelse doing something for you on your behalf.&lt;/p&gt;&#xA;&lt;p&gt;Simple explantion of a proxy act in the below image.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Lforlinux/lforlinux.github.io/master/posts/proxy.png&#34; alt=&#34;N|Solid&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-proxy-server&#34;&gt;What is Proxy server?&lt;/h2&gt;&#xA;&lt;p&gt;It is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the Internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bash scripting - set command </title>
       <link>https://l4linux.com/blog/bash-set-e/</link>
       <pubDate>Thu, 22 Jul 2021 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/bash-set-e/</guid>
-      <description>🖥 Bash scripting - set command and its usage   In this post we will see what is set in bash scripting We will also discuss when to use set -e.   Set command Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.</description>
+      <description>&lt;h2 id=&#34;-bash-scripting---set-command-and-its-usage&#34;&gt;🖥 Bash scripting - set command and its usage&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In this post we will see what is set in bash scripting&lt;/li&gt;&#xA;&lt;li&gt;We will also discuss when to use set -e.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;set-command&#34;&gt;Set command&lt;/h2&gt;&#xA;&lt;p&gt;Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Boto3 Resource, Client and Session</title>
       <link>https://l4linux.com/blog/boto3/</link>
       <pubDate>Thu, 15 Jul 2021 01:23:24 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/boto3/</guid>
-      <description>Core concepts of Boto3   There are few concepts of boto3 (aws sdk) like Session, Resource, Client, Meta, Collections, Paginators In this post we will discuss about the kehy difference between Resource, Client and Session   Session  A session manages state about a particular configuration. By default, a session is created for you when needed. However, it&amp;rsquo;s possible and recommended that in some scenarios you maintain your own session.</description>
+      <description>&lt;h2 id=&#34;core-concepts-of-boto3&#34;&gt;Core concepts of Boto3&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There are few concepts of boto3 (aws sdk) like Session, Resource, Client, Meta, Collections, Paginators&lt;/li&gt;&#xA;&lt;li&gt;In this post we will discuss about the kehy difference between  Resource, Client and Session&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;session&#34;&gt;Session&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;A session manages state about a particular configuration. By default, a session is created for you when needed. However, it&amp;rsquo;s possible and recommended that in some scenarios you maintain your own session. Sessions typically store the following:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Jenkins as a Container</title>
       <link>https://l4linux.com/blog/jenkins-as-docker/</link>
       <pubDate>Mon, 28 Dec 2020 01:23:24 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/jenkins-as-docker/</guid>
-      <description>Run jenkins as a container with the stateful volume! Why Jenkins as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
+      <description>&lt;h2 id=&#34;run-jenkins-as-a-container-with-the-stateful-volume&#34;&gt;&lt;em&gt;Run jenkins as a container with the stateful volume!&lt;/em&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;why-jenkins-as-a-container-&#34;&gt;Why Jenkins as a container 🤔&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It&amp;rsquo;s helps simplify the installation process.&lt;/li&gt;&#xA;&lt;li&gt;Decrease dependency errors.&lt;/li&gt;&#xA;&lt;li&gt;The Turnaround time for an Jenkins server installation is just few minutes.&lt;/li&gt;&#xA;&lt;li&gt;Cross platform compatible.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-do-we-need-a-stateful-volume&#34;&gt;Why do we need a stateful volume!🤨&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly. As in we will setting up the users, credentials inside Jenkins so it is important to save this as a stateful volume.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;lets-get-started-&#34;&gt;Let&amp;rsquo;s get started! 🎬&lt;/h3&gt;&#xA;&lt;p&gt;Create the volume for Jenkins on Docker host.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Docker-container-howitworks</title>
       <link>https://l4linux.com/blog/docker-cli-container-howitworks/</link>
       <pubDate>Fri, 18 Dec 2020 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/docker-cli-container-howitworks/</guid>
-      <description>🐳 Docker container creation - How it works!   In this post we will see what is happening when we run a command # docker container run -it -d nginx We will also discuss some components involved during the container creation process   Docker CLI (docker) 💻  Docker CLI (docker)
-1  /usr/bin/docker   Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith.</description>
+      <description>&lt;h2 id=&#34;-docker-container-creation---how-it-works&#34;&gt;🐳 Docker container creation - How it works!&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In this post we will see what is happening when we run a command # docker container run -it -d nginx&lt;/li&gt;&#xA;&lt;li&gt;We will also discuss some components involved during the container creation process&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;docker-cli-docker-&#34;&gt;Docker CLI (docker) 💻&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Docker CLI (docker)&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/usr/bin/docker&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Docker is used as a reference to the whole set of docker tools and at the beginning, it was a monolith. But now docker-cli is only responsible for user-friendly communication with docker.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Kubectl alias</title>
       <link>https://l4linux.com/blog/kubectl-alias/</link>
       <pubDate>Thu, 17 Dec 2020 08:53:27 +0530</pubDate>
-      
       <guid>https://l4linux.com/blog/kubectl-alias/</guid>
-      <description>Play with kubernets at ease! Alias? What,Why 🤔   An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command. It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency.</description>
+      <description>&lt;h2 id=&#34;play-with-kubernets-at-ease&#34;&gt;&lt;em&gt;Play with kubernets at ease!&lt;/em&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;alias-whatwhy-&#34;&gt;Alias? What,Why 🤔&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An alias is a (usually short) name that the shell translates into another (usually longer) name or command. Aliases allow you to define new commands by substituting a string for the first token of a simple command.&lt;/li&gt;&#xA;&lt;li&gt;It can be used to avoid typing long commands or as a means to correct incorrect input. For common patterns it can reduce keystrokes and improve efficiency. A simple example is setting default options on commands to avoid having to type them each time a command is run&lt;/li&gt;&#xA;&lt;li&gt;✨ Be lazy - use less keys on your keyboard ✨ 😜&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Start your day with a list of things you know you tend to waste time on&#xA;As &lt;em&gt;Alicia Rades&lt;/em&gt; writes on the &lt;a href=&#34;https://www.lifehack.org/author/alicia-j-rades&#34;&gt;lifehack&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

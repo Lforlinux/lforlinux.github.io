@@ -4,17 +4,16 @@
     <title>Docker on Lekshmi Kolappan</title>
     <link>https://l4linux.com/categories/docker/</link>
     <description>Recent content in Docker on Lekshmi Kolappan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 19 Jun 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://l4linux.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jun 2020 23:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l4linux.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins as a container</title>
       <link>https://l4linux.com/portfolio/jenkins-as-a-container/</link>
       <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
-      
       <guid>https://l4linux.com/portfolio/jenkins-as-a-container/</guid>
-      <description>Run jenkins as a container with the stateful volume! Why Jenkins as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
+      <description>&lt;h2 id=&#34;run-jenkins-as-a-container-with-the-stateful-volume&#34;&gt;&lt;em&gt;Run jenkins as a container with the stateful volume!&lt;/em&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;why-jenkins-as-a-container-&#34;&gt;Why Jenkins as a container 🤔&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It&amp;rsquo;s helps simplify the installation process.&lt;/li&gt;&#xA;&lt;li&gt;Decrease dependency errors.&lt;/li&gt;&#xA;&lt;li&gt;The Turnaround time for an Jenkins server installation is just few minutes.&lt;/li&gt;&#xA;&lt;li&gt;Cross platform compatible.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-do-we-need-a-stateful-volume&#34;&gt;Why do we need a stateful volume!🤨&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly. As in we will setting up the users, credentials inside Jenkins so it is important to save this as a stateful volume.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;lets-get-started-&#34;&gt;Let&amp;rsquo;s get started! 🎬&lt;/h3&gt;&#xA;&lt;p&gt;Create the volume for Jenkins on Docker host.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

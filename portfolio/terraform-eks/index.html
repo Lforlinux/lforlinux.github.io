@@ -23,7 +23,7 @@
   <meta name="description" property="og:description" content="EKS deployment">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.151.0">
 
   <!-- plugins -->
   
@@ -104,7 +104,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
                 
                 
             </ul>
@@ -120,7 +120,7 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             
-            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
 
             
             
@@ -171,7 +171,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
             
             
         </ul>
@@ -350,7 +350,7 @@
 <li>AmazonEKSWorkerNodePolicy,AmazonVPCFullAccess,AmazonEKSServicePolicy,AmazonEKS_CNI_Policy</li>
 </ul>
 <h2 id="source-code">Source Code</h2>
-<pre><code>https://github.com/Lforlinux/aws-terraform-nodejs
+<pre tabindex="0"><code>https://github.com/Lforlinux/aws-terraform-nodejs
 </code></pre><hr>
 <h2 id="how-to-provision-the-infra">How to provision the infra</h2>
 <p>Makefile has been leveraged for the simple approach towards the one-click entire stack deployment.</p>
@@ -359,7 +359,7 @@
 <li>Configure your AWS credentials.</li>
 <li>Just deploy the entire stack by following single command.</li>
 </ul>
-<pre><code>make deploy
+<pre tabindex="0"><code>make deploy
 </code></pre><ul>
 <li>Review the resources and type yes.</li>
 <li>Detailed workflow has been given on the following diagram.</li>
@@ -379,7 +379,7 @@
 <li>Above command will set the context to use the kubectl.</li>
 <li>Now ALB URL will be available by <code>kubectl get svc</code> or go to the AWS ALB console and copy and use it on any browser.</li>
 </ul>
-<pre><code>[ec2-user@ip-172-31-83-136 aws-terraform-nodejs]$ kubectl get svc
+<pre tabindex="0"><code>[ec2-user@ip-172-31-83-136 aws-terraform-nodejs]$ kubectl get svc
 NAME                              TYPE           CLUSTER-IP     EXTERNAL-IP                                                              PORT(S)        AGE
 nodejsapplication-helm-nodejs     LoadBalancer   172.20.83.16   a0a551a21584c449a961842a873b38c6-718686509.us-east-1.elb.amazonaws.com   80:31924/TCP   18m
 </code></pre><ul>
@@ -388,14 +388,14 @@ nodejsapplication-helm-nodejs     LoadBalancer   172.20.83.16   a0a551a21584
 <h2 id="how-fault-tolerance-with-high-availability-achieved">How fault tolerance with high availability achieved</h2>
 <ul>
 <li>K8s resources are deployed as deployment and mapped to Horizontal Pod Autoscaler.</li>
-<li>HPA will look after the pod&rsquo;s memory and CPU utilization and it will increase the pods' count and decrease the pod count if the load pressure comes under control.  </li>
+<li>HPA will look after the pod&rsquo;s memory and CPU utilization and it will increase the pods&rsquo; count and decrease the pod count if the load pressure comes under control.  </li>
 <li>K8s worker nodes are deployed are AWS Auto Scaling Group.  </li>
 </ul>
 <h2 id="performance-testing--load-testing">Performance Testing / Load Testing.  </h2>
 <ul>
 <li>use the following command to do performance/load testing.</li>
 </ul>
-<pre><code># export TARGET_HOST=Place-your-ALB-URL-Here
+<pre tabindex="0"><code># export TARGET_HOST=Place-your-ALB-URL-Here
 
 # docker run -i --rm -v $PWD/reports:/opt/reports -v ~/.aws:/root/.aws -v $PWD/:/opt/script -v $PWD/credentials:/meta/credentials -p 8089:8089 -e ROLE=standalone -e TARGET_HOST=$TARGET_HOST -e LOCUST_FILE=https://raw.githubusercontent.com/zalando-incubator/docker-locust/master/example/simple.py -e SLAVE_MUL=4 -e AUTOMATIC=False registry.opensource.zalan.do/tip/docker-locust
 </code></pre><ul>

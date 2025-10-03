@@ -4,26 +4,23 @@
     <title>Portfolio on Lekshmi Kolappan</title>
     <link>https://l4linux.com/portfolio/</link>
     <description>Recent content in Portfolio on Lekshmi Kolappan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://l4linux.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jun 2020 23:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l4linux.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS EKS Deployment through terraform</title>
       <link>https://l4linux.com/portfolio/terraform-eks/</link>
       <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
-      
       <guid>https://l4linux.com/portfolio/terraform-eks/</guid>
-      <description>What is the significance of this?  Using this repository, you can provision the application as well as all of your cloud infrastructure with a single command.  How is automation accomplished?  Terraform has been used to provision infrastructure on AWS. To make provision for application On the AWS EKS, deployment has been performed through using Helm template. To fit the Kubernetes design, the NodeJS service has been changed to a microservice.</description>
+      <description>&lt;h2 id=&#34;what-is-the-significance-of-this&#34;&gt;What is the significance of this?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Using this repository, you can provision the application as well as all of your cloud infrastructure with a single command.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-is-automation-accomplished&#34;&gt;How is automation accomplished?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Terraform has been used to provision infrastructure on AWS.&lt;/li&gt;&#xA;&lt;li&gt;To make provision for application On the AWS EKS, deployment has been performed through using Helm template.&lt;/li&gt;&#xA;&lt;li&gt;To fit the Kubernetes design, the NodeJS service has been changed to a microservice.&lt;/li&gt;&#xA;&lt;li&gt;Terraform has been converted into a docker container microservice to improve team cooperation by ensuring that everyone uses the same version of the software.&lt;/li&gt;&#xA;&lt;li&gt;This project makes use of Makefile to automate the provisioning of the full stack with a single command.&lt;/li&gt;&#xA;&lt;li&gt;For convenience of usage, the load and performance testing tool locust has been transformed into a docker container.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS account access&lt;/li&gt;&#xA;&lt;li&gt;AWS iam programmatic user access with the follwing policy attached to the user&lt;/li&gt;&#xA;&lt;li&gt;AmazonEC2FullAccess,IAMFullAccess,AutoScalingFullAccess,AmazonEKSClusterPolicy,     ￼&lt;/li&gt;&#xA;&lt;li&gt;AmazonEKSWorkerNodePolicy,AmazonVPCFullAccess,AmazonEKSServicePolicy,AmazonEKS_CNI_Policy&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://github.com/Lforlinux/aws-terraform-nodejs&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;how-to-provision-the-infra&#34;&gt;How to provision the infra&lt;/h2&gt;&#xA;&lt;p&gt;Makefile has been leveraged for the simple approach towards the one-click entire stack deployment.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Jenkins as a container</title>
       <link>https://l4linux.com/portfolio/jenkins-as-a-container/</link>
       <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
-      
       <guid>https://l4linux.com/portfolio/jenkins-as-a-container/</guid>
-      <description>Run jenkins as a container with the stateful volume! Why Jenkins as a container 🤔  It&amp;rsquo;s helps simplify the installation process. Decrease dependency errors. The Turnaround time for an Jenkins server installation is just few minutes. Cross platform compatible.  Why do we need a stateful volume!🤨  Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly.</description>
+      <description>&lt;h2 id=&#34;run-jenkins-as-a-container-with-the-stateful-volume&#34;&gt;&lt;em&gt;Run jenkins as a container with the stateful volume!&lt;/em&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;why-jenkins-as-a-container-&#34;&gt;Why Jenkins as a container 🤔&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It&amp;rsquo;s helps simplify the installation process.&lt;/li&gt;&#xA;&lt;li&gt;Decrease dependency errors.&lt;/li&gt;&#xA;&lt;li&gt;The Turnaround time for an Jenkins server installation is just few minutes.&lt;/li&gt;&#xA;&lt;li&gt;Cross platform compatible.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-do-we-need-a-stateful-volume&#34;&gt;Why do we need a stateful volume!🤨&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Containers are often an ephemeral where in Jeknins we need to save our workloads even if we are not using it regularly. As in we will setting up the users, credentials inside Jenkins so it is important to save this as a stateful volume.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;lets-get-started-&#34;&gt;Let&amp;rsquo;s get started! 🎬&lt;/h3&gt;&#xA;&lt;p&gt;Create the volume for Jenkins on Docker host.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

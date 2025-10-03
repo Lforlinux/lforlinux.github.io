@@ -23,7 +23,7 @@
   <meta name="description" property="og:description" content="set command and its usage">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.151.0">
 
   <!-- plugins -->
   
@@ -104,7 +104,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
                 
                 
             </ul>
@@ -120,7 +120,7 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             
-            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
 
             
             
@@ -171,7 +171,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
             
             
         </ul>
@@ -290,42 +290,41 @@ The script will return with the exit code of the failing command.</p>
 <p>From the bash man page</p>
 <p>set -e:</p>
 <blockquote>
-<p>Exit immediately if a pipeline (which may consist of a single simple command), a list, or a compound command (see SHELL GRAMMAR &gt; above), exits with a non-zero status.</p>
-</blockquote>
+<p>Exit immediately if a pipeline (which may consist of a single simple command), a list, or a compound command (see SHELL GRAMMAR &gt; above), exits with a non-zero status.</p></blockquote>
 <h2 id="set--e-usage">Set -e usage</h2>
 <p>General bash script without set -e ( This script written to fail intentionaly)</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 
-echo &quot;a&quot;
+echo &#34;a&#34;
 sleep 2
-echo &quot;b&quot;
+echo &#34;b&#34;
 sleep 2
-echod &quot;c&quot;
+echod &#34;c&#34;
 sleep 2
-echo &quot;d&quot;
+echo &#34;d&#34;
 </code></pre><p>Script execution</p>
-<pre><code> kln@MacBook-Pro  ~  bash check.sh
+<pre tabindex="0"><code> kln@MacBook-Pro  ~  bash check.sh
 a
 b
 check.sh: line 9: echod: command not found
 d
 </code></pre><p>The above code exit code is 0. But the actual script failed in between.</p>
-<pre><code> kln@MacBook-Pro  ~  echo $?
+<pre tabindex="0"><code> kln@MacBook-Pro  ~  echo $?
 0
 </code></pre><p>So now we will make use of set -e and see it in action</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
   
 set -e
 
-echo &quot;a&quot;
+echo &#34;a&#34;
 sleep 2
-echo &quot;b&quot;
+echo &#34;b&#34;
 sleep 2
-echod &quot;c&quot;
+echod &#34;c&#34;
 sleep 2
-echo &quot;d&quot;
+echo &#34;d&#34;
        
-</code></pre><pre><code>  kln@MacBook-Pro  ~  bash check.sh
+</code></pre><pre tabindex="0"><code>  kln@MacBook-Pro  ~  bash check.sh
 a
 b
 check.sh: line 9: echod: command not found

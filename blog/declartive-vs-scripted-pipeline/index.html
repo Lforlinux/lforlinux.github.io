@@ -23,7 +23,7 @@
   <meta name="description" property="og:description" content="Jenkins Pipeline">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.151.0">
 
   <!-- plugins -->
   
@@ -104,7 +104,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
                 
                 
             </ul>
@@ -120,7 +120,7 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             
-            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
 
             
             
@@ -171,7 +171,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
             
             
         </ul>
@@ -298,131 +298,129 @@
 <li>No matter of what Pipeline it is Under the hood even the Declarative pipeline will inteprated by groovy in Jenkins.</li>
 </ul>
 <h3 id="declarative-pipeline-example-code">Declarative pipeline Example code</h3>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pipeline <span style="color:#2c5dcd">{</span>
-    agent <span style="color:#2c5dcd">{</span> label <span style="color:#0c6">&#39;master&#39;</span><span style="color:#2c5dcd">}</span>
-
-    parameters<span style="color:#2c5dcd">{</span>
-        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;AWS_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;AWS_ACCESS_KEY&#39;</span><span style="color:#2c5dcd">)</span>
-        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;AWS_SECRET_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;AWS_SECRET_ACCESS_KEY&#39;</span><span style="color:#2c5dcd">)</span>
-        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;token&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;token&#39;</span><span style="color:#2c5dcd">)</span>
-    <span style="color:#2c5dcd">}</span>
-    stages <span style="color:#2c5dcd">{</span>
-        stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Terraform init&#39;</span><span style="color:#2c5dcd">){</span>
-            steps<span style="color:#2c5dcd">{</span>
-                  sh<span style="color:#2c5dcd">(</span>
-                      <span style="color:#0c6">&#39;&#39;&#39;
-</span><span style="color:#0c6">                      sh &#39;</span>scripts/terraform-init.sh<span style="color:#0c6">&#39;
-</span><span style="color:#0c6">                      &#39;&#39;&#39;</span>  
-                  <span style="color:#2c5dcd">)</span>
-            <span style="color:#2c5dcd">}</span>
-
-        <span style="color:#2c5dcd">}</span>
-        stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Terraform apply&#39;</span><span style="color:#2c5dcd">){</span>
-            steps<span style="color:#2c5dcd">{</span>
-                  sh<span style="color:#2c5dcd">(</span>
-                      <span style="color:#0c6">&#39;&#39;&#39;
-</span><span style="color:#0c6">                      sh &#39;</span>scripts/terraform-apply.sh<span style="color:#0c6">&#39;
-</span><span style="color:#0c6">                      &#39;&#39;&#39;</span>  
-                  <span style="color:#2c5dcd">)</span><span style="color:#5918bb;font-weight:bold">5</span>
-            <span style="color:#2c5dcd">}</span>
-        <span style="color:#2c5dcd">}</span>
-    <span style="color:#2c5dcd">}</span>
-<span style="color:#2c5dcd">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pipeline <span style="color:#2c5dcd">{</span>
+</span></span><span style="display:flex;"><span>    agent <span style="color:#2c5dcd">{</span> label <span style="color:#0c6">&#39;master&#39;</span><span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    parameters<span style="color:#2c5dcd">{</span>
+</span></span><span style="display:flex;"><span>        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;AWS_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;AWS_ACCESS_KEY&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;AWS_SECRET_ACCESS_KEY&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;AWS_SECRET_ACCESS_KEY&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>        string<span style="color:#2c5dcd">(</span>name:<span style="color:#0c6">&#39;token&#39;</span>, defaultValue: <span style="color:#0c6">&#39;&#39;</span>, description: <span style="color:#0c6">&#39;token&#39;</span><span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>    stages <span style="color:#2c5dcd">{</span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Terraform init&#39;</span><span style="color:#2c5dcd">){</span>
+</span></span><span style="display:flex;"><span>            steps<span style="color:#2c5dcd">{</span>
+</span></span><span style="display:flex;"><span>                  sh<span style="color:#2c5dcd">(</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#0c6">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#0c6">                      sh &#39;</span>scripts/terraform-init.sh<span style="color:#0c6">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#0c6">                      &#39;&#39;&#39;</span>  
+</span></span><span style="display:flex;"><span>                  <span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Terraform apply&#39;</span><span style="color:#2c5dcd">){</span>
+</span></span><span style="display:flex;"><span>            steps<span style="color:#2c5dcd">{</span>
+</span></span><span style="display:flex;"><span>                  sh<span style="color:#2c5dcd">(</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#0c6">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#0c6">                      sh &#39;</span>scripts/terraform-apply.sh<span style="color:#0c6">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#0c6">                      &#39;&#39;&#39;</span>  
+</span></span><span style="display:flex;"><span>                  <span style="color:#2c5dcd">)</span><span style="color:#5918bb;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="scripted-pipeline-example-code">Scripted pipeline Example code</h3>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Jenkinsfile <span style="color:#2c5dcd">(</span>Scripted Pipeline<span style="color:#2c5dcd">)</span>
-node <span style="color:#2c5dcd">{</span>  
-    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Build&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
-        // 
-    <span style="color:#2c5dcd">}</span>
-    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Test&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
-        // 
-    <span style="color:#2c5dcd">}</span>
-    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Deploy&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
-        // 
-    <span style="color:#2c5dcd">}</span>
-<span style="color:#2c5dcd">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Jenkinsfile <span style="color:#2c5dcd">(</span>Scripted Pipeline<span style="color:#2c5dcd">)</span>
+</span></span><span style="display:flex;"><span>node <span style="color:#2c5dcd">{</span>  
+</span></span><span style="display:flex;"><span>    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Build&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
+</span></span><span style="display:flex;"><span>        // 
+</span></span><span style="display:flex;"><span>    <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Test&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
+</span></span><span style="display:flex;"><span>        // 
+</span></span><span style="display:flex;"><span>    <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>    stage<span style="color:#2c5dcd">(</span><span style="color:#0c6">&#39;Deploy&#39;</span><span style="color:#2c5dcd">)</span> <span style="color:#2c5dcd">{</span> 
+</span></span><span style="display:flex;"><span>        // 
+</span></span><span style="display:flex;"><span>    <span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="key-differences">Key Differences.</h2>
 <ul>
 <li>Pipeline: This is the user-defined block, which contains all the processes such as build, test, deploy, etc. it is a group of all the stages in a JenkinsFile. All the stages and steps are defined in this block. <strong>It is used in declarative pipeline syntax.</strong></li>
 </ul>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pipeline<span style="color:#2c5dcd">{</span>  
-<span style="color:#2c5dcd">}</span>  
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pipeline<span style="color:#2c5dcd">{</span>  
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">}</span>  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Node: The node is a machine on which Jenkins runs is called a node. <strong>A node block is used in scripted pipeline syntax.</strong></li>
 </ul>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node<span style="color:#2c5dcd">{</span>  
-<span style="color:#2c5dcd">}</span>  
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>node<span style="color:#2c5dcd">{</span>  
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">}</span>  
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

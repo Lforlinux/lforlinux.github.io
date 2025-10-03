@@ -23,7 +23,7 @@
   <meta name="description" property="og:description" content="How I built a lossless, self-hosted music server on my Synology NAS.">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.151.0">
 
   <!-- plugins -->
   
@@ -104,7 +104,7 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/resume/">CV</a></li>
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
                 
                 
             </ul>
@@ -120,7 +120,7 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             
-            <li><a style="font-size: 18px" href="https://l4linux.com"> Home </a></li>
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
 
             
             
@@ -171,7 +171,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/resume/">CV</a></li>
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
             
             
         </ul>
@@ -268,7 +268,7 @@
     <h1 class="uk-text-center uk-heading-medium">Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</h1>
     <p class="uk-text-center uk-text-lead">How I built a lossless, self-hosted music server on my Synology NAS.</p>
     <p class="uk-text-center">Published on Jul 02, 2025</p>
-    <p class="uk-text-center">Reading time: 5 minutes.</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
     
 
     <hr class="full-width">
@@ -278,8 +278,7 @@
       <p>🎵 <strong>Self-Hosted Sound: Building My Personal High-Fidelity Music Streaming Setup</strong></p>
 <p>In a world where everything is now a subscription — from task managers to weather apps — streaming music has become another monthly bill we all accept without thinking. But as someone who has always leaned into open-source and self-hosted solutions, I began to ask myself a simple question:</p>
 <blockquote>
-<p>Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</p>
-</blockquote>
+<p>Why pay every month for compressed audio when I could host my own music server — in full lossless quality — and actually own my collection?</p></blockquote>
 <h2 id="-why-i-decided-to-host-my-own-music-server">🎯 Why I Decided to Host My Own Music Server</h2>
 <p>My journey into self-hosting started with file storage and backups, but I always knew I’d eventually get to music — a deeply personal part of my daily life. After experimenting with Raspberry Pi NAS setups and finally settling on the Synology DS923+ (<a href="https://l4linux.com/blog/haas-homelab-as-a-service/">more on that in my previous post</a>), it was time to bring my music dreams to life.</p>
 <h2 id="-the-frustration-with-streaming">😤 The Frustration with Streaming</h2>
@@ -294,40 +293,40 @@
 <h2 id="-understanding-audio-quality-why-flac-wins">🎧 Understanding Audio Quality: Why FLAC Wins</h2>
 <p>Let’s compare a few popular formats:</p>
 <table>
-<thead>
-<tr>
-<th>Format</th>
-<th>Bitrate</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MP3 (High)</td>
-<td>~320 kbps</td>
-<td>Lossy</td>
-<td>Decent for casual listening, but data is discarded forever</td>
-</tr>
-<tr>
-<td>CD Audio</td>
-<td>~1,411 kbps</td>
-<td>Uncompressed PCM</td>
-<td>Full resolution, classic standard</td>
-</tr>
-<tr>
-<td>FLAC</td>
-<td>700–3,500 kbps</td>
-<td>Lossless (Variable)</td>
-<td>No quality loss, just space-efficient</td>
-</tr>
-<tr>
-<td>Hi-Res Audio</td>
-<td>~9,216 kbps</td>
-<td>Lossless (24-bit)</td>
-<td>Studio-quality, audiophile favorite</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Format</th>
+          <th>Bitrate</th>
+          <th>Type</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>MP3 (High)</td>
+          <td>~320 kbps</td>
+          <td>Lossy</td>
+          <td>Decent for casual listening, but data is discarded forever</td>
+      </tr>
+      <tr>
+          <td>CD Audio</td>
+          <td>~1,411 kbps</td>
+          <td>Uncompressed PCM</td>
+          <td>Full resolution, classic standard</td>
+      </tr>
+      <tr>
+          <td>FLAC</td>
+          <td>700–3,500 kbps</td>
+          <td>Lossless (Variable)</td>
+          <td>No quality loss, just space-efficient</td>
+      </tr>
+      <tr>
+          <td>Hi-Res Audio</td>
+          <td>~9,216 kbps</td>
+          <td>Lossless (24-bit)</td>
+          <td>Studio-quality, audiophile favorite</td>
+      </tr>
+  </tbody>
 </table>
 <p><strong>Why FLAC?</strong></p>
 <ul>
@@ -338,105 +337,105 @@
 <p>Most streaming services still use lossy formats like OGG or AAC. FLAC, on the other hand, lets you experience music as it was meant to be heard — every breath, every reverb tail, every subtle cymbal decay.</p>
 <h2 id="-my-self-hosted-music-stack">🛠️ My Self-Hosted Music Stack</h2>
 <p>Everything runs on Docker, orchestrated with Portainer on my Synology DS923+. Here’s the tech stack I use:</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">plex</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>plex<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>lscr.io/linuxserver/plex:latest<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">devices</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /dev/dri:/dev/dri<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">privileged</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">true</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">network_mode</span>:<span style="color:#cbcbcb"> </span>host<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- PUID=1026<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- PGID=100<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- VERSION=docker<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>unless-stopped<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/plex:/config:rw<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/Movies:/Movies:rw<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/Music:/Music:rw<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl_material</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>tzahi12345/youtubedl-material:latest<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>ytdl_material<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">depends_on</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- ytdl-mongo-db<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;8998:17442&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb"> 
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_mongodb_connection_string</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;mongodb://ytdl-mongo-db:27017&#39;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_use_local_db</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;false&#39;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">write_ytdl_config</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;true&#39;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/appdata:/app/appdata<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/Music/:/app/audio <span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/video:/app/video<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/subscriptions:/app/subscriptions<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/users:/app/users<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl-mongo-db</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>mongo:4<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>mongo-db<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">logging</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;none&#34;</span><span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
-</span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/db:/data/db<span style="color:#cbcbcb">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">plex</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>plex<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>lscr.io/linuxserver/plex:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">devices</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /dev/dri:/dev/dri<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">privileged</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">true</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">network_mode</span>:<span style="color:#cbcbcb"> </span>host<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- PUID=1026<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- PGID=100<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- VERSION=docker<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>unless-stopped<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/plex:/config:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Movies:/Movies:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Music:/Music:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl_material</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>tzahi12345/youtubedl-material:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>ytdl_material<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">depends_on</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- ytdl-mongo-db<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;8998:17442&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_mongodb_connection_string</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;mongodb://ytdl-mongo-db:27017&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_use_local_db</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;false&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">write_ytdl_config</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;true&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/appdata:/app/appdata<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Music/:/app/audio <span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/video:/app/video<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/subscriptions:/app/subscriptions<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/users:/app/users<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl-mongo-db</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>mongo:4<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>mongo-db<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">logging</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;none&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/db:/data/db<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="key-components"><strong>Key Components</strong></h3>
 <ul>
@@ -449,7 +448,6 @@
 <hr>
 <h2 id="-architecture-overview">🗺️ Architecture Overview</h2>
 <p>Below is a diagram of how everything fits together:</p>
-<!-- raw HTML omitted -->
 <p><img src="https://raw.githubusercontent.com/Lforlinux/lforlinux.github.io/refs/heads/master/images/portfolio/plexamp.png" alt="Plexamp Mobile App Screenshot">
 <em>Plexamp: My go-to music player for a high-fidelity, self-hosted experience.</em></p>
 <hr>

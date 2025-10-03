@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Cloud CV - Serverless Resume with AWS Infrastructure as Code">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Cloud CV - Serverless Resume with AWS Infrastructure as Code</h1>
+    <p class="uk-text-center uk-text-lead">Cloud CV - Serverless Resume with AWS Infrastructure as Code</p>
+    <p class="uk-text-center">Published on Jan 03, 2025</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/Lforlinux/Cloud-CV"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.terraform.io/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg" alt="Terraform" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://aws.amazon.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://github.com/features/actions">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="GitHub Actions" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.python.org/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg" alt="Python" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://localstack.cloud/">
+            <img class="contain skills" src="https://raw.githubusercontent.com/localstack/branding/328447df6d80daf0ea7156006f52cd9c9a22a3e5/Web%20Logos%20%28RGB%29/SVG/Horizontal/localstack-logo-horizontal-color.svg" alt="LocalStack" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Serverless Architecture</strong>: A fully serverless resume website showcasing modern cloud-native development practices</li>
+<li><strong>Infrastructure as Code</strong>: Complete AWS infrastructure managed through Terraform with automated deployments</li>
+<li><strong>CI/CD Pipeline</strong>: GitHub Actions automation for one-click deployments with visitor counter functionality</li>
+<li><strong>Local Development</strong>: LocalStack integration for local AWS development without cloud costs</li>
+<li><strong>Professional Portfolio</strong>: Demonstrates SRE/DevOps expertise through the project itself</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>Terraform Infrastructure</strong>: Complete AWS infrastructure provisioned as code including S3, CloudFront, Lambda, DynamoDB, and API Gateway</li>
+<li><strong>GitHub Actions CI/CD</strong>: Automated deployment pipeline that builds, tests, and deploys on every commit</li>
+<li><strong>Serverless Backend</strong>: Python Lambda function with DynamoDB for visitor counter with CORS support</li>
+<li><strong>Static Website Hosting</strong>: S3 + CloudFront for global CDN with automatic HTTPS and custom domain support</li>
+<li><strong>LocalStack Development</strong>: Local AWS environment for development and testing without cloud costs</li>
+<li><strong>Infrastructure Monitoring</strong>: CloudWatch logs and metrics for observability and debugging</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>AWS account with programmatic access</li>
+<li>AWS IAM user with the following policies:
+<ul>
+<li><code>AmazonS3FullAccess</code></li>
+<li><code>CloudFrontFullAccess</code></li>
+<li><code>AWSLambdaFullAccess</code></li>
+<li><code>AmazonDynamoDBFullAccess</code></li>
+<li><code>AmazonAPIGatewayAdministrator</code></li>
+<li><code>IAMFullAccess</code></li>
+<li><code>CloudWatchLogsFullAccess</code></li>
+</ul>
+</li>
+<li>Terraform &gt;= 1.0</li>
+<li>Docker (for LocalStack development)</li>
+<li>Git and GitHub account</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/Lforlinux/Cloud-CV
+</code></pre><hr>
+<h2 id="how-to-deploy-the-infrastructure">How to deploy the infrastructure</h2>
+<h3 id="automated-deployment-recommended">Automated Deployment (Recommended)</h3>
+<p>The project uses GitHub Actions for one-click deployment:</p>
+<ol>
+<li><strong>Fork the repository</strong> to your GitHub account</li>
+<li><strong>Configure AWS Secrets</strong> in GitHub repository settings:
+<ul>
+<li><code>AWS_ACCESS_KEY_ID</code></li>
+<li><code>AWS_SECRET_ACCESS_KEY</code></li>
+</ul>
+</li>
+<li><strong>Push to main branch</strong> - GitHub Actions will automatically deploy</li>
+<li><strong>Access your Cloud CV</strong> via the CloudFront URL provided in the deployment logs</li>
+</ol>
+<h3 id="manual-deployment">Manual Deployment</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Clone the repository</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/Lforlinux/Cloud-CV.git
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">cd</span> Cloud-CV
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Configure AWS credentials</span>
+</span></span><span style="display:flex;"><span>aws configure
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Deploy infrastructure</span>
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">cd</span> infra/terraform
+</span></span><span style="display:flex;"><span>terraform init
+</span></span><span style="display:flex;"><span>terraform plan
+</span></span><span style="display:flex;"><span>terraform apply
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Upload frontend files</span>
+</span></span><span style="display:flex;"><span>aws s3 cp ../frontend/index.html s3://<span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw bucket_name<span style="color:#2c5dcd;font-weight:bold">)</span>/
+</span></span><span style="display:flex;"><span>aws s3 cp ../frontend/styles.css s3://<span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw bucket_name<span style="color:#2c5dcd;font-weight:bold">)</span>/
+</span></span><span style="display:flex;"><span>aws s3 cp ../frontend/script.js s3://<span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw bucket_name<span style="color:#2c5dcd;font-weight:bold">)</span>/
+</span></span><span style="display:flex;"><span>aws s3 cp ../cv.pdf s3://<span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw bucket_name<span style="color:#2c5dcd;font-weight:bold">)</span>/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Invalidate CloudFront cache</span>
+</span></span><span style="display:flex;"><span>aws cloudfront create-invalidation --distribution-id <span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw cloudfront_distribution_id<span style="color:#2c5dcd;font-weight:bold">)</span> --paths <span style="color:#0c6">&#34;/*&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="architecture">Architecture</h2>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/Cloud-CV/main/docs/Cloud-CV.png" alt="Cloud CV Architecture"></p>
+<h3 id="core-components">Core Components</h3>
+<ul>
+<li><strong>S3 Bucket</strong>: Static website hosting with versioning and encryption</li>
+<li><strong>CloudFront CDN</strong>: Global content delivery with custom domain support</li>
+<li><strong>Lambda Function</strong>: Serverless visitor counter with DynamoDB integration</li>
+<li><strong>DynamoDB</strong>: NoSQL database for visitor count storage</li>
+<li><strong>API Gateway</strong>: RESTful API with CORS support for frontend integration</li>
+<li><strong>CloudWatch</strong>: Logging and monitoring for observability</li>
+</ul>
+<h2 id="local-development-with-localstack">Local Development with LocalStack</h2>
+<h3 id="start-localstack-environment">Start LocalStack Environment</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Start LocalStack</span>
+</span></span><span style="display:flex;"><span>./scripts/local-dev-start.sh start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Upload files to local S3</span>
+</span></span><span style="display:flex;"><span>./scripts/local-dev-start.sh upload
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check status</span>
+</span></span><span style="display:flex;"><span>./scripts/local-dev-start.sh status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Stop when done</span>
+</span></span><span style="display:flex;"><span>./scripts/local-dev-start.sh stop
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="access-local-development">Access Local Development</h3>
+<ul>
+<li><strong>Website</strong>: http://localhost:4566/cloud-cv-local/index.html</li>
+<li><strong>S3 Browser</strong>: http://localhost:4566/cloud-cv-local/</li>
+<li><strong>LocalStack Health</strong>: http://localhost:4566/_localstack/health</li>
+</ul>
+<h2 id="how-to-customize-your-cloud-cv">How to customize your Cloud CV</h2>
+<h3 id="1-update-personal-information">1. Update Personal Information</h3>
+<p>Edit <code>frontend/index.html</code>:</p>
+<ul>
+<li>Update name, title, and contact information</li>
+<li>Modify experience and skills sections</li>
+<li>Add your profile image URL</li>
+<li>Update the About Me section</li>
+</ul>
+<h3 id="2-customize-styling">2. Customize Styling</h3>
+<p>Edit <code>frontend/styles.css</code>:</p>
+<ul>
+<li>Modify color scheme and fonts</li>
+<li>Adjust layout and spacing</li>
+<li>Add custom animations or effects</li>
+</ul>
+<h3 id="3-add-custom-domain">3. Add Custom Domain</h3>
+<ol>
+<li><strong>Purchase a domain</strong> (e.g., from Route53, GoDaddy, etc.)</li>
+<li><strong>Create ACM certificate</strong> for your domain</li>
+<li><strong>Update Terraform variables</strong>:
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>domain_name <span style="color:#2c5dcd">=</span> <span style="color:#0c6">&#34;your-domain.com&#34;</span>
+</span></span><span style="display:flex;"><span>certificate_arn <span style="color:#2c5dcd">=</span> <span style="color:#0c6">&#34;arn:aws:acm:us-east-1:123456789012:certificate/your-cert-id&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li><strong>Deploy infrastructure</strong> with custom domain</li>
+<li><strong>Configure DNS</strong> to point to CloudFront distribution</li>
+</ol>
+<h2 id="visitor-counter-implementation">Visitor Counter Implementation</h2>
+<h3 id="backend-lambda--dynamodb">Backend (Lambda + DynamoDB)</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Lambda function handles visitor counting</span>
+</span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">def</span> <span style="color:#ff8000;font-weight:bold">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#0080ff;font-style:italic"># Get current count from DynamoDB</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0080ff;font-style:italic"># Increment counter</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0080ff;font-style:italic"># Update DynamoDB</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0080ff;font-style:italic"># Return JSON response with CORS headers</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="frontend-integration">Frontend Integration</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic">// Fetch visitor count from API Gateway
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span>fetch(apiUrl)
+</span></span><span style="display:flex;"><span>  .then(response =&gt; response.json())
+</span></span><span style="display:flex;"><span>  .then(data =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#5918bb;font-weight:bold">document</span>.getElementById(<span style="color:#0c6">&#39;visitor-count&#39;</span>).textContent <span style="color:#2c5dcd">=</span> data.visitor_count;
+</span></span><span style="display:flex;"><span>  });
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="cicd-pipeline-features">CI/CD Pipeline Features</h2>
+<h3 id="github-actions-workflow">GitHub Actions Workflow</h3>
+<ul>
+<li><strong>Terraform Deployment</strong>: Automated infrastructure provisioning</li>
+<li><strong>File Upload</strong>: Automatic S3 upload with correct content types</li>
+<li><strong>Cache Invalidation</strong>: CloudFront cache invalidation for immediate updates</li>
+<li><strong>Health Checks</strong>: Deployment verification and status reporting</li>
+</ul>
+<h3 id="deployment-triggers">Deployment Triggers</h3>
+<ul>
+<li><strong>Push to main</strong>: Automatic production deployment</li>
+<li><strong>Pull Requests</strong>: Infrastructure validation and testing</li>
+<li><strong>Manual Dispatch</strong>: On-demand deployment capability</li>
+</ul>
+<h2 id="monitoring-and-observability">Monitoring and Observability</h2>
+<h3 id="cloudwatch-integration">CloudWatch Integration</h3>
+<ul>
+<li><strong>Lambda Logs</strong>: Function execution logs and errors</li>
+<li><strong>DynamoDB Metrics</strong>: Database performance and usage</li>
+<li><strong>CloudFront Analytics</strong>: CDN performance and cache hit rates</li>
+<li><strong>API Gateway Logs</strong>: API request/response monitoring</li>
+</ul>
+<h3 id="cost-optimization">Cost Optimization</h3>
+<ul>
+<li><strong>S3 Intelligent Tiering</strong>: Automatic cost optimization for storage</li>
+<li><strong>CloudFront Caching</strong>: Reduced origin requests and costs</li>
+<li><strong>Lambda Pay-per-Use</strong>: Serverless scaling with no idle costs</li>
+<li><strong>DynamoDB On-Demand</strong>: Pay only for actual usage</li>
+</ul>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<h3 id="infrastructure-security">Infrastructure Security</h3>
+<ul>
+<li><strong>S3 Bucket Policies</strong>: Restrictive access controls</li>
+<li><strong>CloudFront OAC</strong>: Secure origin access control</li>
+<li><strong>Lambda IAM Roles</strong>: Least privilege access</li>
+<li><strong>API Gateway CORS</strong>: Controlled cross-origin access</li>
+</ul>
+<h3 id="data-protection">Data Protection</h3>
+<ul>
+<li><strong>S3 Encryption</strong>: Server-side encryption for all objects</li>
+<li><strong>DynamoDB Encryption</strong>: Encryption at rest and in transit</li>
+<li><strong>HTTPS Only</strong>: CloudFront enforces secure connections</li>
+<li><strong>No Sensitive Data</strong>: No personal information stored in visitor counter</li>
+</ul>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="cdn-optimization">CDN Optimization</h3>
+<ul>
+<li><strong>CloudFront Caching</strong>: Global edge locations for fast delivery</li>
+<li><strong>Compression</strong>: Automatic gzip compression for text files</li>
+<li><strong>Cache Headers</strong>: Optimized cache policies for different content types</li>
+<li><strong>HTTP/2</strong>: Modern protocol support for better performance</li>
+</ul>
+<h3 id="lambda-optimization">Lambda Optimization</h3>
+<ul>
+<li><strong>Cold Start Mitigation</strong>: Optimized function initialization</li>
+<li><strong>Memory Tuning</strong>: Right-sized memory allocation</li>
+<li><strong>Connection Reuse</strong>: DynamoDB connection pooling</li>
+<li><strong>Error Handling</strong>: Robust error handling and retries</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>Multi-Environment Support</strong>: Staging and production environments</li>
+<li><strong>Custom Analytics</strong>: Advanced visitor tracking and analytics</li>
+<li><strong>A/B Testing</strong>: Content variation testing capabilities</li>
+<li><strong>Multi-Language Support</strong>: Internationalization features</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>GitOps Integration</strong>: ArgoCD for GitOps workflows</li>
+<li><strong>Infrastructure Testing</strong>: Terratest for infrastructure validation</li>
+<li><strong>Security Scanning</strong>: Automated security vulnerability scanning</li>
+<li><strong>Performance Testing</strong>: Load testing with Artillery or K6</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><strong>CloudFront Cache</strong>: Use cache invalidation for immediate updates</li>
+<li><strong>CORS Errors</strong>: Ensure API Gateway CORS configuration</li>
+<li><strong>Lambda Timeouts</strong>: Check DynamoDB permissions and connectivity</li>
+<li><strong>S3 Access</strong>: Verify bucket policies and CloudFront OAC</li>
+</ol>
+<h3 id="debug-commands">Debug Commands</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check CloudFront distribution status</span>
+</span></span><span style="display:flex;"><span>aws cloudfront get-distribution --id YOUR_DISTRIBUTION_ID
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Test API Gateway endpoint</span>
+</span></span><span style="display:flex;"><span>curl -X GET <span style="color:#0c6">&#34;YOUR_API_GATEWAY_URL/visitor-count&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check Lambda logs</span>
+</span></span><span style="display:flex;"><span>aws logs describe-log-groups --log-group-name-prefix <span style="color:#0c6">&#34;/aws/lambda/cloud-cv&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Verify S3 bucket contents</span>
+</span></span><span style="display:flex;"><span>aws s3 ls s3://YOUR_BUCKET_NAME/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally with LocalStack</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Terraform</strong>: Follow HashiCorp best practices</li>
+<li><strong>Python</strong>: PEP 8 style guide compliance</li>
+<li><strong>JavaScript</strong>: ESLint configuration</li>
+<li><strong>Documentation</strong>: Clear and comprehensive README updates</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This Cloud CV project demonstrates modern cloud-native development practices, showcasing:</p>
+<ul>
+<li><strong>Infrastructure as Code</strong> with Terraform</li>
+<li><strong>Serverless Architecture</strong> with AWS Lambda and DynamoDB</li>
+<li><strong>CI/CD Automation</strong> with GitHub Actions</li>
+<li><strong>Local Development</strong> with LocalStack</li>
+<li><strong>Professional Portfolio</strong> that showcases itself</li>
+</ul>
+<p>The project serves as both a functional resume website and a comprehensive example of DevOps/SRE best practices, making it an excellent addition to any cloud engineer&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="https://d3hxqhnomwslm4.cloudfront.net/">Cloud-CV</a></p>
+<p><strong>Source Code</strong>: <a href="https://github.com/Lforlinux/Cloud-CV">https://github.com/Lforlinux/Cloud-CV</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

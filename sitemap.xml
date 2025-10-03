@@ -11,6 +11,21 @@
     <loc>https://l4linux.com/blog/haas-homelab-as-a-service/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://l4linux.com/categories/aws/</loc>
+    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/</loc>
+    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/portfolio/cloud-cv/</loc>
+    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/devops/</loc>
+    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/sre/</loc>
+    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://l4linux.com/blog/chatgpt/</loc>
     <lastmod>2022-12-10T01:23:24+05:30</lastmod>
   </url><url>
@@ -35,13 +50,7 @@
     <loc>https://l4linux.com/blog/kubectl-alias/</loc>
     <lastmod>2020-12-17T08:53:27+05:30</lastmod>
   </url><url>
-    <loc>https://l4linux.com/categories/aws/</loc>
-    <lastmod>2020-06-19T23:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://l4linux.com/portfolio/terraform-eks/</loc>
-    <lastmod>2020-06-19T23:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l4linux.com/categories/</loc>
     <lastmod>2020-06-19T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l4linux.com/categories/docker/</loc>

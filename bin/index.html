@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="The website of Lekshmi Kolappan, DevOps/SRE Engineer">
+  <meta name="description" property="og:description" content="Command-line tools and utilities developed by Lekshmi Kolappan">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
   <meta name="generator" content="Hugo 0.151.0">
@@ -36,7 +36,7 @@
   
   <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
 
-  <link rel="alternate" type="application/rss+xml" href="https://l4linux.com/categories/aws/index.xml" title="Lekshmi Kolappan" />
+  <link rel="alternate" type="application/rss+xml" href="https://l4linux.com/bin/index.xml" title="Lekshmi Kolappan" />
 <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
   <!--Favicon-->
@@ -46,7 +46,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body class="categories">
+<body class="bin">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -94,7 +94,8 @@
                 
                 
                 
-                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/bin">Tools</a></li>
                 
                 
                 
@@ -171,7 +172,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/bin">Tools</a></li>
             
             
             
@@ -199,70 +200,82 @@
     </div>
 </div>
 
-
-
-
+ 
 
 <section class="uk-margin-large-bottom">
-        <h1 class="uk-heading-large uk-text-center">Aws</h1>
+        <h1 class="uk-heading-large uk-text-center">Tools</h1>
 </section>
 
 
 
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid uk-height-match="target: > div > div > .card-body">
-            
-
-            <div>
-                <div class="uk-card uk-card-default uk-width-1@m">
-                    <div class="card-body">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">Cloud CV - Serverless Resume with AWS Infrastructure as Code</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time
-                                        datetime="2025-01-03 23:00:00 &#43;0000 UTC">Jan 3, 2025</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p>Cloud CV - Serverless Resume with AWS Infrastructure as Code</p>
-                    </div>
-                </div>
-                    <div class="uk-card-footer">
-                        <a href="/portfolio/cloud-cv/" class="uk-button uk-button-text">Read more</a>
-                    </div>
-                </div>
+<section>
+  <div class="uk-container uk-margin-xlarge-bottom">
+    <div class="uk-child-width-1-1 uk-child-width-1-2@m uk-text-center uk-grid-large" uk-grid>
+      
+      <div>
+        <div class="uk-card uk-card-default uk-card-hover" style="position: relative;">
+          <div class="uk-card-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">diffctl</h3>
+                <p class="uk-text-meta uk-margin-remove-top">A powerful tool for comparing and managing configuration differences across environments</p>
+              </div>
             </div>
-            
-
-            <div>
-                <div class="uk-card uk-card-default uk-width-1@m">
-                    <div class="card-body">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">AWS EKS Deployment through terraform</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time
-                                        datetime="2020-06-19 23:00:00 &#43;0000 UTC">Jun 19, 2020</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p>EKS deployment</p>
-                    </div>
-                </div>
-                    <div class="uk-card-footer">
-                        <a href="/portfolio/terraform-eks/" class="uk-button uk-button-text">Read more</a>
-                    </div>
-                </div>
+          </div>
+          <div class="uk-card-body">
+            <p>A powerful tool for comparing and managing configuration differences across environments</p>
+            <div class="uk-margin-top">
+              
+              <a href="https://l4linux.com/diffctl/" target="_blank" class="uk-button uk-button-primary uk-margin-small-right">
+                <span uk-icon="icon: world"></span> Live Demo
+              </a>
+              
+              
+              <a href="https://github.com/Lforlinux/diffctl" target="_blank" class="uk-button uk-button-default uk-margin-small-right">
+                <span uk-icon="icon: github"></span> GitHub
+              </a>
+              
             </div>
-            
-
+          </div>
+          <div class="uk-card-footer">
+            <a href="/bin/diffctl/" class="uk-button uk-button-text">Learn More</a>
+          </div>
         </div>
-
+      </div>
+      
+      <div>
+        <div class="uk-card uk-card-default uk-card-hover" style="position: relative;">
+          <div class="uk-card-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+              <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">subnetctl</h3>
+                <p class="uk-text-meta uk-margin-remove-top">A utility for managing and analyzing network subnets with advanced CIDR operations</p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <p>A utility for managing and analyzing network subnets with advanced CIDR operations</p>
+            <div class="uk-margin-top">
+              
+              <a href="https://l4linux.com/subnetctl/" target="_blank" class="uk-button uk-button-primary uk-margin-small-right">
+                <span uk-icon="icon: world"></span> Live Demo
+              </a>
+              
+              
+              <a href="https://github.com/Lforlinux/subnetctl" target="_blank" class="uk-button uk-button-default uk-margin-small-right">
+                <span uk-icon="icon: github"></span> GitHub
+              </a>
+              
+            </div>
+          </div>
+          <div class="uk-card-footer">
+            <a href="/bin/subnetctl/" class="uk-button uk-button-text">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
     </div>
+  </div>
 </section>
 
 

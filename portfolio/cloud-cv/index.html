@@ -38,6 +38,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="3eacc7d5-7d8b-4068-ab3f-7f9b1f0181bd"></script>
+
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -524,41 +527,17 @@
 <li><strong>S3 Browser</strong>: http://localhost:4566/cloud-cv-local/</li>
 <li><strong>LocalStack Health</strong>: http://localhost:4566/_localstack/health</li>
 </ul>
-<h2 id="how-to-customize-your-cloud-cv">How to customize your Cloud CV</h2>
-<h3 id="1-update-personal-information">1. Update Personal Information</h3>
-<p>Edit <code>frontend/index.html</code>:</p>
+<h2 id="project-architecture--implementation">Project Architecture &amp; Implementation</h2>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<p>This Cloud CV project demonstrates a complete serverless architecture built with modern DevOps practices:</p>
 <ul>
-<li>Update name, title, and contact information</li>
-<li>Modify experience and skills sections</li>
-<li>Add your profile image URL</li>
-<li>Update the About Me section</li>
+<li><strong>Frontend</strong>: Static HTML/CSS/JavaScript hosted on S3</li>
+<li><strong>Backend</strong>: Python Lambda function for visitor counter</li>
+<li><strong>Database</strong>: DynamoDB for storing visitor statistics</li>
+<li><strong>CDN</strong>: CloudFront for global content delivery</li>
+<li><strong>Infrastructure</strong>: Terraform for Infrastructure as Code</li>
+<li><strong>CI/CD</strong>: GitHub Actions for automated deployments</li>
 </ul>
-<h3 id="2-customize-styling">2. Customize Styling</h3>
-<p>Edit <code>frontend/styles.css</code>:</p>
-<ul>
-<li>Modify color scheme and fonts</li>
-<li>Adjust layout and spacing</li>
-<li>Add custom animations or effects</li>
-</ul>
-<h3 id="3-add-custom-domain">3. Add Custom Domain</h3>
-<ol>
-<li><strong>Purchase a domain</strong> (e.g., from Route53, GoDaddy, etc.)</li>
-<li><strong>Create ACM certificate</strong> for your domain</li>
-<li><strong>Update Terraform variables</strong>:
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>domain_name <span style="color:#2c5dcd">=</span> <span style="color:#0c6">&#34;your-domain.com&#34;</span>
-</span></span><span style="display:flex;"><span>certificate_arn <span style="color:#2c5dcd">=</span> <span style="color:#0c6">&#34;arn:aws:acm:us-east-1:123456789012:certificate/your-cert-id&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li><strong>Deploy infrastructure</strong> with custom domain</li>
-<li><strong>Configure DNS</strong> to point to CloudFront distribution</li>
-</ol>
 <h2 id="visitor-counter-implementation">Visitor Counter Implementation</h2>
 <h3 id="backend-lambda--dynamodb">Backend (Lambda + DynamoDB)</h3>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">

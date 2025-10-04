@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Self-hosted personal finance management with Actual Budget - complete data ownership and zero subscription costs">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Self-Hosted Finance: Taking Control of Your Money with Actual Budget</h1>
+    <p class="uk-text-center uk-text-lead">Self-hosted personal finance management with Actual Budget - complete data ownership and zero subscription costs</p>
+    <p class="uk-text-center">Published on Jan 03, 2025</p>
+    <p class="uk-text-center">Reading time: 3 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/actualbudget/actual"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+
+    
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://nodejs.org/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-ar21.svg" alt="Node.js" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.sqlite.org/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-ar21.svg" alt="SQLite" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.portainer.io/">
+            <img class="contain skills" src="https://cdn.worldvectorlogo.com/logos/portainer.svg" alt="Portainer" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.synology.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Synology_Logo.svg" alt="Synology" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://tailscale.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Tailscale-Logo-Black.svg" alt="Tailscale" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Financial Independence</strong>: Complete control over personal finance data with zero subscription costs</li>
+<li><strong>Data Sovereignty</strong>: Personal financial information never leaves your infrastructure</li>
+<li><strong>Cost Savings</strong>: Eliminates $179.88/year YNAB subscription, saving nearly $1,800 over 10 years</li>
+<li><strong>Privacy &amp; Security</strong>: No third-party access to sensitive financial data</li>
+<li><strong>Customization</strong>: Unlimited flexibility in budgeting methodology and reporting</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>Docker Containerization</strong>: Actual Budget server running in Docker with automated restarts</li>
+<li><strong>Portainer Management</strong>: Web-based container orchestration and monitoring</li>
+<li><strong>Automated Backups</strong>: Scheduled database backups with version control</li>
+<li><strong>VPN Integration</strong>: Secure remote access via Tailscale for mobile budget management</li>
+<li><strong>Bank Sync</strong>: Automatic transaction import (country-specific features)</li>
+<li><strong>Goal Tracking</strong>: Automated progress monitoring for financial objectives</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Synology NAS (DS923+ or compatible)</li>
+<li>Docker and Portainer installed</li>
+<li>Tailscale VPN for secure remote access</li>
+<li>Basic understanding of Docker containers</li>
+<li>Budget data for migration (optional)</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/actualbudget/actual
+</code></pre><hr>
+<h2 id="how-to-deploy-the-infrastructure">How to deploy the infrastructure</h2>
+<h3 id="docker-compose-setup">Docker Compose Setup</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">actual</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>actualbudget/actual-server:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>actual-budget<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;5006:5006&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- NODE_ENV=production<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/actual-budget:/data<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- actual-network<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">actual-network</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span>bridge<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="deployment-steps">Deployment Steps</h3>
+<ol>
+<li><strong>Create Directory Structure</strong></li>
+</ol>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /volume1/docker-config/actual-budget
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>Deploy with Portainer</strong></li>
+</ol>
+<ul>
+<li>Import the Docker Compose stack</li>
+<li>Configure volume mounts for data persistence</li>
+<li>Set up network connectivity</li>
+</ul>
+<ol start="3">
+<li><strong>Access the Application</strong></li>
+</ol>
+<ul>
+<li>Navigate to <code>http://your-nas-ip:5006</code></li>
+<li>Create your first budget</li>
+<li>Import existing financial data</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<h3 id="core-components">Core Components</h3>
+<ul>
+<li><strong>Actual Budget Server</strong>: Node.js application serving budget data</li>
+<li><strong>SQLite Database</strong>: Local data storage with backup capabilities</li>
+<li><strong>Docker Container</strong>: Isolated runtime environment</li>
+<li><strong>Portainer</strong>: Container management and monitoring</li>
+<li><strong>Tailscale</strong>: Secure VPN for remote access</li>
+</ul>
+<h3 id="data-flow">Data Flow</h3>
+<ol>
+<li><strong>Transaction Entry</strong>: Manual entry or bank sync</li>
+<li><strong>Budget Allocation</strong>: Assign dollars to categories</li>
+<li><strong>Real-time Updates</strong>: Instant sync across devices</li>
+<li><strong>Reporting</strong>: Generate financial insights and trends</li>
+</ol>
+<h2 id="key-features">Key Features</h2>
+<h3 id="budget-management">Budget Management</h3>
+<ul>
+<li><strong>Envelope Budgeting</strong>: YNAB-compatible methodology</li>
+<li><strong>Category Management</strong>: Custom spending categories</li>
+<li><strong>Goal Setting</strong>: Track progress toward financial objectives</li>
+<li><strong>Account Reconciliation</strong>: Keep bank accounts in sync</li>
+</ul>
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+<li><strong>Dashboard Customization</strong>: Import/export JSON configurations</li>
+<li><strong>Mobile Support</strong>: Responsive web interface</li>
+<li><strong>Offline Capability</strong>: Works without internet connection</li>
+<li><strong>Data Export</strong>: Full data portability</li>
+</ul>
+<h2 id="financial-impact">Financial Impact</h2>
+<h3 id="cost-comparison">Cost Comparison</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Period</th>
+          <th>YNAB Cost</th>
+          <th>Actual Budget</th>
+          <th>Savings</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Monthly</strong></td>
+          <td>$14.99</td>
+          <td>$0</td>
+          <td>$14.99</td>
+      </tr>
+      <tr>
+          <td><strong>Yearly</strong></td>
+          <td>$179.88</td>
+          <td>$0</td>
+          <td>$179.88</td>
+      </tr>
+      <tr>
+          <td><strong>5 Years</strong></td>
+          <td>$899.40</td>
+          <td>$0</td>
+          <td>$899.40</td>
+      </tr>
+      <tr>
+          <td><strong>10 Years</strong></td>
+          <td>$1,798.80</td>
+          <td>$0</td>
+          <td>$1,798.80</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="additional-benefits">Additional Benefits</h3>
+<ul>
+<li><strong>Data Ownership</strong>: Complete control over financial data</li>
+<li><strong>Privacy</strong>: No third-party access to sensitive information</li>
+<li><strong>Customization</strong>: Unlimited flexibility in budgeting approach</li>
+<li><strong>Learning</strong>: Valuable technical skills in homelab management</li>
+</ul>
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+<h3 id="data-protection">Data Protection</h3>
+<ul>
+<li><strong>Local Storage</strong>: All data remains on your infrastructure</li>
+<li><strong>Encrypted Backups</strong>: Secure backup strategies</li>
+<li><strong>VPN Access</strong>: Tailscale for secure remote connections</li>
+<li><strong>No Cloud Dependencies</strong>: Complete data sovereignty</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li><strong>Regular Updates</strong>: Keep containers current for security</li>
+<li><strong>Backup Strategy</strong>: Automated, encrypted backups</li>
+<li><strong>Access Control</strong>: Secure authentication and authorization</li>
+<li><strong>Network Security</strong>: Isolated container networking</li>
+</ul>
+<h2 id="monitoring--maintenance">Monitoring &amp; Maintenance</h2>
+<h3 id="health-checks">Health Checks</h3>
+<ul>
+<li><strong>Container Status</strong>: Monitor via Portainer dashboard</li>
+<li><strong>Database Integrity</strong>: Regular backup verification</li>
+<li><strong>Performance Metrics</strong>: Resource usage monitoring</li>
+<li><strong>Log Analysis</strong>: Troubleshooting and optimization</li>
+</ul>
+<h3 id="backup-strategy">Backup Strategy</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Automated backup script</span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic">#!/bin/bash</span>
+</span></span><span style="display:flex;"><span>DATE<span style="color:#2c5dcd">=</span><span style="color:#2c5dcd;font-weight:bold">$(</span>date +%Y%m%d_%H%M%S<span style="color:#2c5dcd;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>cp /volume1/docker-config/actual-budget/actual.db /volume1/backups/actual_$DATE.db
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Database Corruption</strong></p>
+<ul>
+<li>Restore from recent backup</li>
+<li>Check container logs for errors</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Issues</strong></p>
+<ul>
+<li>Monitor resource usage</li>
+<li>Optimize database queries</li>
+</ul>
+</li>
+<li>
+<p><strong>Sync Problems</strong></p>
+<ul>
+<li>Verify network connectivity</li>
+<li>Check container health status</li>
+</ul>
+</li>
+<li>
+<p><strong>Import Errors</strong></p>
+<ul>
+<li>Validate file formats</li>
+<li>Check data integrity</li>
+</ul>
+</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>Advanced Reporting</strong>: Custom financial analytics</li>
+<li><strong>API Integration</strong>: Connect with other financial tools</li>
+<li><strong>Automated Categorization</strong>: AI-powered transaction classification</li>
+<li><strong>Multi-Currency Support</strong>: International financial management</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>High Availability</strong>: Multi-instance deployment</li>
+<li><strong>Performance Optimization</strong>: Database tuning</li>
+<li><strong>Security Hardening</strong>: Enhanced authentication</li>
+<li><strong>Monitoring Integration</strong>: Prometheus/Grafana metrics</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Node.js</strong>: Follow JavaScript best practices</li>
+<li><strong>Docker</strong>: Container optimization guidelines</li>
+<li><strong>Documentation</strong>: Clear and comprehensive README updates</li>
+<li><strong>Testing</strong>: Automated testing for new features</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This self-hosted finance project demonstrates the power of taking control of your financial data:</p>
+<ul>
+<li><strong>Complete Data Ownership</strong> with Actual Budget</li>
+<li><strong>Zero Subscription Costs</strong> compared to commercial alternatives</li>
+<li><strong>Enhanced Privacy</strong> with local data storage</li>
+<li><strong>Technical Learning</strong> through homelab management</li>
+<li><strong>Financial Independence</strong> from vendor lock-in</li>
+</ul>
+<p>The project serves as both a practical financial management tool and a comprehensive example of self-hosted infrastructure, making it an excellent addition to any homelab enthusiast&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="https://l4linux.com/blog/actual-fianance/">Self-Hosted Finance Setup</a><br>
+<strong>Source Code</strong>: <a href="https://github.com/actualbudget/actual">https://github.com/actualbudget/actual</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

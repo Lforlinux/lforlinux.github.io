@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="High-fidelity music streaming with lossless FLAC audio - complete control over your music library">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Self-Hosted Music Streaming: High-Fidelity Audio with Complete Control</h1>
+    <p class="uk-text-center uk-text-lead">High-fidelity music streaming with lossless FLAC audio - complete control over your music library</p>
+    <p class="uk-text-center">Published on Jan 03, 2025</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/plexinc/plex-media-server"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+
+    
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.plex.tv/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/plextv/plextv-ar21.svg" alt="Plex" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.mongodb.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg" alt="MongoDB" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.portainer.io/">
+            <img class="contain skills" src="https://cdn.worldvectorlogo.com/logos/portainer.svg" alt="Portainer" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.synology.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Synology_Logo.svg" alt="Synology" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://tailscale.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Tailscale-Logo-Black.svg" alt="Tailscale" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Audio Quality</strong>: Lossless FLAC streaming vs compressed MP3 from commercial services</li>
+<li><strong>Data Ownership</strong>: Complete control over your music library and metadata</li>
+<li><strong>Cost Savings</strong>: Eliminates monthly streaming subscriptions ($10-15/month)</li>
+<li><strong>Privacy</strong>: No tracking or data collection by streaming companies</li>
+<li><strong>Customization</strong>: Unlimited library size and organization</li>
+<li><strong>Offline Access</strong>: Full library available without internet connection</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>Docker Orchestration</strong>: Plex Media Server with automated container management</li>
+<li><strong>YouTube Integration</strong>: Automated music downloading via YouTubeDL-Material</li>
+<li><strong>Metadata Management</strong>: MongoDB for subscription and media metadata</li>
+<li><strong>Mobile Sync</strong>: Plexamp app with offline download capabilities</li>
+<li><strong>VPN Access</strong>: Secure remote streaming via Tailscale</li>
+<li><strong>Automated Organization</strong>: Smart library management and metadata matching</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Synology NAS (DS923+ or compatible)</li>
+<li>Docker and Portainer installed</li>
+<li>Tailscale VPN for secure remote access</li>
+<li>FLAC music library (optional)</li>
+<li>Basic understanding of media server concepts</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/plexinc/plex-media-server
+</code></pre><hr>
+<h2 id="how-to-deploy-the-infrastructure">How to deploy the infrastructure</h2>
+<h3 id="docker-compose-setup">Docker Compose Setup</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">plex</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>plex<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>lscr.io/linuxserver/plex:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">devices</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /dev/dri:/dev/dri<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">privileged</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">true</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">network_mode</span>:<span style="color:#cbcbcb"> </span>host<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- PUID=1026<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- PGID=100<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- VERSION=docker<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>unless-stopped<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/plex:/config:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Movies:/Movies:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Music:/Music:rw<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl_material</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>tzahi12345/youtubedl-material:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>ytdl_material<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">depends_on</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- ytdl-mongo-db<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;8998:17442&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_mongodb_connection_string</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;mongodb://ytdl-mongo-db:27017&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">ytdl_use_local_db</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;false&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">write_ytdl_config</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;true&#39;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/appdata:/app/appdata<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/Music/:/app/audio <span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/video:/app/video<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/subscriptions:/app/subscriptions<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/users:/app/users<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ytdl-mongo-db</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>mongo:4<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>mongo-db<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">logging</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;none&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/ytdl/db:/data/db<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="deployment-steps">Deployment Steps</h3>
+<ol>
+<li><strong>Create Directory Structure</strong></li>
+</ol>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /volume1/docker-config/plex
+</span></span><span style="display:flex;"><span>mkdir -p /volume1/docker-config/ytdl/<span style="color:#2c5dcd">{</span>appdata,video,subscriptions,users,db<span style="color:#2c5dcd">}</span>
+</span></span><span style="display:flex;"><span>mkdir -p /volume1/Music
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>Deploy with Portainer</strong></li>
+</ol>
+<ul>
+<li>Import the Docker Compose stack</li>
+<li>Configure volume mounts for media and configuration</li>
+<li>Set up network connectivity</li>
+</ul>
+<ol start="3">
+<li><strong>Configure Plex</strong></li>
+</ol>
+<ul>
+<li>Access Plex web interface</li>
+<li>Set up media libraries</li>
+<li>Configure remote access via Tailscale</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<h3 id="core-components">Core Components</h3>
+<ul>
+<li><strong>Plex Media Server</strong>: Central media hub for music and video</li>
+<li><strong>YouTubeDL-Material</strong>: Automated music downloading from YouTube</li>
+<li><strong>MongoDB</strong>: Database for managing subscriptions and metadata</li>
+<li><strong>Portainer</strong>: Container orchestration and management</li>
+<li><strong>Tailscale</strong>: Secure VPN for remote access</li>
+</ul>
+<h3 id="audio-quality-comparison">Audio Quality Comparison</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Format</th>
+          <th>Bitrate</th>
+          <th>Type</th>
+          <th>Quality</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>MP3 (High)</td>
+          <td>~320 kbps</td>
+          <td>Lossy</td>
+          <td>Good for casual listening</td>
+      </tr>
+      <tr>
+          <td>CD Audio</td>
+          <td>~1,411 kbps</td>
+          <td>Uncompressed</td>
+          <td>Full resolution</td>
+      </tr>
+      <tr>
+          <td>FLAC</td>
+          <td>700–3,500 kbps</td>
+          <td>Lossless</td>
+          <td>No quality loss</td>
+      </tr>
+      <tr>
+          <td>Hi-Res Audio</td>
+          <td>~9,216 kbps</td>
+          <td>Lossless (24-bit)</td>
+          <td>Studio quality</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="key-features">Key Features</h2>
+<h3 id="music-management">Music Management</h3>
+<ul>
+<li><strong>Lossless Audio</strong>: FLAC support for audiophile-quality streaming</li>
+<li><strong>Metadata Matching</strong>: Automatic artist, album, and track information</li>
+<li><strong>Library Organization</strong>: Smart categorization and search</li>
+<li><strong>Offline Sync</strong>: Download music for offline listening</li>
+</ul>
+<h3 id="advanced-features">Advanced Features</h3>
+<ul>
+<li><strong>Gapless Playback</strong>: Seamless album listening experience</li>
+<li><strong>Loudness Leveling</strong>: Consistent volume across tracks</li>
+<li><strong>Crossfade</strong>: Smooth transitions between songs</li>
+<li><strong>Mobile Apps</strong>: Plexamp for iOS and Android</li>
+</ul>
+<h2 id="audio-setup">Audio Setup</h2>
+<h3 id="budget-audiophile-configuration">Budget Audiophile Configuration</h3>
+<ul>
+<li><strong>In-Ear Monitors</strong>: KZ EDX Pro ($10) for neutral tuning</li>
+<li><strong>Lossless Streaming</strong>: FLAC files from your own server</li>
+<li><strong>No Digital Processing</strong>: Clean analog sound path</li>
+<li><strong>Passive Noise Isolation</strong>: Immersive listening experience</li>
+</ul>
+<h3 id="quality-benefits">Quality Benefits</h3>
+<ul>
+<li><strong>Instrument Separation</strong>: Clear distinction between instruments</li>
+<li><strong>Dynamic Range</strong>: Full frequency response</li>
+<li><strong>No Compression Artifacts</strong>: Pure audio reproduction</li>
+<li><strong>Artist Intent</strong>: Music as recorded in studio</li>
+</ul>
+<h2 id="media-sourcing">Media Sourcing</h2>
+<h3 id="legal-flac-sources">Legal FLAC Sources</h3>
+<ul>
+<li><strong>Qobuz</strong>: High-resolution music downloads</li>
+<li><strong>Bandcamp</strong>: Direct artist support</li>
+<li><strong>HDtracks</strong>: Audiophile-quality downloads</li>
+<li><strong>Community Forums</strong>: Legal sharing recommendations</li>
+</ul>
+<h3 id="collection-building">Collection Building</h3>
+<ul>
+<li><strong>Album Purchases</strong>: Support artists directly</li>
+<li><strong>Lossless Rips</strong>: Convert existing CDs to FLAC</li>
+<li><strong>Community Sharing</strong>: Legal FLAC collections</li>
+<li><strong>YouTube Integration</strong>: Download and convert to FLAC</li>
+</ul>
+<h2 id="mobile-experience">Mobile Experience</h2>
+<h3 id="plexamp-features">Plexamp Features</h3>
+<ul>
+<li><strong>Offline Downloads</strong>: Full library available offline</li>
+<li><strong>Smart Playlists</strong>: AI-powered music discovery</li>
+<li><strong>Car Mode</strong>: Optimized for driving</li>
+<li><strong>Sleep Timer</strong>: Automatic playback control</li>
+<li><strong>Crossfade</strong>: Smooth transitions</li>
+</ul>
+<h3 id="remote-access">Remote Access</h3>
+<ul>
+<li><strong>Tailscale VPN</strong>: Secure connection from anywhere</li>
+<li><strong>Mobile Sync</strong>: Download music for offline use</li>
+<li><strong>Bandwidth Optimization</strong>: Adaptive quality streaming</li>
+<li><strong>Multi-Device</strong>: Sync across all devices</li>
+</ul>
+<h2 id="cost-analysis">Cost Analysis</h2>
+<h3 id="streaming-service-comparison">Streaming Service Comparison</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Service</th>
+          <th>Monthly Cost</th>
+          <th>Audio Quality</th>
+          <th>Library Size</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Spotify Premium</td>
+          <td>$10.99</td>
+          <td>320 kbps MP3</td>
+          <td>Unlimited</td>
+      </tr>
+      <tr>
+          <td>Apple Music</td>
+          <td>$10.99</td>
+          <td>Lossless</td>
+          <td>100M+ songs</td>
+      </tr>
+      <tr>
+          <td>Tidal HiFi</td>
+          <td>$19.99</td>
+          <td>Lossless</td>
+          <td>100M+ songs</td>
+      </tr>
+      <tr>
+          <td><strong>Self-Hosted</strong></td>
+          <td><strong>$0</strong></td>
+          <td><strong>FLAC Lossless</strong></td>
+          <td><strong>Unlimited</strong></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="long-term-savings">Long-term Savings</h3>
+<ul>
+<li><strong>Annual Savings</strong>: $131.88 (Spotify) to $239.88 (Tidal)</li>
+<li><strong>10-Year Savings</strong>: $1,318.80 to $2,398.80</li>
+<li><strong>No Subscription Fatigue</strong>: One-time setup cost</li>
+<li><strong>Data Ownership</strong>: Priceless privacy and control</li>
+</ul>
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+<h3 id="data-protection">Data Protection</h3>
+<ul>
+<li><strong>Local Storage</strong>: All media remains on your infrastructure</li>
+<li><strong>No Tracking</strong>: No data collection or analytics</li>
+<li><strong>VPN Access</strong>: Secure remote connections only</li>
+<li><strong>User Control</strong>: Complete privacy over listening habits</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li><strong>Regular Updates</strong>: Keep containers current</li>
+<li><strong>Backup Strategy</strong>: Protect your music library</li>
+<li><strong>Access Control</strong>: Secure authentication</li>
+<li><strong>Network Isolation</strong>: Container network security</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Audio Quality Problems</strong></p>
+<ul>
+<li>Check FLAC file integrity</li>
+<li>Verify Plex transcoding settings</li>
+<li>Test with different audio equipment</li>
+</ul>
+</li>
+<li>
+<p><strong>Sync Issues</strong></p>
+<ul>
+<li>Verify Tailscale connection</li>
+<li>Check Plex server status</li>
+<li>Restart mobile app</li>
+</ul>
+</li>
+<li>
+<p><strong>Download Failures</strong></p>
+<ul>
+<li>Check YouTubeDL-Material logs</li>
+<li>Verify internet connectivity</li>
+<li>Update container images</li>
+</ul>
+</li>
+<li>
+<p><strong>Metadata Issues</strong></p>
+<ul>
+<li>Refresh library in Plex</li>
+<li>Check file naming conventions</li>
+<li>Manual metadata entry</li>
+</ul>
+</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>Multi-Room Audio</strong>: Synchronized playback across devices</li>
+<li><strong>Voice Control</strong>: Integration with smart speakers</li>
+<li><strong>Social Features</strong>: Share playlists with friends</li>
+<li><strong>Advanced Analytics</strong>: Listening habit insights</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>High Availability</strong>: Multi-server deployment</li>
+<li><strong>Performance Optimization</strong>: Faster transcoding</li>
+<li><strong>Storage Optimization</strong>: Deduplication and compression</li>
+<li><strong>API Integration</strong>: Connect with other services</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Docker</strong>: Container optimization guidelines</li>
+<li><strong>Media</strong>: Audio quality best practices</li>
+<li><strong>Documentation</strong>: Clear setup instructions</li>
+<li><strong>Testing</strong>: Automated media processing tests</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This self-hosted music streaming project demonstrates the power of owning your media infrastructure:</p>
+<ul>
+<li><strong>Audiophile Quality</strong> with lossless FLAC streaming</li>
+<li><strong>Complete Data Ownership</strong> of your music library</li>
+<li><strong>Zero Subscription Costs</strong> compared to commercial services</li>
+<li><strong>Enhanced Privacy</strong> with local data storage</li>
+<li><strong>Unlimited Library</strong> size and customization</li>
+</ul>
+<p>The project serves as both a practical music streaming solution and a comprehensive example of self-hosted media infrastructure, making it an excellent addition to any homelab enthusiast&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="https://l4linux.com/blog/self-hosted-sound-high-fidelity-music-streaming/">Self-Hosted Music Setup</a><br>
+<strong>Source Code</strong>: <a href="https://github.com/plexinc/plex-media-server">https://github.com/plexinc/plex-media-server</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Building your own private cloud infrastructure with Synology NAS and Docker orchestration">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">HaaS: Homelab as a Service - Private Cloud Infrastructure</h1>
+    <p class="uk-text-center uk-text-lead">Building your own private cloud infrastructure with Synology NAS and Docker orchestration</p>
+    <p class="uk-text-center">Published on Jan 03, 2025</p>
+    <p class="uk-text-center">Reading time: 4 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/portainer/portainer"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+
+    
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.portainer.io/">
+            <img class="contain skills" src="https://cdn.worldvectorlogo.com/logos/portainer.svg" alt="Portainer" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.synology.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Synology_Logo.svg" alt="Synology" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://tailscale.com/">
+            <img class="contain skills" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Tailscale-Logo-Black.svg" alt="Tailscale" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.linux.org/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/linux/linux-ar21.svg" alt="Linux" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.openssh.com/">
+            <img class="contain skills" src="https://www.svgrepo.com/show/438984/ssh.svg" alt="SSH" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Private Cloud</strong>: Complete control over your data and infrastructure</li>
+<li><strong>Cost Savings</strong>: Eliminates multiple SaaS subscriptions ($50-200/month)</li>
+<li><strong>Data Sovereignty</strong>: No dependency on third-party cloud services</li>
+<li><strong>Learning Platform</strong>: Hands-on experience with enterprise technologies</li>
+<li><strong>Scalability</strong>: Start small and grow with your needs</li>
+<li><strong>Security</strong>: Enhanced privacy and control over sensitive data</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>Docker Orchestration</strong>: Containerized applications with automated lifecycle management</li>
+<li><strong>Portainer Management</strong>: Web-based container orchestration and monitoring</li>
+<li><strong>SSH Automation</strong>: Terminal-based configuration and maintenance</li>
+<li><strong>Tailscale VPN</strong>: Zero-config secure remote access</li>
+<li><strong>Synology DSM</strong>: Built-in package management and system administration</li>
+<li><strong>Backup Automation</strong>: Scheduled data protection and disaster recovery</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Synology NAS (DS923+ or compatible)</li>
+<li>Docker and Portainer installed</li>
+<li>Tailscale VPN account</li>
+<li>Basic understanding of containerization</li>
+<li>Network infrastructure (router, switches)</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/portainer/portainer
+</code></pre><hr>
+<h2 id="how-to-deploy-the-infrastructure">How to deploy the infrastructure</h2>
+<h3 id="synology-nas-setup">Synology NAS Setup</h3>
+<ol>
+<li>
+<p><strong>Hardware Configuration</strong></p>
+<ul>
+<li>Install drives in RAID configuration</li>
+<li>Configure network settings</li>
+<li>Set up user accounts and permissions</li>
+</ul>
+</li>
+<li>
+<p><strong>Software Installation</strong></p>
+<ul>
+<li>Install Docker package from Synology Package Center</li>
+<li>Deploy Portainer container</li>
+<li>Configure Tailscale VPN</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Configuration</strong></p>
+<ul>
+<li>Set up static IP addresses</li>
+<li>Configure firewall rules</li>
+<li>Enable SSH access</li>
+</ul>
+</li>
+</ol>
+<h3 id="portainer-deployment">Portainer Deployment</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">portainer</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>portainer/portainer-ce:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">container_name</span>:<span style="color:#cbcbcb"> </span>portainer<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">restart</span>:<span style="color:#cbcbcb"> </span>always<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;9000:9000&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#0c6">&#34;8000:8000&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /var/run/docker.sock:/var/run/docker.sock<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- /volume1/docker-config/portainer:/data<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- portainer-network<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">portainer-network</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">driver</span>:<span style="color:#cbcbcb"> </span>bridge<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="architecture">Architecture</h2>
+<h3 id="core-infrastructure">Core Infrastructure</h3>
+<ul>
+<li><strong>Synology DS923+</strong>: 4-bay NAS with AMD Ryzen processor</li>
+<li><strong>Docker Engine</strong>: Container runtime environment</li>
+<li><strong>Portainer</strong>: Container management and orchestration</li>
+<li><strong>Tailscale</strong>: Mesh VPN for secure remote access</li>
+<li><strong>SSH Access</strong>: Terminal-based administration</li>
+</ul>
+<h3 id="service-stack">Service Stack</h3>
+<ul>
+<li><strong>Media Server</strong>: Plex for movies and music</li>
+<li><strong>Finance Management</strong>: Actual Budget for personal finance</li>
+<li><strong>File Storage</strong>: Centralized file sharing and backup</li>
+<li><strong>Development</strong>: Code repositories and CI/CD</li>
+<li><strong>Monitoring</strong>: System health and performance metrics</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<h3 id="container-management">Container Management</h3>
+<ul>
+<li><strong>Web Interface</strong>: User-friendly container orchestration</li>
+<li><strong>Stack Deployment</strong>: Docker Compose management</li>
+<li><strong>Volume Management</strong>: Persistent data storage</li>
+<li><strong>Network Configuration</strong>: Container networking</li>
+<li><strong>Registry Integration</strong>: Docker image management</li>
+</ul>
+<h3 id="remote-access">Remote Access</h3>
+<ul>
+<li><strong>Tailscale VPN</strong>: Secure connection from anywhere</li>
+<li><strong>SSH Terminal</strong>: Command-line administration</li>
+<li><strong>Web Interfaces</strong>: Browser-based service access</li>
+<li><strong>Mobile Apps</strong>: Remote management capabilities</li>
+</ul>
+<h2 id="service-portfolio">Service Portfolio</h2>
+<h3 id="current-stack">Current Stack</h3>
+<ul>
+<li><strong>Plex Media Server</strong>: Movies, TV shows, and music</li>
+<li><strong>Actual Budget</strong>: Personal finance management</li>
+<li><strong>File Sharing</strong>: Centralized document storage</li>
+<li><strong>Backup Services</strong>: Automated data protection</li>
+<li><strong>Development Tools</strong>: Git repositories and CI/CD</li>
+</ul>
+<h3 id="planned-services">Planned Services</h3>
+<ul>
+<li><strong>Home Assistant</strong>: Smart home automation</li>
+<li><strong>Nextcloud</strong>: File sync and collaboration</li>
+<li><strong>Grafana</strong>: Monitoring and analytics</li>
+<li><strong>GitLab</strong>: Code repository and CI/CD</li>
+<li><strong>Bitwarden</strong>: Password management</li>
+</ul>
+<h2 id="cost-analysis">Cost Analysis</h2>
+<h3 id="saas-vs-self-hosted">SaaS vs Self-Hosted</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Service</th>
+          <th>SaaS Cost/Month</th>
+          <th>Self-Hosted</th>
+          <th>Annual Savings</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Media Streaming</strong></td>
+          <td>$15.99 (Netflix + Spotify)</td>
+          <td>$0</td>
+          <td>$191.88</td>
+      </tr>
+      <tr>
+          <td><strong>File Storage</strong></td>
+          <td>$9.99 (Google Drive)</td>
+          <td>$0</td>
+          <td>$119.88</td>
+      </tr>
+      <tr>
+          <td><strong>Finance Software</strong></td>
+          <td>$14.99 (YNAB)</td>
+          <td>$0</td>
+          <td>$179.88</td>
+      </tr>
+      <tr>
+          <td><strong>Password Manager</strong></td>
+          <td>$3.00 (Bitwarden)</td>
+          <td>$0</td>
+          <td>$36.00</td>
+      </tr>
+      <tr>
+          <td><strong>Total Monthly</strong></td>
+          <td><strong>$43.97</strong></td>
+          <td><strong>$0</strong></td>
+          <td><strong>$527.64</strong></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="hardware-investment">Hardware Investment</h3>
+<ul>
+<li><strong>Synology DS923+</strong>: $600 (one-time)</li>
+<li><strong>Hard Drives</strong>: $400 (one-time)</li>
+<li><strong>Payback Period</strong>: ~2 years</li>
+<li><strong>Long-term Savings</strong>: $2,000+ over 5 years</li>
+</ul>
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+<h3 id="data-protection">Data Protection</h3>
+<ul>
+<li><strong>Local Storage</strong>: All data remains on your infrastructure</li>
+<li><strong>VPN Access</strong>: Encrypted remote connections</li>
+<li><strong>User Control</strong>: Complete privacy over your data</li>
+<li><strong>No Tracking</strong>: No third-party analytics or monitoring</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li><strong>Regular Updates</strong>: Keep system and containers current</li>
+<li><strong>Backup Strategy</strong>: Multiple backup locations</li>
+<li><strong>Access Control</strong>: Secure authentication and authorization</li>
+<li><strong>Network Security</strong>: Firewall and VPN configuration</li>
+</ul>
+<h2 id="monitoring--maintenance">Monitoring &amp; Maintenance</h2>
+<h3 id="health-monitoring">Health Monitoring</h3>
+<ul>
+<li><strong>Portainer Dashboard</strong>: Container status and resource usage</li>
+<li><strong>System Metrics</strong>: CPU, memory, and disk utilization</li>
+<li><strong>Service Health</strong>: Application availability and performance</li>
+<li><strong>Log Analysis</strong>: Troubleshooting and optimization</li>
+</ul>
+<h3 id="maintenance-tasks">Maintenance Tasks</h3>
+<ul>
+<li><strong>Container Updates</strong>: Regular image updates</li>
+<li><strong>Backup Verification</strong>: Ensure data protection</li>
+<li><strong>Security Patches</strong>: Apply system updates</li>
+<li><strong>Performance Tuning</strong>: Optimize resource usage</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Container Startup Failures</strong></p>
+<ul>
+<li>Check Docker daemon status</li>
+<li>Verify volume mounts</li>
+<li>Review container logs</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Connectivity</strong></p>
+<ul>
+<li>Verify Tailscale status</li>
+<li>Check firewall rules</li>
+<li>Test port accessibility</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Issues</strong></p>
+<ul>
+<li>Monitor resource usage</li>
+<li>Check disk space</li>
+<li>Optimize container configuration</li>
+</ul>
+</li>
+<li>
+<p><strong>Backup Problems</strong></p>
+<ul>
+<li>Verify backup schedules</li>
+<li>Check storage capacity</li>
+<li>Test restore procedures</li>
+</ul>
+</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>High Availability</strong>: Multi-node deployment</li>
+<li><strong>Load Balancing</strong>: Traffic distribution</li>
+<li><strong>Automated Scaling</strong>: Dynamic resource allocation</li>
+<li><strong>Disaster Recovery</strong>: Automated failover</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>Kubernetes</strong>: Container orchestration upgrade</li>
+<li><strong>Monitoring Stack</strong>: Prometheus and Grafana</li>
+<li><strong>CI/CD Pipeline</strong>: Automated deployment</li>
+<li><strong>Security Hardening</strong>: Enhanced protection</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li>**Create Pull Request`</li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Docker</strong>: Container optimization guidelines</li>
+<li><strong>Infrastructure</strong>: Infrastructure as Code best practices</li>
+<li><strong>Documentation</strong>: Clear setup and maintenance guides</li>
+<li><strong>Testing</strong>: Automated infrastructure testing</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This HaaS (Homelab as a Service) project demonstrates the power of building your own private cloud:</p>
+<ul>
+<li><strong>Complete Data Ownership</strong> with local infrastructure</li>
+<li><strong>Significant Cost Savings</strong> compared to SaaS subscriptions</li>
+<li><strong>Enhanced Privacy</strong> with no third-party data access</li>
+<li><strong>Technical Learning</strong> through hands-on infrastructure management</li>
+<li><strong>Scalable Architecture</strong> that grows with your needs</li>
+</ul>
+<p>The project serves as both a practical private cloud solution and a comprehensive example of self-hosted infrastructure, making it an excellent foundation for any homelab enthusiast&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="https://l4linux.com/blog/haas-homelab-as-a-service/">HaaS Setup Guide</a><br>
+<strong>Source Code</strong>: <a href="https://github.com/portainer/portainer">https://github.com/portainer/portainer</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

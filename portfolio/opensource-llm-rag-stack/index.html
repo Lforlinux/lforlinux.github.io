@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Your own private AI assistant with retrieval memory, running entirely on local storage with complete data protection">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="3eacc7d5-7d8b-4068-ab3f-7f9b1f0181bd"></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Personal AI Assistant with Local Data Protection</h1>
+    <p class="uk-text-center uk-text-lead">Your own private AI assistant with retrieval memory, running entirely on local storage with complete data protection</p>
+    <p class="uk-text-center">Published on Jan 03, 2025</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/Lforlinux/Opensource-LLM-RAG-Stack"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+
+    
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://ollama.ai/">
+            <img class="contain skills" src="https://blog.sugoitoolkit.com/content/images/size/w1200/2025/06/ollama-logo.png" alt="Ollama" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.trychroma.com/">
+            <img class="contain skills" src="https://images.seeklogo.com/logo-png/48/1/chroma-logo-png_seeklogo-482133.png" alt="Chroma" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.postgresql.org/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/postgresql/postgresql-ar21.svg" alt="PostgreSQL" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://prometheus.io/">
+            <img class="contain skills" src="https://images.seeklogo.com/logo-png/44/3/prometheus-monitoring-system-logo-png_seeklogo-447007.png" alt="Prometheus" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://grafana.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/grafana/grafana-ar21.svg" alt="Grafana" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-makes-this-special">What makes this special?</h2>
+<ul>
+<li><strong>Complete Privacy</strong>: Your AI assistant runs entirely on your local infrastructure - no data leaves your network</li>
+<li><strong>Persistent Memory</strong>: Chroma vector database remembers everything you teach it, creating a truly personalized AI</li>
+<li><strong>Local LLM Power</strong>: Ollama runs powerful language models locally, no internet required for AI responses</li>
+<li><strong>Your Data, Your Control</strong>: All documents, conversations, and embeddings stored securely on your own storage</li>
+<li><strong>Zero Subscription Costs</strong>: Open-source stack with no ongoing fees or usage limits</li>
+<li><strong>Self-Hosted Excellence</strong>: Full control over your AI assistant&rsquo;s capabilities and data retention</li>
+</ul>
+<h2 id="how-does-it-work">How does it work?</h2>
+<ul>
+<li><strong>Smart Document Processing</strong>: Upload your documents and Chroma automatically creates searchable knowledge</li>
+<li><strong>Intelligent Memory</strong>: Your AI remembers past conversations and can reference your uploaded documents</li>
+<li><strong>Local Processing</strong>: Everything runs on your hardware - documents, conversations, and AI responses stay private</li>
+<li><strong>Easy Setup</strong>: One-command deployment with Docker Compose for hassle-free installation</li>
+<li><strong>Model Flexibility</strong>: Choose from various open-source LLM models that run entirely offline</li>
+<li><strong>Real-time Monitoring</strong>: Track your AI&rsquo;s performance and resource usage with built-in dashboards</li>
+</ul>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li>Docker &amp; Docker Compose installed</li>
+<li>8GB+ RAM (for running AI models locally)</li>
+<li>Basic familiarity with Docker commands</li>
+<li>Your own documents to create a personalized AI knowledge base</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/Lforlinux/Opensource-LLM-RAG-Stack
+</code></pre><hr>
+<h2 id="how-to-deploy-the-infrastructure">How to deploy the infrastructure</h2>
+<h3 id="quick-start-deployment">Quick Start Deployment</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Clone the repository</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/Lforlinux/Opensource-LLM-RAG-Stack.git
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">cd</span> Opensource-LLM-RAG-Stack
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Quick start (includes model setup)</span>
+</span></span><span style="display:flex;"><span>./start.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Or manual setup:</span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Start all services (includes Ollama)</span>
+</span></span><span style="display:flex;"><span>docker-compose up -d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Set up Ollama with a model</span>
+</span></span><span style="display:flex;"><span>./scripts/setup-ollama.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="docker-compose-architecture">Docker Compose Architecture</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">version</span>:<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#34;3.8&#34;</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">ollama</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>ollama/ollama:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb"> </span>[<span style="color:#0c6">&#34;11434:11434&#34;</span>]<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- ollama-data:/root/.ollama<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- OLLAMA_HOST=0.0.0.0<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- OLLAMA_ORIGINS=*<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">open-webui</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>ghcr.io/open-webui/open-webui:main<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb"> </span>[<span style="color:#0c6">&#34;3000:8080&#34;</span>]<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- OLLAMA_API_BASE_URL=http://ollama:11434<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- VECTOR_DB=chroma<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- DATABASE_URL=postgresql://user:password@postgres:5432/chatdb<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">chroma</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>ghcr.io/chroma-core/chroma:latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">ports</span>:<span style="color:#cbcbcb"> </span>[<span style="color:#0c6">&#34;8000:8000&#34;</span>]<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- CHROMA_DB_IMPL=duckdb+parquet<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">postgres</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>postgres:15-alpine<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">environment</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">POSTGRES_USER</span>:<span style="color:#cbcbcb"> </span>user<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">POSTGRES_PASSWORD</span>:<span style="color:#cbcbcb"> </span>password<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span><span style="color:#2c5dcd;font-weight:bold">POSTGRES_DB</span>:<span style="color:#cbcbcb"> </span>chatdb<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="architecture">Architecture</h2>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/Opensource-LLM-RAG-Stack/main/scripts/RAG-LLM-stack.png" alt="RAG LLM Stack Architecture"></p>
+<h3 id="rag-stack-components">RAG Stack Components</h3>
+<ul>
+<li><strong>Open WebUI</strong>: User interface for chat interactions and document management</li>
+<li><strong>Ollama</strong>: Containerized LLM inference engine with model management</li>
+<li><strong>Chroma</strong>: Vector database for semantic search and embeddings storage</li>
+<li><strong>PostgreSQL</strong>: Relational database for chat history and document metadata</li>
+<li><strong>Prometheus</strong>: Metrics collection and monitoring</li>
+<li><strong>Grafana</strong>: Visualization and dashboard management</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<h3 id="rag-implementation">RAG Implementation</h3>
+<ul>
+<li><strong>Document Processing</strong>: Automatic chunking and embedding generation</li>
+<li><strong>Semantic Search</strong>: Vector similarity search for relevant context retrieval</li>
+<li><strong>Context Augmentation</strong>: Dynamic prompt enhancement with retrieved information</li>
+<li><strong>Chat History</strong>: Persistent conversation management with PostgreSQL</li>
+<li><strong>Model Management</strong>: Easy model switching and versioning with Docker volumes</li>
+</ul>
+<h3 id="monitoring--observability">Monitoring &amp; Observability</h3>
+<ul>
+<li><strong>Service Health</strong>: Real-time monitoring of all stack components</li>
+<li><strong>Performance Metrics</strong>: Request rates, response times, and resource usage</li>
+<li><strong>Database Monitoring</strong>: PostgreSQL performance and query optimization</li>
+<li><strong>Vector DB Metrics</strong>: Chroma collection health and search performance</li>
+<li><strong>Grafana Dashboards</strong>: Pre-configured dashboards for comprehensive monitoring</li>
+</ul>
+<h2 id="database-schema--architecture">Database Schema &amp; Architecture</h2>
+<h3 id="postgresql-schema">PostgreSQL Schema</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic">-- Chat Sessions Management
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span><span style="color:#2c5dcd;font-weight:bold">CREATE</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">TABLE</span><span style="color:#cbcbcb"> </span>chat_sessions<span style="color:#cbcbcb"> </span>(<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>id<span style="color:#cbcbcb"> </span>UUID<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">PRIMARY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">KEY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span>uuid_generate_v4(),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>user_id<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">255</span>)<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NOT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NULL</span>,<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>session_name<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">255</span>),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>created_at<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">TIMESTAMP</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">WITH</span><span style="color:#cbcbcb"> </span>TIME<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">ZONE</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">CURRENT_TIMESTAMP</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span>);<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#0080ff;font-style:italic">-- Message Storage with Full-Text Search
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span><span style="color:#2c5dcd;font-weight:bold">CREATE</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">TABLE</span><span style="color:#cbcbcb"> </span>chat_messages<span style="color:#cbcbcb"> </span>(<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>id<span style="color:#cbcbcb"> </span>UUID<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">PRIMARY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">KEY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span>uuid_generate_v4(),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>session_id<span style="color:#cbcbcb"> </span>UUID<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">REFERENCES</span><span style="color:#cbcbcb"> </span>chat_sessions(id),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">role</span><span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">50</span>)<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">CHECK</span><span style="color:#cbcbcb"> </span>(<span style="color:#2c5dcd;font-weight:bold">role</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">IN</span><span style="color:#cbcbcb"> </span>(<span style="color:#0c6">&#39;user&#39;</span>,<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;assistant&#39;</span>,<span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;system&#39;</span>)),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>content<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">TEXT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NOT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NULL</span>,<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>token_count<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">INTEGER</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">0</span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span>);<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#0080ff;font-style:italic">-- RAG Document Storage
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span><span style="color:#2c5dcd;font-weight:bold">CREATE</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">TABLE</span><span style="color:#cbcbcb"> </span>documents<span style="color:#cbcbcb"> </span>(<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>id<span style="color:#cbcbcb"> </span>UUID<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">PRIMARY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">KEY</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span>uuid_generate_v4(),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>title<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">500</span>),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>content<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">TEXT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NOT</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">NULL</span>,<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">source</span><span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">500</span>),<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span>embedding_id<span style="color:#cbcbcb"> </span><span style="color:#5918bb;font-weight:bold">VARCHAR</span>(<span style="color:#5918bb;font-weight:bold">255</span>),<span style="color:#cbcbcb"> </span><span style="color:#0080ff;font-style:italic">-- Chroma reference
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span><span style="color:#cbcbcb">    </span>metadata<span style="color:#cbcbcb"> </span>JSONB<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">DEFAULT</span><span style="color:#cbcbcb"> </span><span style="color:#0c6">&#39;{}&#39;</span>::jsonb<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span>);<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#0080ff;font-style:italic">-- Performance Indexes
+</span></span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"></span><span style="color:#2c5dcd;font-weight:bold">CREATE</span><span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">INDEX</span><span style="color:#cbcbcb"> </span>idx_documents_content_gin<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">ON</span><span style="color:#cbcbcb"> </span>documents<span style="color:#cbcbcb"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">USING</span><span style="color:#cbcbcb"> </span>gin(to_tsvector(<span style="color:#0c6">&#39;english&#39;</span>,<span style="color:#cbcbcb"> </span>content));<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="rag-implementation-guide">RAG Implementation Guide</h2>
+<h3 id="document-upload--processing">Document Upload &amp; Processing</h3>
+<ol>
+<li><strong>Access Open WebUI</strong>: Navigate to http://localhost:3000</li>
+<li><strong>Upload Documents</strong>: Support for PDF, TXT, and other formats</li>
+<li><strong>Automatic Processing</strong>: System chunks documents and generates embeddings</li>
+<li><strong>Vector Storage</strong>: Embeddings stored in Chroma for semantic search</li>
+</ol>
+<h3 id="query-with-rag">Query with RAG</h3>
+<ol>
+<li><strong>User Query</strong>: Ask questions in Open WebUI interface</li>
+<li><strong>Context Retrieval</strong>: System retrieves relevant chunks from Chroma</li>
+<li><strong>Prompt Augmentation</strong>: Retrieved context enhances user prompts</li>
+<li><strong>LLM Generation</strong>: Ollama generates responses using augmented context</li>
+</ol>
+<h2 id="monitoring--observability-1">Monitoring &amp; Observability</h2>
+<h3 id="prometheus-metrics">Prometheus Metrics</h3>
+<ul>
+<li><strong>Service Health</strong>: <code>up{job=~&quot;prometheus|postgres_exporter&quot;}</code></li>
+<li><strong>Database Performance</strong>: PostgreSQL exporter metrics</li>
+<li><strong>Request Rates</strong>: HTTP request monitoring</li>
+<li><strong>Resource Usage</strong>: Container and system metrics</li>
+</ul>
+<h3 id="grafana-dashboards">Grafana Dashboards</h3>
+<ul>
+<li><strong>RAG Stack Overview</strong>: Service health and performance</li>
+<li><strong>Database Metrics</strong>: PostgreSQL performance monitoring</li>
+<li><strong>System Resources</strong>: CPU, memory, and disk usage</li>
+<li><strong>Request Analytics</strong>: API call patterns and response times</li>
+</ul>
+<h2 id="production-deployment">Production Deployment</h2>
+<h3 id="environment-configuration">Environment Configuration</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Production environment variables</span>
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> POSTGRES_PASSWORD<span style="color:#2c5dcd">=</span>secure_password
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> GRAFANA_ADMIN_PASSWORD<span style="color:#2c5dcd">=</span>secure_admin_password
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> OLLAMA_API_BASE_URL<span style="color:#2c5dcd">=</span>https://your-ollama-instance.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="scaling-considerations">Scaling Considerations</h3>
+<ul>
+<li><strong>Horizontal Scaling</strong>: Multiple Ollama instances behind load balancer</li>
+<li><strong>Database Scaling</strong>: PostgreSQL read replicas for query performance</li>
+<li><strong>Vector DB Scaling</strong>: Chroma clustering for high availability</li>
+<li><strong>Monitoring</strong>: Prometheus federation for multi-instance monitoring</li>
+</ul>
+<h2 id="security-best-practices">Security Best Practices</h2>
+<h3 id="infrastructure-security">Infrastructure Security</h3>
+<ul>
+<li><strong>Network Isolation</strong>: Container network security and service isolation</li>
+<li><strong>Environment Configuration</strong>: Secure environment variable management</li>
+<li><strong>Data Encryption</strong>: Encryption at rest and in transit</li>
+<li><strong>Access Control</strong>: Proper authentication and authorization</li>
+</ul>
+<h3 id="data-protection">Data Protection</h3>
+<ul>
+<li><strong>Backup Strategy</strong>: Automated backup for all persistent data</li>
+<li><strong>Data Privacy</strong>: No sensitive data logging in production</li>
+<li><strong>Secure Communication</strong>: HTTPS/TLS for all service communications</li>
+<li><strong>Container Security</strong>: Regular image updates and vulnerability scanning</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>RAG Not Working - Document Upload Issues</strong></p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check Chroma connection</span>
+</span></span><span style="display:flex;"><span>curl -s -o /dev/null -w <span style="color:#0c6">&#34;%{http_code}\n&#34;</span> http://localhost:8000/api/v2/heartbeat
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Database Connection Issues</strong></p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check PostgreSQL status</span>
+</span></span><span style="display:flex;"><span>docker-compose logs postgres
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Verify database initialization</span>
+</span></span><span style="display:flex;"><span>docker <span style="color:#5918bb;font-weight:bold">exec</span> -it postgres psql -U user -d chatdb -c <span style="color:#0c6">&#34;\dt&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>Model Loading Problems</strong></p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check Ollama service</span>
+</span></span><span style="display:flex;"><span>docker-compose logs ollama
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Verify model availability</span>
+</span></span><span style="display:flex;"><span>curl http://localhost:11434/api/tags
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>Multi-Model Support</strong>: Support for multiple LLM providers</li>
+<li><strong>Advanced RAG</strong>: Hybrid search with keyword and semantic matching</li>
+<li><strong>API Integration</strong>: RESTful API for external system integration</li>
+<li><strong>Multi-Tenant Support</strong>: Isolated environments for different users</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>High Availability</strong>: Multi-instance deployment with load balancing</li>
+<li><strong>Performance Optimization</strong>: Query optimization and caching strategies</li>
+<li><strong>Security Hardening</strong>: Enhanced authentication and authorization</li>
+<li><strong>Monitoring Enhancement</strong>: Advanced alerting and anomaly detection</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Docker</strong>: Container optimization and security best practices</li>
+<li><strong>Database</strong>: PostgreSQL performance and schema optimization</li>
+<li><strong>Monitoring</strong>: Prometheus metrics and Grafana dashboard standards</li>
+<li><strong>Documentation</strong>: Clear setup and troubleshooting guides</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This OpenSource LLM RAG Stack project demonstrates enterprise-grade AI infrastructure practices, showcasing:</p>
+<ul>
+<li><strong>Production-Ready RAG System</strong> with comprehensive monitoring</li>
+<li><strong>Containerized Microservices</strong> architecture for scalability</li>
+<li><strong>Vector Database Integration</strong> for semantic search capabilities</li>
+<li><strong>Observability</strong> with Prometheus and Grafana monitoring</li>
+<li><strong>Enterprise DevOps</strong> practices with Infrastructure as Code</li>
+</ul>
+<p>The project serves as both a functional RAG system and a comprehensive example of modern AI infrastructure, making it an excellent addition to any AI/ML engineer&rsquo;s portfolio.</p>
+<p><strong>Source Code</strong>: <a href="https://github.com/Lforlinux/Opensource-LLM-RAG-Stack">https://github.com/Lforlinux/Opensource-LLM-RAG-Stack</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

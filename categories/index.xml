@@ -9,6 +9,13 @@
     <lastBuildDate>Fri, 03 Jan 2025 23:00:00 +0000</lastBuildDate>
     <atom:link href="https://l4linux.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ai</title>
+      <link>https://l4linux.com/categories/ai/</link>
+      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
+      <guid>https://l4linux.com/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Automation</title>
       <link>https://l4linux.com/categories/automation/</link>
       <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
@@ -55,6 +62,13 @@
       <link>https://l4linux.com/categories/media/</link>
       <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
       <guid>https://l4linux.com/categories/media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ml</title>
+      <link>https://l4linux.com/categories/ml/</link>
+      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
+      <guid>https://l4linux.com/categories/ml/</guid>
       <description></description>
     </item>
     <item>

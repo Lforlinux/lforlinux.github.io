@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Infrastructure on Lekshmi Kolappan</title>
-    <link>https://l4linux.com/categories/infrastructure/</link>
-    <description>Recent content in Infrastructure on Lekshmi Kolappan</description>
+    <title>Ml on Lekshmi Kolappan</title>
+    <link>https://l4linux.com/categories/ml/</link>
+    <description>Recent content in Ml on Lekshmi Kolappan</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 03 Jan 2025 23:00:00 +0000</lastBuildDate>
-    <atom:link href="https://l4linux.com/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HaaS: Homelab as a Service - Private Cloud Infrastructure</title>
-      <link>https://l4linux.com/portfolio/haas-homelab-as-a-service/</link>
-      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
-      <guid>https://l4linux.com/portfolio/haas-homelab-as-a-service/</guid>
-      <description>&lt;h2 id=&#34;what-is-the-significance-of-this&#34;&gt;What is the significance of this?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Private Cloud&lt;/strong&gt;: Complete control over your data and infrastructure&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cost Savings&lt;/strong&gt;: Eliminates multiple SaaS subscriptions ($50-200/month)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data Sovereignty&lt;/strong&gt;: No dependency on third-party cloud services&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Learning Platform&lt;/strong&gt;: Hands-on experience with enterprise technologies&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Start small and grow with your needs&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Security&lt;/strong&gt;: Enhanced privacy and control over sensitive data&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-is-automation-accomplished&#34;&gt;How is automation accomplished?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Docker Orchestration&lt;/strong&gt;: Containerized applications with automated lifecycle management&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Portainer Management&lt;/strong&gt;: Web-based container orchestration and monitoring&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;SSH Automation&lt;/strong&gt;: Terminal-based configuration and maintenance&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tailscale VPN&lt;/strong&gt;: Zero-config secure remote access&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Synology DSM&lt;/strong&gt;: Built-in package management and system administration&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Backup Automation&lt;/strong&gt;: Scheduled data protection and disaster recovery&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Synology NAS (DS923+ or compatible)&lt;/li&gt;&#xA;&lt;li&gt;Docker and Portainer installed&lt;/li&gt;&#xA;&lt;li&gt;Tailscale VPN account&lt;/li&gt;&#xA;&lt;li&gt;Basic understanding of containerization&lt;/li&gt;&#xA;&lt;li&gt;Network infrastructure (router, switches)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://github.com/portainer/portainer&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;how-to-deploy-the-infrastructure&#34;&gt;How to deploy the infrastructure&lt;/h2&gt;&#xA;&lt;h3 id=&#34;synology-nas-setup&#34;&gt;Synology NAS Setup&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hardware Configuration&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://l4linux.com/categories/ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal AI Assistant with Local Data Protection</title>
       <link>https://l4linux.com/portfolio/opensource-llm-rag-stack/</link>

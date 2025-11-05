@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="The website of Lekshmi Kolappan, DevOps/SRE Engineer">
+  <meta name="description" property="og:description" content="Interactive knowledge platform for DevOps, SRE, and Cloud engineering with curated questions and hands-on challenges">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
   <meta name="generator" content="Hugo 0.151.0">
@@ -288,163 +288,469 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium"></h1>
-    <p class="uk-text-center uk-text-lead"></p>
-    <p class="uk-text-center">Published on Jan 01, 0001</p>
-    <p class="uk-text-center">Reading time: 0 minutes.</p>
+    <h1 class="uk-text-center uk-heading-medium">StackQuest - DevOps Knowledge Platform</h1>
+    <p class="uk-text-center uk-text-lead">Interactive knowledge platform for DevOps, SRE, and Cloud engineering with curated questions and hands-on challenges</p>
+    <p class="uk-text-center">Published on Oct 25, 2025</p>
+    <p class="uk-text-center">Reading time: 6 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/Lforlinux/StackQuest"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+      
+
+    
+    
+      <div>
+        <a class="uk-button uk-button-default" href="https://l4linux.com/stack-quest/" target="_blank"> <span uk-icon="icon: world"></span>
+          Live Demo</a>
+      </div>
+    
+    
+    </div>
+
     
 
     <hr class="full-width">
     
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg" alt="JavaScript" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg" alt="CSS3" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://github.com/features/actions">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg" alt="GitHub Actions" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://pages.github.com/">
+            <img class="contain skills" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png" alt="GitHub Pages" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
 
     <div class="content">
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StackQuest</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="logo">StackQuest</h1>
-            <p class="description">A quest for stack knowledge across DevOps, SRE, and Cloud engineering.</p>
-        </header>
-        
-        <main class="main">
-            <div id="loadingIndicator" class="loading-indicator">
-                <div class="loading-spinner"></div>
-                <p>Loading questions and challenges...</p>
-            </div>
-            
-            <div class="buttons">
-                <button id="randomBtn" class="btn btn-primary">
-                    <span class="btn-icon">🎲</span>
-                    Random Question
-                </button>
-                <button id="challengeBtn" class="btn btn-secondary">
-                    <span class="btn-icon">⚡</span>
-                    Challenge
-                </button>
-            </div>
-            
-            <div id="categorySelection" class="category-selection hidden">
-                <h3>Select Categories for Random Questions</h3>
-                <div class="category-grid">
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="linux" checked>
-                        <span class="checkmark"></span>
-                        Linux 🐧
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="networking" checked>
-                        <span class="checkmark"></span>
-                        Networking 🌐
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="git" checked>
-                        <span class="checkmark"></span>
-                        Git
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="cloud" checked>
-                        <span class="checkmark"></span>
-                        Cloud ☁️
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="terraform" checked>
-                        <span class="checkmark"></span>
-                        Terraform 🏗️
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="docker" checked>
-                        <span class="checkmark"></span>
-                        Docker 🐳
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="kubernetes" checked>
-                        <span class="checkmark"></span>
-                        Kubernetes 🎻
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="devops" checked>
-                        <span class="checkmark"></span>
-                        DevOps 🛠
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="cicd" checked>
-                        <span class="checkmark"></span>
-                        CI/CD 🔄
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="config-management" checked>
-                        <span class="checkmark"></span>
-                        Config Management 🔧
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="security" checked>
-                        <span class="checkmark"></span>
-                        Security 🔒
-                    </label>
-                </div>
-                <div class="category-actions">
-                    <button id="selectAllBtn" class="btn btn-small">Select All</button>
-                    <button id="deselectAllBtn" class="btn btn-small">Deselect All</button>
-                    <button id="getQuestionBtn" class="btn btn-primary">Get Random Question</button>
-                </div>
-            </div>
-
-            <div id="challengeCategorySelection" class="category-selection hidden">
-                <h3>Select Categories for Random Challenge</h3>
-                <div class="category-grid">
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="devops" checked>
-                        <span class="checkmark"></span>
-                        DevOps 🛠️
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="sre" checked>
-                        <span class="checkmark"></span>
-                        SRE 🔧
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="aws" checked>
-                        <span class="checkmark"></span>
-                        AWS ☁️
-                    </label>
-                    <label class="category-checkbox">
-                        <input type="checkbox" value="kubernetes" checked>
-                        <span class="checkmark"></span>
-                        Kubernetes ☸️
-                    </label>
-                </div>
-                <div class="category-actions">
-                    <button id="selectAllChallengeBtn" class="btn btn-small">Select All</button>
-                    <button id="deselectAllChallengeBtn" class="btn btn-small">Deselect All</button>
-                    <button id="getChallengeBtn" class="btn btn-primary">Get Random Challenge</button>
-                </div>
-            </div>
-            
-            <div id="result" class="result hidden">
-                <div class="result-content">
-                    <h3 id="resultTitle"></h3>
-                    <div id="resultBody"></div>
-                </div>
-            </div>
-        </main>
-    </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Lekshmi Kolappan | View this project on <a href="https://github.com/Lforlinux/StackQuest" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script>
-</body>
-</html>
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Interactive Learning Platform</strong>: A quest-based knowledge platform for mastering DevOps, SRE, and Cloud engineering concepts</li>
+<li><strong>Curated Content</strong>: High-quality questions and challenges across 12+ categories covering essential DevOps skills</li>
+<li><strong>Session Tracking</strong>: Intelligent system prevents question repetition for focused learning</li>
+<li><strong>Zero Infrastructure</strong>: Static site deployed on GitHub Pages with automatic CI/CD</li>
+<li><strong>Open Source Community</strong>: Contributions welcome to expand the knowledge base</li>
+<li><strong>Mobile Responsive</strong>: Works seamlessly on desktop and mobile devices</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>GitHub Actions CI/CD</strong>: Automated deployment to GitHub Pages on every push to main branch</li>
+<li><strong>Static Site Architecture</strong>: No server-side dependencies, fast loading times</li>
+<li><strong>JavaScript-powered</strong>: Client-side question randomization and session management</li>
+<li><strong>Markdown-based Content</strong>: Easy content management through markdown files</li>
+<li><strong>Category-based Organization</strong>: Structured content across multiple technology domains</li>
+<li><strong>Session Persistence</strong>: Browser localStorage for tracking answered questions</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Web browser (Chrome, Firefox, Safari, or Edge)</li>
+<li>No installation or setup required - works directly in browser</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>https://github.com/Lforlinux/StackQuest
+</code></pre><hr>
+<h2 id="how-to-contribute">How to contribute?</h2>
+<h3 id="getting-started">Getting Started</h3>
+<ol>
+<li><strong>Fork the repository</strong> to your GitHub account</li>
+<li><strong>Clone your fork</strong> locally: <code>git clone https://github.com/yourusername/StackQuest.git</code></li>
+<li><strong>Create a feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make your changes</strong> (add questions, fix bugs, improve UI, etc.)</li>
+<li><strong>Test locally</strong> by opening <code>index.html</code> in your browser</li>
+<li><strong>Commit and push</strong> your changes: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create a Pull Request</strong> on the original repository</li>
+<li><strong>GitHub Actions will automatically deploy</strong> your changes once merged</li>
+</ol>
+<h3 id="deployment">Deployment</h3>
+<p>The project uses GitHub Actions for automatic deployment to GitHub Pages:</p>
+<ul>
+<li>When changes are pushed to the <code>main</code> branch, GitHub Actions automatically deploys to GitHub Pages</li>
+<li>Access your forked StackQuest via <code>https://yourusername.github.io/StackQuest/</code></li>
+</ul>
+<h3 id="manual-local-setup">Manual Local Setup</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Clone the repository</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/Lforlinux/StackQuest.git
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">cd</span> StackQuest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Open index.html in your browser</span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Or use a local server:</span>
+</span></span><span style="display:flex;"><span>python3 -m http.server <span style="color:#5918bb;font-weight:bold">8000</span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Then visit http://localhost:8000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="github-pages-configuration">GitHub Pages Configuration</h3>
+<ol>
+<li>Go to repository Settings → Pages</li>
+<li>Select source branch: <code>main</code></li>
+<li>Select folder: <code>/ (root)</code></li>
+<li>GitHub Pages will automatically build and deploy</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<h3 id="static-site-components">Static Site Components</h3>
+<ul>
+<li><strong>HTML Structure</strong>: Semantic HTML5 with responsive design</li>
+<li><strong>CSS Styling</strong>: Modern gradient design with mobile-first approach</li>
+<li><strong>JavaScript Logic</strong>: Question randomization, session tracking, and UI interactions</li>
+<li><strong>Markdown Content</strong>: Organized question files by category</li>
+<li><strong>Asset Management</strong>: Images and stylesheets for branding</li>
+</ul>
+<h3 id="content-structure">Content Structure</h3>
+<pre tabindex="0"><code>StackQuest/
+├── index.html          # Main application interface
+├── styles.css          # Responsive styling
+├── script.js           # Core functionality
+├── page.png            # Project screenshot
+├── Random-Questions/   # Category-based questions
+│   ├── linux.md
+│   ├── networking.md
+│   ├── docker.md
+│   ├── kubernetes.md
+│   └── ...
+└── Challenge/          # Hands-on challenges
+    ├── devops-challenges.md
+    ├── SRE-challenge.md
+    ├── aws-challenge.md
+    └── kubernetes-challenge.md
+</code></pre><h2 id="key-features">Key Features</h2>
+<h3 id="question-categories">Question Categories</h3>
+<ul>
+<li><strong>Linux</strong>: Command-line operations, system administration, shell scripting</li>
+<li><strong>Networking</strong>: TCP/IP, DNS, load balancing, network protocols</li>
+<li><strong>Git</strong>: Version control, branching strategies, workflows</li>
+<li><strong>Cloud</strong>: AWS, Azure, cloud architecture patterns</li>
+<li><strong>Terraform</strong>: Infrastructure as Code, state management</li>
+<li><strong>Docker</strong>: Containerization, Dockerfile optimization, orchestration</li>
+<li><strong>Kubernetes</strong>: Pods, services, deployments, cluster management</li>
+<li><strong>CI/CD</strong>: Pipeline automation, deployment strategies</li>
+<li><strong>Config Management</strong>: Ansible, Puppet, Chef patterns</li>
+<li><strong>DevOps</strong>: Best practices, culture, tooling</li>
+<li><strong>System Design</strong>: Architecture patterns, scalability</li>
+<li><strong>Security</strong>: DevSecOps, vulnerability management</li>
+</ul>
+<h3 id="challenge-types">Challenge Types</h3>
+<ul>
+<li><strong>DevOps Challenges</strong>: Real-world scenarios and problem-solving</li>
+<li><strong>SRE Challenges</strong>: Reliability engineering, monitoring, incident response</li>
+<li><strong>AWS Challenges</strong>: Cloud infrastructure, services, best practices</li>
+<li><strong>Kubernetes Challenges</strong>: Container orchestration, cluster operations</li>
+</ul>
+<h3 id="user-experience-features">User Experience Features</h3>
+<ul>
+<li><strong>Random Question Mode</strong>: Get random questions from selected categories</li>
+<li><strong>Challenge Mode</strong>: Practice with hands-on scenarios</li>
+<li><strong>Category Selection</strong>: Choose specific topics to focus on</li>
+<li><strong>Session Tracking</strong>: Prevents seeing the same question twice</li>
+<li><strong>Responsive Design</strong>: Works on all device sizes</li>
+<li><strong>Loading Indicators</strong>: Smooth user experience with visual feedback</li>
+</ul>
+<h2 id="content-management">Content Management</h2>
+<h3 id="adding-questions">Adding Questions</h3>
+<ol>
+<li>Navigate to the appropriate category file in <code>Random-Questions/</code></li>
+<li>Add questions in markdown format:
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">## Question Title
+</span></span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span>Question text here?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Answer:**</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Detailed answer explanation...
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>Commit and push - GitHub Actions will deploy automatically</li>
+</ol>
+<h3 id="adding-challenges">Adding Challenges</h3>
+<ol>
+<li>Navigate to the appropriate challenge file in <code>Challenge/</code></li>
+<li>Add challenge scenarios with solutions:
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">## Challenge Title
+</span></span></span><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold"></span>
+</span></span><span style="display:flex;"><span>Scenario description...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**Solution:**</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Step-by-step solution...
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>Commit and push for automatic deployment</li>
+</ol>
+<h2 id="github-actions-workflow">GitHub Actions Workflow</h2>
+<h3 id="automated-deployment-pipeline">Automated Deployment Pipeline</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">name</span>:<span style="color:#cbcbcb"> </span>Deploy to GitHub Pages<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">on</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">push</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">branches</span>:<span style="color:#cbcbcb"> </span>[<span style="color:#cbcbcb"> </span>main ]<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb"></span><span style="color:#2c5dcd;font-weight:bold">jobs</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">deploy</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">runs-on</span>:<span style="color:#cbcbcb"> </span>ubuntu-latest<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">steps</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#2c5dcd;font-weight:bold">uses</span>:<span style="color:#cbcbcb"> </span>actions/checkout@v3<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#2c5dcd;font-weight:bold">name</span>:<span style="color:#cbcbcb"> </span>Deploy to GitHub Pages<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">        </span><span style="color:#2c5dcd;font-weight:bold">uses</span>:<span style="color:#cbcbcb"> </span>peaceiris/actions-gh-pages@v3<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">        </span><span style="color:#2c5dcd;font-weight:bold">with</span>:<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">          </span><span style="color:#2c5dcd;font-weight:bold">github_token</span>:<span style="color:#cbcbcb"> </span>${{ secrets.GITHUB_TOKEN }}<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">          </span><span style="color:#2c5dcd;font-weight:bold">publish_dir</span>:<span style="color:#cbcbcb"> </span>./<span style="color:#cbcbcb">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>This workflow automatically:</p>
+<ul>
+<li>Triggers on push to main branch</li>
+<li>Deploys static files to GitHub Pages</li>
+<li>Updates the live site within minutes</li>
+</ul>
+<h2 id="browser-compatibility">Browser Compatibility</h2>
+<h3 id="supported-browsers">Supported Browsers</h3>
+<ul>
+<li>Chrome (latest)</li>
+<li>Firefox (latest)</li>
+<li>Safari (latest)</li>
+<li>Edge (latest)</li>
+<li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+</ul>
+<h3 id="features-used">Features Used</h3>
+<ul>
+<li><strong>ES6 JavaScript</strong>: Modern JavaScript features</li>
+<li><strong>CSS Grid/Flexbox</strong>: Modern layout techniques</li>
+<li><strong>LocalStorage API</strong>: Session persistence</li>
+<li><strong>Fetch API</strong>: Content loading</li>
+<li><strong>CSS Gradients</strong>: Visual design</li>
+</ul>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="loading-strategy">Loading Strategy</h3>
+<ul>
+<li><strong>Lazy Loading</strong>: Questions loaded on-demand</li>
+<li><strong>Minimal Dependencies</strong>: No external libraries required</li>
+<li><strong>Static Assets</strong>: Fast CDN delivery via GitHub Pages</li>
+<li><strong>Caching</strong>: Browser caching for improved performance</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li><strong>Minimal JavaScript</strong>: Only essential functionality</li>
+<li><strong>CSS Optimization</strong>: Efficient selectors and properties</li>
+<li><strong>Image Optimization</strong>: Compressed images for faster loading</li>
+<li><strong>Semantic HTML</strong>: Better accessibility and SEO</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<h3 id="client-side-security">Client-Side Security</h3>
+<ul>
+<li><strong>No Server-Side Code</strong>: Reduced attack surface</li>
+<li><strong>Content Security</strong>: All content is static and verified</li>
+<li><strong>XSS Prevention</strong>: Proper input sanitization</li>
+<li><strong>HTTPS</strong>: GitHub Pages provides SSL by default</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li>
+<p><strong>Questions Not Loading</strong></p>
+<ul>
+<li>Check browser console for errors</li>
+<li>Verify markdown files are properly formatted</li>
+<li>Ensure GitHub Pages deployment succeeded</li>
+</ul>
+</li>
+<li>
+<p><strong>Session Tracking Not Working</strong></p>
+<ul>
+<li>Check browser localStorage permissions</li>
+<li>Clear browser cache and try again</li>
+<li>Verify JavaScript is enabled</li>
+</ul>
+</li>
+<li>
+<p><strong>Styling Issues</strong></p>
+<ul>
+<li>Clear browser cache</li>
+<li>Check CSS file is loading correctly</li>
+<li>Verify responsive breakpoints</li>
+</ul>
+</li>
+<li>
+<p><strong>Deployment Issues</strong></p>
+<ul>
+<li>Check GitHub Actions workflow status</li>
+<li>Verify repository settings for Pages</li>
+<li>Check branch protection rules</li>
+</ul>
+</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="major-feature-llm-integration">Major Feature: LLM Integration</h3>
+<p>The primary focus for future development is <strong>LLM (Large Language Model) Integration</strong> to revolutionize the learning experience:</p>
+<ul>
+<li><strong>AI-Powered Question Generation</strong>: Instead of static markdown files, LLM will dynamically generate contextually relevant questions based on selected categories</li>
+<li><strong>Intelligent Answer Generation</strong>: AI will provide comprehensive, detailed explanations tailored to each question</li>
+<li><strong>Adaptive Learning</strong>: LLM will adjust question difficulty and topics based on user performance and learning patterns</li>
+<li><strong>Interactive Q&amp;A Sessions</strong>: Real-time conversation with AI to clarify concepts, provide examples, and answer follow-up questions</li>
+<li><strong>Personalized Learning Paths</strong>: AI-driven recommendations for what to study next based on knowledge gaps</li>
+<li><strong>Context-Aware Responses</strong>: LLM understands the full context of DevOps/SRE/Cloud engineering to provide accurate, industry-relevant answers</li>
+<li><strong>Multi-Model Support</strong>: Integration with various LLM providers (OpenAI, Anthropic, local models) for flexibility</li>
+</ul>
+<h3 id="additional-planned-features">Additional Planned Features</h3>
+<ul>
+<li><strong>User Progress Tracking</strong>: Track learning progress across sessions with AI-powered insights</li>
+<li><strong>Difficulty Levels</strong>: Beginner, intermediate, advanced categorization with dynamic adjustment</li>
+<li><strong>Search Functionality</strong>: AI-enhanced semantic search for questions by keywords and concepts</li>
+<li><strong>Export/Import</strong>: Save progress and share with others</li>
+<li><strong>Dark Mode</strong>: Theme toggle for better viewing</li>
+<li><strong>Statistics Dashboard</strong>: Track learning metrics with AI-generated recommendations</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>LLM API Integration</strong>: Connect with OpenAI, Anthropic, or self-hosted LLM services</li>
+<li><strong>Progressive Web App</strong>: Offline support and installability with cached AI responses</li>
+<li><strong>Service Worker</strong>: Caching for offline access and AI response optimization</li>
+<li><strong>Vector Database</strong>: Semantic search capabilities for enhanced question matching</li>
+<li><strong>Multi-language Support</strong>: Internationalization with LLM-powered translation</li>
+<li><strong>Advanced Analytics</strong>: User engagement metrics with AI-driven insights</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repository</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="contribution-guidelines">Contribution Guidelines</h3>
+<ul>
+<li><strong>Question Quality</strong>: Ensure questions are clear and accurate</li>
+<li><strong>Answer Completeness</strong>: Provide detailed explanations</li>
+<li><strong>Format Consistency</strong>: Follow existing markdown structure</li>
+<li><strong>Category Appropriateness</strong>: Place questions in correct categories</li>
+<li><strong>Testing</strong>: Test locally before submitting PR</li>
+</ul>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>HTML</strong>: Semantic markup and accessibility</li>
+<li><strong>CSS</strong>: Mobile-first responsive design</li>
+<li><strong>JavaScript</strong>: ES6+ features, clean code</li>
+<li><strong>Markdown</strong>: Consistent formatting and structure</li>
+<li><strong>Documentation</strong>: Clear README and comments</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>StackQuest demonstrates modern web development practices for creating interactive learning platforms, showcasing:</p>
+<ul>
+<li><strong>Static Site Excellence</strong> with zero infrastructure overhead</li>
+<li><strong>Automated CI/CD</strong> with GitHub Actions and Pages</li>
+<li><strong>User-Centric Design</strong> with responsive and accessible interface</li>
+<li><strong>Content Management</strong> through markdown-based structure</li>
+<li><strong>Community-Driven</strong> open-source knowledge sharing</li>
+</ul>
+<p>The project serves as both a functional learning tool and a comprehensive example of modern web development, making it an excellent addition to any DevOps engineer&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="https://l4linux.com/stack-quest/">StackQuest</a><br>
+<strong>Source Code</strong>: <a href="https://github.com/Lforlinux/StackQuest">https://github.com/Lforlinux/StackQuest</a></p>
 
     </div>
   </div>

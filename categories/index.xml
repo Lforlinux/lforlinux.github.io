@@ -6,8 +6,29 @@
     <description>Recent content in Categories on Lekshmi Kolappan</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 03 Jan 2025 23:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2025 23:00:00 +0000</lastBuildDate>
     <atom:link href="https://l4linux.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devops</title>
+      <link>https://l4linux.com/categories/devops/</link>
+      <pubDate>Sat, 25 Oct 2025 23:00:00 +0000</pubDate>
+      <guid>https://l4linux.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sre</title>
+      <link>https://l4linux.com/categories/sre/</link>
+      <pubDate>Sat, 25 Oct 2025 23:00:00 +0000</pubDate>
+      <guid>https://l4linux.com/categories/sre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>https://l4linux.com/categories/tools/</link>
+      <pubDate>Sat, 25 Oct 2025 23:00:00 +0000</pubDate>
+      <guid>https://l4linux.com/categories/tools/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ai</title>
       <link>https://l4linux.com/categories/ai/</link>
@@ -27,13 +48,6 @@
       <link>https://l4linux.com/categories/aws/</link>
       <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
       <guid>https://l4linux.com/categories/aws/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Devops</title>
-      <link>https://l4linux.com/categories/devops/</link>
-      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
-      <guid>https://l4linux.com/categories/devops/</guid>
       <description></description>
     </item>
     <item>
@@ -76,20 +90,6 @@
       <link>https://l4linux.com/categories/networking/</link>
       <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
       <guid>https://l4linux.com/categories/networking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sre</title>
-      <link>https://l4linux.com/categories/sre/</link>
-      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
-      <guid>https://l4linux.com/categories/sre/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tools</title>
-      <link>https://l4linux.com/categories/tools/</link>
-      <pubDate>Fri, 03 Jan 2025 23:00:00 +0000</pubDate>
-      <guid>https://l4linux.com/categories/tools/</guid>
       <description></description>
     </item>
     <item>

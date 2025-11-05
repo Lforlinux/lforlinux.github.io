@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="set command and its usage">
+  <meta name="description" property="og:description" content="The website of Lekshmi Kolappan, DevOps/SRE Engineer">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Lekshmi Kolappan">
   <meta name="generator" content="Hugo 0.151.0">
@@ -48,7 +48,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body class="blog">
+<body class="portfolio">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -76,18 +76,18 @@
                 
                 
                 
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <li class="uk-active"><a style="font-size: 18px; text-transform:none"
-                        href="/blog">Blog</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+                        href="/portfolio">Portfolio</a></li>
                 
                 
                 
@@ -154,7 +154,7 @@
             
             
             
-            <li class="uk-active"><a style="font-size: 18px" href="/blog">Blog</a></li>
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
             
             
             
@@ -164,7 +164,7 @@
             
             
             
-            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
             
             
             
@@ -288,72 +288,163 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">Bash scripting - set command </h1>
-    <p class="uk-text-center uk-text-lead">set command and its usage</p>
-    <p class="uk-text-center">Published on Jul 22, 2021</p>
-    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    <h1 class="uk-text-center uk-heading-medium"></h1>
+    <p class="uk-text-center uk-text-lead"></p>
+    <p class="uk-text-center">Published on Jan 01, 0001</p>
+    <p class="uk-text-center">Reading time: 0 minutes.</p>
     
 
     <hr class="full-width">
     
 
     <div class="content">
-      <h2 id="-bash-scripting---set-command-and-its-usage">🖥 Bash scripting - set command and its usage</h2>
-<hr>
-<ul>
-<li>In this post we will see what is set in bash scripting</li>
-<li>We will also discuss when to use set -e.</li>
-</ul>
-<hr>
-<h2 id="set-command">Set command</h2>
-<p>Use the set command to set or unset values of shell options and positional parameters. You can change the value of shell attributes and positional parameters, or display the names and values of shell variables using set command.</p>
-<h2 id="set--e">Set -e</h2>
-<p>sets a shell option to immediately exit if any command being run exits with a non-zero exit code.
-The script will return with the exit code of the failing command.</p>
-<p>From the bash man page</p>
-<p>set -e:</p>
-<blockquote>
-<p>Exit immediately if a pipeline (which may consist of a single simple command), a list, or a compound command (see SHELL GRAMMAR &gt; above), exits with a non-zero status.</p></blockquote>
-<h2 id="set--e-usage">Set -e usage</h2>
-<p>General bash script without set -e ( This script written to fail intentionaly)</p>
-<pre tabindex="0"><code>#!/bin/bash
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackQuest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">StackQuest</h1>
+            <p class="description">A quest for stack knowledge across DevOps, SRE, and Cloud engineering.</p>
+        </header>
+        
+        <main class="main">
+            <div id="loadingIndicator" class="loading-indicator">
+                <div class="loading-spinner"></div>
+                <p>Loading questions and challenges...</p>
+            </div>
+            
+            <div class="buttons">
+                <button id="randomBtn" class="btn btn-primary">
+                    <span class="btn-icon">🎲</span>
+                    Random Question
+                </button>
+                <button id="challengeBtn" class="btn btn-secondary">
+                    <span class="btn-icon">⚡</span>
+                    Challenge
+                </button>
+            </div>
+            
+            <div id="categorySelection" class="category-selection hidden">
+                <h3>Select Categories for Random Questions</h3>
+                <div class="category-grid">
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="linux" checked>
+                        <span class="checkmark"></span>
+                        Linux 🐧
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="networking" checked>
+                        <span class="checkmark"></span>
+                        Networking 🌐
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="git" checked>
+                        <span class="checkmark"></span>
+                        Git
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="cloud" checked>
+                        <span class="checkmark"></span>
+                        Cloud ☁️
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="terraform" checked>
+                        <span class="checkmark"></span>
+                        Terraform 🏗️
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="docker" checked>
+                        <span class="checkmark"></span>
+                        Docker 🐳
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="kubernetes" checked>
+                        <span class="checkmark"></span>
+                        Kubernetes 🎻
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="devops" checked>
+                        <span class="checkmark"></span>
+                        DevOps 🛠
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="cicd" checked>
+                        <span class="checkmark"></span>
+                        CI/CD 🔄
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="config-management" checked>
+                        <span class="checkmark"></span>
+                        Config Management 🔧
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="security" checked>
+                        <span class="checkmark"></span>
+                        Security 🔒
+                    </label>
+                </div>
+                <div class="category-actions">
+                    <button id="selectAllBtn" class="btn btn-small">Select All</button>
+                    <button id="deselectAllBtn" class="btn btn-small">Deselect All</button>
+                    <button id="getQuestionBtn" class="btn btn-primary">Get Random Question</button>
+                </div>
+            </div>
 
-echo &#34;a&#34;
-sleep 2
-echo &#34;b&#34;
-sleep 2
-echod &#34;c&#34;
-sleep 2
-echo &#34;d&#34;
-</code></pre><p>Script execution</p>
-<pre tabindex="0"><code> kln@MacBook-Pro  ~  bash check.sh
-a
-b
-check.sh: line 9: echod: command not found
-d
-</code></pre><p>The above code exit code is 0. But the actual script failed in between.</p>
-<pre tabindex="0"><code> kln@MacBook-Pro  ~  echo $?
-0
-</code></pre><p>So now we will make use of set -e and see it in action</p>
-<pre tabindex="0"><code>#!/bin/bash
-  
-set -e
-
-echo &#34;a&#34;
-sleep 2
-echo &#34;b&#34;
-sleep 2
-echod &#34;c&#34;
-sleep 2
-echo &#34;d&#34;
-       
-</code></pre><pre tabindex="0"><code>  kln@MacBook-Pro  ~  bash check.sh
-a
-b
-check.sh: line 9: echod: command not found
- ✘ kln@MacBook-Pro  ~  echo $?      
-127
-</code></pre><p>So it&rsquo;s evident that with set -e sets a shell option to immediately exit if any command being run exits with a non-zero exit code.</p>
+            <div id="challengeCategorySelection" class="category-selection hidden">
+                <h3>Select Categories for Random Challenge</h3>
+                <div class="category-grid">
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="devops" checked>
+                        <span class="checkmark"></span>
+                        DevOps 🛠️
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="sre" checked>
+                        <span class="checkmark"></span>
+                        SRE 🔧
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="aws" checked>
+                        <span class="checkmark"></span>
+                        AWS ☁️
+                    </label>
+                    <label class="category-checkbox">
+                        <input type="checkbox" value="kubernetes" checked>
+                        <span class="checkmark"></span>
+                        Kubernetes ☸️
+                    </label>
+                </div>
+                <div class="category-actions">
+                    <button id="selectAllChallengeBtn" class="btn btn-small">Select All</button>
+                    <button id="deselectAllChallengeBtn" class="btn btn-small">Deselect All</button>
+                    <button id="getChallengeBtn" class="btn btn-primary">Get Random Challenge</button>
+                </div>
+            </div>
+            
+            <div id="result" class="result hidden">
+                <div class="result-content">
+                    <h3 id="resultTitle"></h3>
+                    <div id="resultBody"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lekshmi Kolappan | View this project on <a href="https://github.com/Lforlinux/StackQuest" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
     </div>
   </div>

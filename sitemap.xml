@@ -26,13 +26,25 @@
     <loc>https://l4linux.com/blog/haas-homelab-as-a-service/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://l4linux.com/categories/aws/</loc>
+    <lastmod>2025-01-15T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/gitops/</loc>
+    <lastmod>2025-01-15T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/infrastructure/</loc>
+    <lastmod>2025-01-15T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/categories/kubernetes/</loc>
+    <lastmod>2025-01-15T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l4linux.com/portfolio/kubernetes-gitops-platform/</loc>
+    <lastmod>2025-01-15T23:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://l4linux.com/categories/ai/</loc>
     <lastmod>2025-01-03T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l4linux.com/categories/automation/</loc>
-    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l4linux.com/categories/aws/</loc>
     <lastmod>2025-01-03T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l4linux.com/portfolio/cloud-cv/</loc>
@@ -48,9 +60,6 @@
     <lastmod>2025-01-03T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l4linux.com/categories/homelab/</loc>
-    <lastmod>2025-01-03T23:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l4linux.com/categories/infrastructure/</loc>
     <lastmod>2025-01-03T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l4linux.com/categories/media/</loc>

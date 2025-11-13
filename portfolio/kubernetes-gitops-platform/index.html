@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Lekshmi Kolappan</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Production-ready AWS EKS cluster with complete GitOps platform toolkit, automated deployment, monitoring, and observability">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Lekshmi Kolappan">
+  <meta name="generator" content="Hugo 0.151.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
+
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="3eacc7d5-7d8b-4068-ab3f-7f9b1f0181bd"></script>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/bin">Tools</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://l4linux.com/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/bin">Tools</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://d3hxqhnomwslm4.cloudfront.net/">CV</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Kubernetes GitOps Platform - Complete EKS Infrastructure &amp; Platform Toolkit</h1>
+    <p class="uk-text-center uk-text-lead">Production-ready AWS EKS cluster with complete GitOps platform toolkit, automated deployment, monitoring, and observability</p>
+    <p class="uk-text-center">Published on Jan 15, 2025</p>
+    <p class="uk-text-center">Reading time: 8 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+    
+
+
+    
+      <div>
+        
+        <div>
+          <button class="uk-button uk-button-default" type="button"> <span uk-icon="icon: github"></span> GitHub</button>
+          <div class="uk-width-auto" uk-dropdown="pos: bottom-center; delay-hide:400">
+            <div class="uk-dropdown-grid uk-child-width-1-2" uk-grid>
+              <div>
+                <ul class="uk-nav uk-dropdown-nav">
+                  
+                  <li><a style="color: #0366d6; font-weight: 600" href="https://github.com/Lforlinux/k8s-infrastructure-as-code"> <span><img loading="lazy" src="https://res.cloudinary.com/samrobbins/image/upload/v1593092912/repo_ec3slk.svg"></span>  k8s-infrastructure-as-code</a></li>
+                  
+                  <li><a style="color: #0366d6; font-weight: 600" href="https://github.com/Lforlinux/k8s-platform-toolkit"> <span><img loading="lazy" src="https://res.cloudinary.com/samrobbins/image/upload/v1593092912/repo_ec3slk.svg"></span>  k8s-platform-toolkit</a></li>
+                  
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+    
+    
+      <div>
+        <a class="uk-button uk-button-default" href="http://aeea3f555e8d340ecbeb923c5ce88bf5-1291506396.eu-west-1.elb.amazonaws.com/" target="_blank"> <span uk-icon="icon: world"></span>
+          Live Demo</a>
+      </div>
+    
+    
+    </div>
+
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.terraform.io/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/terraformio/terraformio-ar21.svg" alt="Terraform" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://aws.amazon.com/eks/">
+            <img class="contain skills" src="https://www.itopstimes.com/wp-content/uploads/2018/06/amazon-eks.png" alt="AWS EKS" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://helm.sh/">
+            <img class="contain skills" src="https://landscape.cncf.io/logos/caf58dcdb373502573c954e0aa3e03e725c12ffec5f8fe183c7f174b71357dd5.svg" alt="Helm" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://argo-cd.readthedocs.io/">
+            <img class="contain skills" src="https://argo-cd.readthedocs.io/en/stable/assets/logo.png" alt="ArgoCD" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://prometheus.io/">
+            <img class="contain skills" src="https://images.seeklogo.com/logo-png/44/3/prometheus-monitoring-system-logo-png_seeklogo-447007.png" alt="Prometheus" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://grafana.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/grafana/grafana-ar21.svg" alt="Grafana" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://www.docker.com/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+          <div class="imagemargin">
+            <a href="https://kubernetes.io/">
+            <img class="contain skills" src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h2 id="what-is-the-significance-of-this">What is the significance of this?</h2>
+<ul>
+<li><strong>Complete Infrastructure as Code</strong>: Provision entire AWS EKS cluster and all platform services with a single command</li>
+<li><strong>GitOps Automation</strong>: ArgoCD automatically deploys and manages all platform applications from Git repositories</li>
+<li><strong>Production-Ready Platform</strong>: Comprehensive observability stack with monitoring, logging, and testing tools</li>
+<li><strong>High Availability</strong>: Multi-AZ deployment with auto-scaling worker nodes and Horizontal Pod Autoscaler (HPA)</li>
+<li><strong>Zero-Downtime Deployments</strong>: Kubernetes rolling updates ensure continuous service availability</li>
+<li><strong>Complete Observability</strong>: Prometheus, Grafana, Loki, and Promtail for metrics, logs, and dashboards</li>
+<li><strong>SRE-Ready</strong>: Availability testing and sanity checks built-in</li>
+</ul>
+<h2 id="how-is-automation-accomplished">How is automation accomplished?</h2>
+<ul>
+<li><strong>Terraform Infrastructure</strong>: Complete AWS infrastructure provisioning (VPC, EKS, IAM, Security Groups) as code</li>
+<li><strong>Docker Containerization</strong>: Terraform runs in Docker for consistent execution across team members</li>
+<li><strong>Helm Charts</strong>: Application deployment automation with Helm templates and values management</li>
+<li><strong>ArgoCD GitOps</strong>: App-of-apps pattern automatically deploys entire platform toolkit from Git</li>
+<li><strong>Makefile Automation</strong>: One-command deployment (<code>make deploy</code>) for entire infrastructure stack</li>
+<li><strong>Auto-Scaling</strong>: HPA for pod scaling and AWS Auto Scaling Groups for worker node scaling</li>
+<li><strong>Automated Sync</strong>: ArgoCD continuously syncs Git changes to cluster with self-healing capabilities</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><strong>AWS Account</strong>: Programmatic access with IAM user</li>
+<li><strong>IAM Policies</strong>: AmazonEC2FullAccess, IAMFullAccess, AutoScalingFullAccess, AmazonEKSClusterPolicy, AmazonEKSWorkerNodePolicy, AmazonVPCFullAccess, AmazonEKSServicePolicy, AmazonEKS_CNI_Policy</li>
+<li><strong>Docker</strong>: Installed and running for Terraform containerization</li>
+<li><strong>AWS CLI</strong>: Configured with credentials (<code>~/.aws/credentials</code> or <code>AWS_PROFILE</code>)</li>
+<li><strong>Git</strong>: For cloning repositories</li>
+</ul>
+<h2 id="source-code">Source Code</h2>
+<pre tabindex="0"><code>Infrastructure Repository: https://github.com/Lforlinux/k8s-infrastructure-as-code
+Platform Toolkit Repository: https://github.com/Lforlinux/k8s-platform-toolkit
+</code></pre><hr>
+<h2 id="how-to-provision-the-infrastructure">How to provision the infrastructure</h2>
+<h3 id="quick-start-deployment">Quick Start Deployment</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Clone the infrastructure repository</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/Lforlinux/k8s-infrastructure-as-code.git
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">cd</span> k8s-infrastructure-as-code
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Configure AWS credentials</span>
+</span></span><span style="display:flex;"><span>aws configure
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># OR set AWS_PROFILE environment variable</span>
+</span></span><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> AWS_PROFILE<span style="color:#2c5dcd">=</span>your-profile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Deploy entire stack with one command</span>
+</span></span><span style="display:flex;"><span>make deploy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Review the Terraform plan and type <code>yes</code> to proceed. The deployment includes:</p>
+<ul>
+<li>VPC and networking components (subnets, route tables, internet gateway)</li>
+<li>EKS cluster with managed node groups</li>
+<li>Metrics Server for HPA</li>
+<li>NodeJS application (via Helm)</li>
+<li>ArgoCD for GitOps</li>
+<li>Platform toolkit applications (automatically deployed via ArgoCD)</li>
+</ul>
+<h3 id="deployment-workflow">Deployment Workflow</h3>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/k8s-infrastructure-as-code/master/eks-gitops.png" alt="EKS GitOps Workflow"></p>
+<p>The infrastructure repository deploys ArgoCD, which then automatically references the platform toolkit repository through the app-of-apps pattern, deploying all platform applications.</p>
+<h2 id="architecture">Architecture</h2>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/k8s-infrastructure-as-code/master/architecture.png" alt="Architecture Diagram"></p>
+<h3 id="infrastructure-components">Infrastructure Components</h3>
+<ul>
+<li><strong>AWS VPC</strong>: Multi-AZ network with public and private subnets</li>
+<li><strong>EKS Cluster</strong>: Managed Kubernetes control plane</li>
+<li><strong>Worker Nodes</strong>: Auto-scaling node groups in private subnets</li>
+<li><strong>Application Load Balancer</strong>: External access to services</li>
+<li><strong>Security Groups</strong>: Network security and access control</li>
+<li><strong>IAM Roles</strong>: Service accounts and permissions</li>
+</ul>
+<h3 id="platform-services-via-argocd">Platform Services (via ArgoCD)</h3>
+<p>The platform toolkit repository provides:</p>
+<h4 id="monitoring-stack"><strong>Monitoring Stack</strong></h4>
+<ul>
+<li><strong>Prometheus</strong>: Metrics collection and alerting</li>
+<li><strong>Grafana</strong>: Visualization dashboards</li>
+<li><strong>kube-state-metrics</strong>: Kubernetes object metrics</li>
+<li><strong>node-exporter</strong>: Node-level system metrics</li>
+</ul>
+<h4 id="logging-stack"><strong>Logging Stack</strong></h4>
+<ul>
+<li><strong>Loki</strong>: Centralized log aggregation</li>
+<li><strong>Promtail</strong>: Log collection agent (DaemonSet)</li>
+</ul>
+<h4 id="testing--validation"><strong>Testing &amp; Validation</strong></h4>
+<ul>
+<li><strong>Sanity Test</strong>: Automated health check testing for microservices</li>
+<li><strong>Availability Test</strong>: SRE-style availability and reliability testing</li>
+</ul>
+<h4 id="demo-applications"><strong>Demo Applications</strong></h4>
+<ul>
+<li><strong>Online Boutique</strong>: Google&rsquo;s microservices demo (11 services)</li>
+<li><strong>NodeJS Application</strong>: Sample application deployed via Helm</li>
+</ul>
+<h2 id="key-features">Key Features</h2>
+<h3 id="infrastructure-as-code">Infrastructure as Code</h3>
+<ul>
+<li><strong>Terraform Modules</strong>: Reusable infrastructure components</li>
+<li><strong>Docker-Based Execution</strong>: Consistent Terraform version across team</li>
+<li><strong>State Management</strong>: Remote state storage for team collaboration</li>
+<li><strong>Output Management</strong>: Automatic kubeconfig generation and access information</li>
+</ul>
+<h3 id="gitops-with-argocd">GitOps with ArgoCD</h3>
+<ul>
+<li><strong>App-of-Apps Pattern</strong>: Hierarchical application management</li>
+<li><strong>Automated Sync</strong>: Continuous deployment from Git repositories</li>
+<li><strong>Self-Healing</strong>: Automatic reconciliation of cluster state</li>
+<li><strong>Multi-Repository</strong>: Infrastructure and platform toolkit separation</li>
+<li><strong>Sync Waves</strong>: Ordered deployment of dependent applications</li>
+</ul>
+<h3 id="high-availability--auto-scaling">High Availability &amp; Auto-Scaling</h3>
+<ul>
+<li><strong>Multi-AZ Deployment</strong>: High availability across availability zones</li>
+<li><strong>Horizontal Pod Autoscaler</strong>: Automatic pod scaling based on CPU/memory</li>
+<li><strong>Worker Node Auto-Scaling</strong>: AWS Auto Scaling Groups for node capacity</li>
+<li><strong>Load Balancing</strong>: Application Load Balancer for traffic distribution</li>
+</ul>
+<h3 id="observability">Observability</h3>
+<ul>
+<li><strong>Metrics Collection</strong>: Prometheus scrapes metrics from all services</li>
+<li><strong>Log Aggregation</strong>: Centralized logging with Loki and Promtail</li>
+<li><strong>Dashboards</strong>: Pre-configured Grafana dashboards for Kubernetes and applications</li>
+<li><strong>Alerting</strong>: Prometheus alerting rules for proactive monitoring</li>
+</ul>
+<h3 id="testing--validation-1">Testing &amp; Validation</h3>
+<ul>
+<li><strong>Sanity Testing</strong>: Automated health checks for all microservices</li>
+<li><strong>Availability Testing</strong>: SRE metrics (uptime %, MTTR) with real user simulation</li>
+<li><strong>Performance Testing</strong>: Integrated Locust container for load testing</li>
+</ul>
+<h2 id="platform-toolkit-applications">Platform Toolkit Applications</h2>
+<h3 id="1-monitoring-stack">1. Monitoring Stack</h3>
+<p><strong>Purpose</strong>: Comprehensive observability and metrics collection<br>
+<strong>Namespace</strong>: <code>monitoring</code></p>
+<ul>
+<li><strong>Prometheus</strong>: Metrics collection, storage, and alerting</li>
+<li><strong>Grafana</strong>: Visualization with pre-configured dashboards</li>
+<li><strong>kube-state-metrics</strong>: Kubernetes object state tracking</li>
+<li><strong>node-exporter</strong>: Node-level system metrics</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/k8s-platform-toolkit/master/dashboards/online-boutique-dashboard.png" alt="Grafana Online Boutique Dashboard"></p>
+<p>The Grafana dashboard provides real-time monitoring of the Online Boutique microservices, including CPU usage by pod, pod status metrics, and application logs for comprehensive observability.</p>
+<h3 id="2-logging-stack">2. Logging Stack</h3>
+<p><strong>Purpose</strong>: Centralized log aggregation and analysis<br>
+<strong>Namespace</strong>: <code>monitoring</code></p>
+<ul>
+<li><strong>Loki</strong>: Log aggregation server with Prometheus-inspired storage</li>
+<li><strong>Promtail</strong>: Log collector agent (DaemonSet) for all pods</li>
+</ul>
+<h3 id="3-sanity-test">3. Sanity Test</h3>
+<p><strong>Purpose</strong>: Automated health check testing<br>
+<strong>Namespace</strong>: <code>sanity-test</code></p>
+<ul>
+<li>Periodic health checks for all microservices (every 60 seconds)</li>
+<li>Web UI dashboard with test results</li>
+<li>REST API for programmatic access</li>
+<li>Response time metrics and error tracking</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/k8s-platform-toolkit/master/sanity-test/dashboard.png" alt="Sanity Test Health Check Dashboard"></p>
+<p>The Sanity Test dashboard provides a comprehensive health check overview for all Online Boutique microservices, displaying total test runs, pass/fail status, and service health metrics in a Jenkins-like interface.</p>
+<h3 id="4-availability-test">4. Availability Test</h3>
+<p><strong>Purpose</strong>: SRE-style availability and reliability testing<br>
+<strong>Namespace</strong>: <code>availability-test</code></p>
+<ul>
+<li>Real user workflow simulation (add to cart, remove from cart)</li>
+<li>Automated tests every 5 minutes</li>
+<li>SRE metrics calculation (uptime %, MTTR)</li>
+<li>Jenkins-like dashboard with green/red status</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/k8s-platform-toolkit/master/availability-test/build-status.png" alt="Availability Test Build Status"></p>
+<p>The Availability Test dashboard displays detailed build status and test case results, including complete user journey validation (visit → browse → add to cart → remove from cart) and microservices integration verification, providing comprehensive SRE-style reliability testing.</p>
+<h3 id="5-online-boutique">5. Online Boutique</h3>
+<p><strong>Purpose</strong>: Microservices demonstration application<br>
+<strong>Namespace</strong>: <code>online-boutique</code></p>
+<ul>
+<li>11 microservices (frontend, cart, checkout, payment, shipping, etc.)</li>
+<li>Redis for cart storage</li>
+<li>gRPC and REST API communication</li>
+<li>Real-world microservices architecture patterns</li>
+</ul>
+<h2 id="accessing-the-cluster">Accessing the Cluster</h2>
+<h3 id="kubernetes-access">Kubernetes Access</h3>
+<p><strong>Option 1: Using kubectl</strong></p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws eks --region <span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw region<span style="color:#2c5dcd;font-weight:bold">)</span> update-kubeconfig --name <span style="color:#2c5dcd;font-weight:bold">$(</span>terraform output -raw cluster_name<span style="color:#2c5dcd;font-weight:bold">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Option 2: Using kubeconfig file</strong>
+If running <code>make deploy</code> locally, a <code>kubeconfig.yaml</code> file is created in the project directory. Use this with Kubernetes tools like Lens, k9s, or other IDEs.</p>
+<h3 id="application-access">Application Access</h3>
+<p>View all LoadBalancer services:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get svc --all-namespaces -o wide | grep LoadBalancer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Available Services:</strong></p>
+<ul>
+<li><strong>ArgoCD Server</strong> (<code>argocd</code> namespace): GitOps UI and API</li>
+<li><strong>NodeJS Application</strong> (<code>default</code> namespace): Main application</li>
+<li><strong>Grafana</strong> (<code>monitoring</code> namespace): Monitoring dashboards</li>
+<li><strong>Prometheus</strong> (<code>monitoring</code> namespace): Metrics collection</li>
+<li><strong>Microservices Demo Frontend</strong> (<code>online-boutique</code> namespace): Demo application</li>
+<li><strong>Availability Test</strong> (<code>availability-test</code> namespace): Testing service</li>
+<li><strong>Sanity Test</strong> (<code>sanity-test</code> namespace): Health check service</li>
+</ul>
+<h3 id="argocd-access">ArgoCD Access</h3>
+<p>ArgoCD is deployed with a LoadBalancer service. Access information is displayed after <code>make deploy</code>:</p>
+<ul>
+<li><strong>URL</strong>: Provided in deployment output</li>
+<li><strong>Username</strong>: <code>admin</code></li>
+<li><strong>Password</strong>: Generated automatically (displayed in output)</li>
+</ul>
+<p>To get password manually:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#34;{.data.password}&#34;</span> | base64 -d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="performance-testing">Performance Testing</h2>
+<p>Load testing can be performed using the Locust container:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> TARGET_HOST<span style="color:#2c5dcd">=</span>&lt;your-alb-url&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker run -i --rm <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/reports:/opt/reports <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v ~/.aws:/root/.aws <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/:/opt/script <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/credentials:/meta/credentials <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -p 8089:8089 <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e ROLE<span style="color:#2c5dcd">=</span>standalone <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e TARGET_HOST<span style="color:#2c5dcd">=</span>$TARGET_HOST <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e LOCUST_FILE<span style="color:#2c5dcd">=</span>https://raw.githubusercontent.com/zalando-incubator/docker-locust/master/example/simple.py <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e SLAVE_MUL<span style="color:#2c5dcd">=</span><span style="color:#5918bb;font-weight:bold">4</span> <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e AUTOMATIC<span style="color:#2c5dcd">=</span>False <span style="color:#c5060b;font-weight:bold">\
+</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  registry.opensource.zalan.do/tip/docker-locust
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>Open <code>http://localhost:8089</code> in your browser</li>
+<li>Configure load test parameters (recommended: 1000+ concurrent users)</li>
+<li>Monitor pod scaling via HPA:
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get hpa
+</span></span><span style="display:flex;"><span>kubectl get pods -w
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="application-lifecycle-management">Application Lifecycle Management</h2>
+<h3 id="zero-downtime-deployments">Zero-Downtime Deployments</h3>
+<p>The infrastructure supports zero-downtime deployments through Kubernetes rolling updates:</p>
+<ol>
+<li>
+<p><strong>Update Application Code</strong></p>
+<ul>
+<li>Make changes to the NodeJS application in <code>Nodejs-Docker/</code></li>
+<li>Build and push Docker image to your registry</li>
+</ul>
+</li>
+<li>
+<p><strong>Update Helm Chart</strong></p>
+<ul>
+<li>Create a feature branch</li>
+<li>Update image tag in <code>charts/helm-nodejs-app/values.yaml</code></li>
+<li>Create a Pull Request</li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy Changes</strong></p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make deploy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Helm performs rolling updates</li>
+<li>Kubernetes ensures zero downtime during deployment</li>
+</ul>
+</li>
+</ol>
+<h3 id="gitops-workflow-argocd">GitOps Workflow (ArgoCD)</h3>
+<p>For GitOps-based deployments:</p>
+<ol>
+<li>Push application manifests to Git repository</li>
+<li>ArgoCD automatically syncs changes</li>
+<li>Rolling updates handled by Kubernetes</li>
+<li>Monitor deployment status in ArgoCD UI</li>
+</ol>
+<h2 id="project-structure">Project Structure</h2>
+<h3 id="infrastructure-repository-k8s-infrastructure-as-code">Infrastructure Repository (<code>k8s-infrastructure-as-code</code>)</h3>
+<pre tabindex="0"><code>.
+├── argocd/                 # ArgoCD application manifests
+│   └── app-of-apps.yaml
+├── charts/                 # Helm charts
+│   └── helm-nodejs-app/
+├── Nodejs-Docker/          # NodeJS application source
+├── *.tf                    # Terraform configuration files
+├── Makefile               # Automation scripts
+└── README.md              # Project documentation
+</code></pre><h3 id="platform-toolkit-repository-k8s-platform-toolkit">Platform Toolkit Repository (<code>k8s-platform-toolkit</code>)</h3>
+<pre tabindex="0"><code>.
+├── application/          # Demo microservices applications
+│   ├── k8s-demo/        # Platform dashboard application
+│   └── online-boutique/ # Google&#39;s microservices demo
+├── argocd/              # ArgoCD configuration and application definitions
+│   ├── apps/            # Individual ArgoCD application manifests
+│   └── install/         # ArgoCD installation manifests
+├── availability-test/   # SRE availability testing application
+├── dashboards/          # Grafana dashboard configurations
+├── monitoring/          # Monitoring stack (Prometheus, Grafana, Loki)
+└── sanity-test/         # Health check testing application
+</code></pre><h2 id="repository-relationship">Repository Relationship</h2>
+<ul>
+<li><strong>k8s-infrastructure-as-code</strong>: Contains complete Kubernetes infrastructure (EKS cluster, networking, security groups, IAM, etc.) and deploys ArgoCD</li>
+<li><strong>k8s-platform-toolkit</strong>: Supplies the app-of-apps repository location and stores all application source code and manifests</li>
+</ul>
+<p>When the infrastructure repository deploys ArgoCD, it automatically references the platform toolkit repository through the app-of-apps pattern, which then deploys all platform applications defined there.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="cluster-access-issues">Cluster Access Issues</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Verify AWS credentials</span>
+</span></span><span style="display:flex;"><span>aws sts get-caller-identity
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check cluster status</span>
+</span></span><span style="display:flex;"><span>aws eks describe-cluster --name &lt;cluster-name&gt; --region &lt;region&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="argocd-access-issues">ArgoCD Access Issues</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Get ArgoCD password manually</span>
+</span></span><span style="display:flex;"><span>kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath<span style="color:#2c5dcd">=</span><span style="color:#0c6">&#34;{.data.password}&#34;</span> | base64 -d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check ArgoCD server status</span>
+</span></span><span style="display:flex;"><span>kubectl get svc -n argocd argocd-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="application-not-accessible">Application Not Accessible</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check service status</span>
+</span></span><span style="display:flex;"><span>kubectl get svc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check pod status</span>
+</span></span><span style="display:flex;"><span>kubectl get pods
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># View pod logs</span>
+</span></span><span style="display:flex;"><span>kubectl logs &lt;pod-name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="argocd-sync-issues">ArgoCD Sync Issues</h3>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># View all applications</span>
+</span></span><span style="display:flex;"><span>kubectl get applications -n argocd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Check application sync status</span>
+</span></span><span style="display:flex;"><span>kubectl describe application &lt;app-name&gt; -n argocd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Manual sync</span>
+</span></span><span style="display:flex;"><span>argocd app sync &lt;app-name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="security-notes">Security Notes</h2>
+<ul>
+<li>Ensure IAM policies follow least privilege principles</li>
+<li>Rotate ArgoCD admin password after first login</li>
+<li>Use AWS Secrets Manager for sensitive data</li>
+<li>Enable VPC flow logs for network monitoring</li>
+<li>Regularly update container images and dependencies</li>
+<li>Implement network policies for pod-to-pod communication</li>
+<li>Use RBAC for Kubernetes access control</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+<li><strong>Service Mesh</strong>: Istio or Linkerd integration for advanced traffic management</li>
+<li><strong>CI/CD Integration</strong>: Jenkins/GitHub Actions pipeline automation</li>
+<li><strong>Multi-Cluster</strong>: Support for multiple EKS clusters</li>
+<li><strong>Disaster Recovery</strong>: Automated backup and restore procedures</li>
+</ul>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<ul>
+<li><strong>Helm Chart Registry</strong>: Separate registry for Helm chart distribution</li>
+<li><strong>GitOps Automation</strong>: Automated PR-based deployments via GitHooks</li>
+<li><strong>Advanced Monitoring</strong>: Custom metrics and alerting rules</li>
+<li><strong>Security Hardening</strong>: Enhanced network policies and pod security standards</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="development-setup">Development Setup</h3>
+<ol>
+<li><strong>Fork the repositories</strong></li>
+<li><strong>Create feature branch</strong>: <code>git checkout -b feature/your-feature</code></li>
+<li><strong>Make changes</strong> and test locally</li>
+<li><strong>Commit changes</strong>: <code>git commit -m &quot;Add your feature&quot;</code></li>
+<li><strong>Push to branch</strong>: <code>git push origin feature/your-feature</code></li>
+<li><strong>Create Pull Request</strong></li>
+</ol>
+<h3 id="code-standards">Code Standards</h3>
+<ul>
+<li><strong>Terraform</strong>: Follow HashiCorp best practices and module structure</li>
+<li><strong>Kubernetes</strong>: Adhere to Kubernetes resource naming conventions</li>
+<li><strong>Helm</strong>: Follow Helm chart best practices and versioning</li>
+<li><strong>Documentation</strong>: Clear setup and troubleshooting guides</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This Kubernetes GitOps Platform project demonstrates enterprise-grade infrastructure and platform operations practices, showcasing:</p>
+<ul>
+<li><strong>Complete Infrastructure as Code</strong> with Terraform for AWS EKS</li>
+<li><strong>GitOps Automation</strong> with ArgoCD app-of-apps pattern</li>
+<li><strong>Production-Ready Observability</strong> with Prometheus, Grafana, and Loki</li>
+<li><strong>SRE Best Practices</strong> with availability testing</li>
+<li><strong>High Availability</strong> with multi-AZ deployment and auto-scaling</li>
+<li><strong>Zero-Downtime Deployments</strong> through Kubernetes rolling updates</li>
+</ul>
+<p>The project serves as both a functional Kubernetes platform and a comprehensive example of modern DevOps and GitOps practices, making it an excellent addition to any infrastructure engineer&rsquo;s portfolio.</p>
+<p><strong>Live Demo</strong>: <a href="http://aeea3f555e8d340ecbeb923c5ce88bf5-1291506396.eu-west-1.elb.amazonaws.com/">Kubernetes GitOps Platform</a><br>
+<strong>Infrastructure Repository</strong>: <a href="https://github.com/Lforlinux/k8s-infrastructure-as-code">https://github.com/Lforlinux/k8s-infrastructure-as-code</a><br>
+<strong>Platform Toolkit Repository</strong>: <a href="https://github.com/Lforlinux/k8s-platform-toolkit">https://github.com/Lforlinux/k8s-platform-toolkit</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<div class="uk-container uk-margin-large-top">
+  <hr class="full-width">
+  <h2 class="uk-text-center uk-heading-small">Comments</h2>
+  <div class="uk-margin-medium-top">
+    <script src="https://giscus.app/client.js"
+            data-repo="Lforlinux/hugo-new-site"
+            data-repo-id=""
+            data-category="General"
+            data-category-id=""
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:lekshmi.kola@gmail.com">lekshmi.kola@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Address</h5>
+          <div uk-lightbox>
+            <a href="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwbHYJaUqfEgRK0Ui9dVGimc&amp;key=AIzaSyAE_4rVAKux_DSPcb_OdSRDaovtPOSk_3U" data-caption="Reading, UK"
+               data-type="iframe">Reading, UK</a>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
+  width: 1.2em;" alt="Creative Commons">
+      <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
+  width: 1.2em;" alt="CC-BY">
+      2025
+      Lekshmi Kolappan
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -291,7 +291,7 @@
     <h1 class="uk-text-center uk-heading-medium">Kubernetes GitOps Platform - Complete EKS Infrastructure &amp; Platform Toolkit</h1>
     <p class="uk-text-center uk-text-lead">Production-ready AWS EKS cluster with complete GitOps platform toolkit, automated deployment, monitoring, and observability</p>
     <p class="uk-text-center">Published on Jan 15, 2025</p>
-    <p class="uk-text-center">Reading time: 8 minutes.</p>
+    <p class="uk-text-center">Reading time: 9 minutes.</p>
     
 
     <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
@@ -549,7 +549,7 @@ Platform Toolkit Repository: https://github.com/Lforlinux/k8s-platform-toolkit
 <ul>
 <li><strong>Sanity Testing</strong>: Automated health checks for all microservices</li>
 <li><strong>Availability Testing</strong>: SRE metrics (uptime %, MTTR) with real user simulation</li>
-<li><strong>Performance Testing</strong>: Integrated Locust container for load testing</li>
+<li><strong>Performance Testing</strong>: k6 performance testing with Prometheus integration and Grafana dashboards</li>
 </ul>
 <h2 id="platform-toolkit-applications">Platform Toolkit Applications</h2>
 <h3 id="1-monitoring-stack">1. Monitoring Stack</h3>
@@ -651,7 +651,12 @@ If running <code>make deploy</code> locally, a <code>kubeconfig.yaml</code> file
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="performance-testing">Performance Testing</h2>
-<p>Load testing can be performed using the Locust container:</p>
+<p>The platform includes k6 performance testing capabilities with full Prometheus integration and Grafana dashboard visualization. k6 is a modern load testing tool that provides comprehensive performance metrics and real-time monitoring.</p>
+<h3 id="how-k6-performance-testing-works">How k6 Performance Testing Works</h3>
+<p>The k6 performance testing framework runs as Kubernetes jobs and integrates seamlessly with Prometheus for metrics collection. Tests are executed against the Online Boutique microservices application, testing both frontend HTTP endpoints (homepage, product pages) and backend health check endpoints. All performance metrics including response times, error rates, and threshold violations are automatically exported to Prometheus, where they can be visualized in real-time through pre-configured Grafana dashboards.</p>
+<p><img src="https://raw.githubusercontent.com/Lforlinux/lforlinux.github.io/refs/heads/master/images/k6-performance-test.png" alt="k6 Performance Test Dashboard"></p>
+<h3 id="running-performance-tests">Running Performance Tests</h3>
+<p>Performance tests can be executed using the k6 test runner script with different test types:</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -665,31 +670,57 @@ If running <code>make deploy</code> locally, a <code>kubeconfig.yaml</code> file
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#5918bb;font-weight:bold">export</span> TARGET_HOST<span style="color:#2c5dcd">=</span>&lt;your-alb-url&gt;
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Run smoke test (basic functionality)</span>
+</span></span><span style="display:flex;"><span>performance-testing/deployment/run-test.sh smoke
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>docker run -i --rm <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/reports:/opt/reports <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v ~/.aws:/root/.aws <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/:/opt/script <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -v $PWD/credentials:/meta/credentials <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -p 8089:8089 <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e ROLE<span style="color:#2c5dcd">=</span>standalone <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e TARGET_HOST<span style="color:#2c5dcd">=</span>$TARGET_HOST <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e LOCUST_FILE<span style="color:#2c5dcd">=</span>https://raw.githubusercontent.com/zalando-incubator/docker-locust/master/example/simple.py <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e SLAVE_MUL<span style="color:#2c5dcd">=</span><span style="color:#5918bb;font-weight:bold">4</span> <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  -e AUTOMATIC<span style="color:#2c5dcd">=</span>False <span style="color:#c5060b;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#c5060b;font-weight:bold"></span>  registry.opensource.zalan.do/tip/docker-locust
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Run load test (normal production load)</span>
+</span></span><span style="display:flex;"><span>performance-testing/deployment/run-test.sh load
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Run stress test (find breaking point)</span>
+</span></span><span style="display:flex;"><span>performance-testing/deployment/run-test.sh stress
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0080ff;font-style:italic"># Run spike test (sudden traffic surge)</span>
+</span></span><span style="display:flex;"><span>performance-testing/deployment/run-test.sh spike
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ol>
-<li>Open <code>http://localhost:8089</code> in your browser</li>
-<li>Configure load test parameters (recommended: 1000+ concurrent users)</li>
-<li>Monitor pod scaling via HPA:
+</div><h3 id="available-test-types">Available Test Types</h3>
+<p><strong>Smoke Test</strong> - Basic functionality verification</p>
+<ul>
+<li>Duration: ~4 minutes</li>
+<li>Load: 1 virtual user</li>
+<li>Purpose: Verify basic app functionality</li>
+</ul>
+<p><strong>Load Test</strong> - Normal production load</p>
+<ul>
+<li>Duration: ~16 minutes</li>
+<li>Load: 50-100 virtual users</li>
+<li>Purpose: Test under expected production load</li>
+</ul>
+<p><strong>Stress Test</strong> - Find application breaking point</p>
+<ul>
+<li>Duration: ~40 minutes</li>
+<li>Load: 100-500 virtual users (gradual increase)</li>
+<li>Purpose: Discover maximum capacity and limits</li>
+</ul>
+<p><strong>Spike Test</strong> - Sudden traffic spike</p>
+<ul>
+<li>Duration: ~6 minutes</li>
+<li>Load: 10 → 500 → 1000 virtual users (sudden spikes)</li>
+<li>Purpose: Test handling of sudden traffic surges</li>
+</ul>
+<h3 id="viewing-test-results">Viewing Test Results</h3>
+<p>View test execution logs:</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs job/k6-&lt;test-type&gt;-test -n performance-testing
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Monitor pod scaling during tests:</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -700,8 +731,16 @@ If running <code>make deploy</code> locally, a <code>kubeconfig.yaml</code> file
 </span></span><span style="display:flex;"><span>kubectl get pods -w
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
+</div><h3 id="prometheus-integration--grafana-dashboard">Prometheus Integration &amp; Grafana Dashboard</h3>
+<p>All k6 test metrics are automatically exported to Prometheus, including:</p>
+<ul>
+<li><strong>Response Times</strong>: P50, P90, P95, P99 percentiles</li>
+<li><strong>Request Rates</strong>: Requests per second (RPS)</li>
+<li><strong>Error Rates</strong>: HTTP error percentages</li>
+<li><strong>Threshold Violations</strong>: Failed threshold checks</li>
+<li><strong>Virtual User Metrics</strong>: Active and total virtual users</li>
+</ul>
+<p>The Grafana dashboard provides real-time visualization of all performance metrics, allowing you to monitor test execution, identify bottlenecks, and analyze application performance under different load conditions. Metrics are stored in Prometheus for historical analysis and trend monitoring.</p>
 <h2 id="application-lifecycle-management">Application Lifecycle Management</h2>
 <h3 id="zero-downtime-deployments">Zero-Downtime Deployments</h3>
 <p>The infrastructure supports zero-downtime deployments through Kubernetes rolling updates:</p>
